@@ -53,12 +53,6 @@
   'print':
     'prefix': 'print'
     'body': 'print("${0:logging}")'
-  'require':
-    'prefix': 'require'
-    'body': 'local ${0:name} = require "${1:module}"'
-  'require shortcut':
-    'prefix': 'req'
-    'body': 'local ${0:name} = require "${1:module}"'
   'if conditional':
     'prefix': 'if',
     'body': 'if ${1:value} then\n\t${0:--body...}\nend'
