@@ -1,6 +1,6 @@
 {
   "name": "language-mta-lua",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "author": "Crusax <kevenvz1@gmail.com>",
   "description": "Add syntax highlighting and snippets to Multi Theft Auto Lua files in Atom",
