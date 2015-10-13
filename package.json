@@ -1,10 +1,10 @@
 {
-  "name": "language-lua",
-  "version": "0.9.4",
+  "name": "language-mta-lua",
+  "version": "0.1.0",
   "private": false,
-  "author": "FireZenk <firezenk@gmail.com>",
-  "description": "Add syntax highlighting and snippets to Lua files in Atom",
-  "repository": "https://github.com/FireZenk/language-lua",
+  "author": "Crusax <kevenvz1@gmail.com>",
+  "description": "Add syntax highlighting and snippets to Multi Theft Auto Lua files in Atom",
+  "repository": "https://github.com/Kevenvz/language-mta-lua",
   "license": "MIT",
   "engines": {
     "atom": ">=0.50.0"
