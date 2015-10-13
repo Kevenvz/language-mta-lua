@@ -162,6 +162,18 @@
     'name': 'keyword.operator.lua'
   }
   {
+    'match': '(?<![^.]\\.|:)\\b(exports|resource|resourceRoot|root|source|this|eventName)\\b'
+    'name': 'variable.language.mta.shared.predefined.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiRoot|localPlayer)\\b'
+    'name': 'variable.language.mta.client.predefined.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(client|sourceResourceRoot|sourceResource)\\b'
+    'name': 'variable.language.mta.server.predefined.lua'
+  }
+  {
     'match': '(?<![^.]\\.|:)\\b(getRadioChannel|getRadioChannelName|getSFXStatus|getSoundBPM|getSoundEffects|getSoundFFTData|getSoundLength|getSoundLevelData|getSoundMaxDistance|getSoundMetaTags|getSoundMinDistance|getSoundPan|getSoundPosition|getSoundProperties|getSoundSpeed|getSoundVolume|getSoundWaveData|isSoundPanningEnabled|isSoundPaused|playSFX|playSFX3D|playSound|playSound3D|playSoundFrontEnd|setRadioChannel|setSoundEffectEnabled|setSoundMaxDistance|setSoundMinDistance|setSoundPan|setSoundPanningEnabled|setSoundPaused|setSoundPosition|setSoundProperties|setSoundSpeed|setSoundVolume|stopSound)\\b(?=\\s*(?:[({"\']|\\[\\[))'
     'name': 'support.function.mta.client.audio.lua'
   }
