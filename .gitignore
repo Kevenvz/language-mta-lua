@@ -1,1 +1,6 @@
 npm-debug.log
+# IntelliJ project files
+.idea/
+*.iml
+out
+gen
