@@ -1,10 +1,9 @@
 [Multi Theft Auto](http://mtasa.com/) Lua language support in Atom
 ======
 
-Add syntax highlighting and snippets to Lua files in Atom.
+Add Multi Theft Auto syntax highlighting and snippets to Lua files in Atom.
 
-See: https://atom.io/packages/language-lua
-and: https://www.npmjs.com/package/language-lua
+See: https://atom.io/packages/language-mta-lua
 
 Common snippets
 ---
