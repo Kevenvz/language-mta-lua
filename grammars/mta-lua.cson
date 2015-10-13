@@ -165,5 +165,205 @@
     'match': '(?<![^.]\\.|:)\\b(getRadioChannel|getRadioChannelName|getSFXStatus|getSoundBPM|getSoundEffects|getSoundFFTData|getSoundLength|getSoundLevelData|getSoundMaxDistance|getSoundMetaTags|getSoundMinDistance|getSoundPan|getSoundPosition|getSoundProperties|getSoundSpeed|getSoundVolume|getSoundWaveData|isSoundPanningEnabled|isSoundPaused|playSFX|playSFX3D|playSound|playSound3D|playSoundFrontEnd|setRadioChannel|setSoundEffectEnabled|setSoundMaxDistance|setSoundMinDistance|setSoundPan|setSoundPanningEnabled|setSoundPaused|setSoundPosition|setSoundProperties|setSoundSpeed|setSoundVolume|stopSound)\\b(?=\\s*(?:[({"\']|\\[\\[))'
     'name': 'support.function.mta.client.audio.lua'
   }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createBlip|createBlipAttachedTo|getBlipColor|getBlipIcon|getBlipSize|setBlipColor|setBlipIcon|setBlipSize|getBlipOrdering|setBlipOrdering|getBlipVisibleDistance|setBlipVisibleDistance)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.blip.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createBrowser|guiCreateBrowser|guiGetBrowser|executeBrowserJavascript|focusBrowser|isBrowserDomainBlocked|isBrowserFocused|isBrowserLoading|getBrowserProperty|getBrowserSettings|getBrowserTitle|getBrowserURL|injectBrowserMouseDown|injectBrowserMouseMove|injectBrowserMouseUp|injectBrowserMouseWheel|loadBrowserURL|setBrowserProperty|setBrowserRenderingPaused|setBrowserVolume|requestBrowserDomains|setBrowserAjaxHandler|getBrowserSource)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.browser.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(fadeCamera|getCamera|getCameraClip|getCameraGoggleEffect|getCameraInterior|getCameraMatrix|getCameraTarget|getCameraViewMode|getCameraShakeLevel|setCameraClip|setCameraGoggleEffect|setCameraInterior|setCameraMatrix|setCameraTarget|setCameraViewMode|setCameraShakeLevel)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.camera.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(addPedClothes|getBodyPartName|getClothesByTypeIndex|getClothesTypeName|getPedClothes|getTypeIndexFromClothes|removePedClothes)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.clothes-body.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createColCircle|createColCuboid|createColRectangle|createColSphere|createColTube|createColPolygon|isElementWithinColShape|getElementsWithinColShape|getElementColShape)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.collision.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(getCursorPosition|setCursorPosition|isCursorShowing|showCursor|setCursorAlpha|getCursorAlpha)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.cursor.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(dxDrawImage|dxDrawImageSection|dxDrawLine|dxDrawLine3D|dxDrawRectangle|dxDrawText|dxGetFontHeight|dxGetTextWidth|dxCreateFont|dxCreateTexture|dxCreateShader|dxCreateRenderTarget|dxCreateScreenSource|dxGetMaterialSize|dxSetShaderValue|dxSetShaderTessellation|dxSetShaderTransform|dxSetRenderTarget|dxUpdateScreenSource|dxGetStatus|dxSetTestMode|dxGetTexturePixels|dxSetTexturePixels|dxGetPixelsSize|dxGetPixelsFormat|dxConvertPixels|dxGetPixelColor|dxSetPixelColor|dxSetBlendMode|dxGetBlendMode|dxDrawMaterialLine3D|dxDrawMaterialSectionLine3D|dxSetAspectRatioAdjustmentEnabled|dxSetTextureEdge)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.drawing.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createEffect|fxAddBlood|fxAddBulletImpact|fxAddBulletSplash|fxAddDebris|fxAddFootSplash|fxAddGlass|fxAddGunshot|fxAddPunchImpact|fxAddSparks|fxAddTankFire|fxAddTyreBurst|fxAddWaterHydrant|fxAddWaterSplash|fxAddWood|getEffectDensity|getEffectSpeed|setEffectDensity|setEffectSpeed)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.effects.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(attachElements|createElement|destroyElement|detachElements|getAttachedElements|getElementAttachedOffsets|getElementAlpha|getElementCollisionsEnabled|getElementAttachedTo|getElementBoundingBox|getElementByID|getElementChild|getElementChildren|getElementChildrenCount|getElementColShape|getElementData|getElementDimension|getElementDistanceFromCentreOfMassToBaseOfModel|getElementHealth|getElementID|getElementInterior|getElementMatrix|getElementModel|getElementParent|getElementPosition|getElementRotation|getElementRadius|getElementsByType|getElementsWithinColShape|getElementType|getElementVelocity|getLowLODElement|getRootElement|isElement|isElementAttached|isElementCallPropagationEnabled|isElementCollidableWith|isElementDoubleSided|isElementFrozen|isElementLocal|isElementLowLOD|isElementInWater|isElementOnScreen|isElementStreamable|isElementStreamedIn|isElementSyncer|isElementWaitingForGroundToLoad|isElementWithinColShape|setElementAlpha|setElementAttachedOffsets|setElementCallPropagationEnabled|setElementCollidableWith|setElementCollisionsEnabled|setElementData|setElementDimension|setElementDoubleSided|setElementFrozen|setElementHealth|setElementID|setElementInterior|setElementMatrix|setElementModel|setElementParent|setElementPosition|setElementRotation|setElementStreamable|setElementVelocity|setLowLODElement)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.element.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(engineImportTXD|engineLoadCOL|engineLoadDFF|engineLoadTXD|engineReplaceCOL|engineReplaceModel|engineRestoreCOL|engineRestoreModel|engineSetAsynchronousLoading|engineSetModelLODDistance|engineGetModelLODDistance|engineApplyShaderToWorldTexture|engineRemoveShaderFromWorldTexture|engineGetModelNameFromID|engineGetModelIDFromName|engineGetVisibleTextureNames|engineGetModelTextureNames)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.engine.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(addEvent|addEventHandler|getEventHandlers|cancelEvent|removeEventHandler|triggerEvent|triggerServerEvent|wasEventCancelled|triggerLatentServerEvent|getLatentEventHandles|getLatentEventStatus|cancelLatentEvent)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.event.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createExplosion)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.explosion.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(fileClose|fileCopy|fileCreate|fileDelete|fileExists|fileFlush|fileGetPos|fileGetSize|fileIsEOF|fileOpen|fileRead|fileRename|fileSetPos|fileWrite)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.file.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createFire)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.fire.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(getChatboxLayout|guiBringToFront|guiCreateFont|guiGetAlpha|guiGetEnabled|guiGetFont|guiGetInputEnabled|guiGetInputMode|guiGetPosition|guiGetProperties|guiGetProperty|guiGetScreenSize|guiGetSize|guiGetText|guiGetVisible|guiMoveToBack|guiSetAlpha|guiSetEnabled|guiSetFont|guiSetInputEnabled|guiSetInputMode|guiSetPosition|guiSetProperty|guiSetSize|guiSetText|guiSetVisible|isChatBoxInputActive|isConsoleActive|isDebugViewActive|isMainMenuActive|isMTAWindowActive|isTransferBoxActive)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createButton)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.buttons.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCheckBoxGetSelected|guiCheckBoxSetSelected|guiCreateCheckBox)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.checkboxes.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateComboBox|guiComboBoxAddItem|guiComboBoxClear|guiComboBoxGetItemText|guiComboBoxSetItemText|guiComboBoxRemoveItem|guiComboBoxGetSelected|guiComboBoxSetSelected)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.comboboxes.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateEdit|guiEditSetMasked|guiEditSetMaxLength|guiEditSetReadOnly|guiEditSetCaretIndex|guiEditGetCaretIndex)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.editfields.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateGridList|guiGridListAddColumn|guiGridListAddRow|guiGridListAutoSizeColumn|guiGridListClear|guiGridListGetItemData|guiGridListGetItemText|guiGridListGetRowCount|guiGridListGetSelectedItem|guiGridListInsertRowAfter|guiGridListRemoveColumn|guiGridListRemoveRow|guiGridListSetItemData|guiGridListSetItemText|guiGridListSetScrollBars|guiGridListSetSelectedItem|guiGridListSetSelectionMode|guiGridListSetSortingEnabled|guiGridListGetSelectedCount|guiGridListGetSelectedItems|guiGridListSetColumnWidth|guiGridListGetColumnCount|guiGridListGetItemColor|guiGridListSetItemColor|guiGridListGetColumnTitle|guiGridListSetColumnTitle|guiGridListGetHorizontalScrollPosition|guiGridListSetHorizontalScrollPosition|guiGridListGetVerticalScrollPosition|guiGridListSetVerticalScrollPosition|guiGridListGetColumnWidth)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.gridlists.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateMemo|guiMemoSetReadOnly|guiMemoSetCaretIndex|guiMemoGetCaretIndex)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.memos.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateProgressBar|guiProgressBarGetProgress|guiProgressBarSetProgress)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.progressbars.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateRadioButton|guiRadioButtonGetSelected|guiRadioButtonSetSelected)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.radiobuttons.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateScrollBar|guiScrollBarGetScrollPosition|guiScrollBarSetScrollPosition)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.scrollbars.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateScrollPane|guiScrollPaneGetHorizontalScrollPosition|guiScrollPaneGetVerticalScrollPosition|guiScrollPaneSetHorizontalScrollPosition|guiScrollPaneSetScrollBars|guiScrollPaneSetVerticalScrollPosition)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.scrollpanes.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateStaticImage|guiStaticImageGetNativeSize|guiStaticImageLoadImage)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.staticimages.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateTabPanel|guiGetSelectedTab|guiSetSelectedTab)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.tabpanels.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateTab|guiDeleteTab)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.tabs.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateLabel|guiLabelGetFontHeight|guiLabelGetTextExtent|guiLabelSetColor|guiLabelSetHorizontalAlign|guiLabelSetVerticalAlign|guiLabelGetColor)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.textlabels.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateWindow|guiWindowSetMovable|guiWindowSetSizable)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.windows.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(guiCreateBrowser|guiGetBrowser)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.gui.browsers.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(bindKey|unbindKey|getBoundKeys|getKeyState|getCommandsBoundToKey|getFunctionsBoundToKey|getKeyBoundToCommand|getKeyBoundToFunction|getControlState|isControlEnabled|setControlState|toggleControl|toggleAllControls|addCommandHandler|removeCommandHandler|executeCommandHandler|getAnalogControlState)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.input.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createLight|getLightType|getLightRadius|getLightColor|getLightDirection|setLightRadius|setLightColor|setLightDirection)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.light.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createMarker|getMarkerColor|getMarkerCount|getMarkerIcon|getMarkerSize|getMarkerTarget|getMarkerType|isElementWithinMarker|setMarkerColor|setMarkerIcon|setMarkerSize|setMarkerTarget|setMarkerType)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.marker.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createObject|moveObject|stopObject|setObjectScale|getObjectScale|setObjectBreakable|isObjectBreakable|breakObject|respawnObject|toggleObjectRespawn|setObjectMass|getObjectMass)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.object.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(outputChatBox|outputConsole|outputDebugString|showChat|isChatVisible)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.output.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(canPedBeKnockedOffBike|createPed|doesPedHaveJetPack|getPedAmmoInClip|getPedAnalogControlState|getPedAnimation|getPedArmor|getPedBonePosition|getPedCameraRotation|getPedClothes|getPedContactElement|getPedControlState|getPedMoveState|getPedOccupiedVehicle|getPedOccupiedVehicleSeat|getPedOxygenLevel|getPedSkin|getPedStat|getPedTarget|getPedTargetCollision|getPedTargetEnd|getPedTargetStart|getPedSimplestTask|getPedTask|getPedTotalAmmo|getPedVoice|getPedWeapon|getPedWeaponMuzzlePosition|getPedWeaponSlot|getValidPedModels|givePedWeapon|isPedChoking|isPedDead|isPedDoingGangDriveby|isPedDoingTask|isPedDucked|isPedHeadless|isPedInVehicle|isPedOnFire|isPedOnGround|isPedTargetingMarkerEnabled|removePedFromVehicle|setAnalogControlState|setPedAimTarget|setPedAnalogControlState|setPedAnimation|setPedAnimationProgress|setPedCameraRotation|setPedCanBeKnockedOffBike|setPedControlState|setPedDoingGangDriveby|setPedFootBloodEnabled|setPedHeadless|setPedLookAt|setPedOnFire|setPedOxygenLevel|setPedTargetingMarkerEnabled|setPedVoice|setPedWeaponSlot|setPedWalkingStyle|warpPedIntoVehicle)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.ped.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createPickup|getPickupAmmo|getPickupAmount|getPickupType|getPickupWeapon|setPickupType)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.pickup.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(forcePlayerMap|getLocalPlayer|givePlayerMoney|takePlayerMoney|showPlayerHudComponent|setPlayerBlurLevel|setPlayerMoney|setPlayerNametagColor|setPlayerNametagShowing|setPlayerNametagText|getPlayerBlurLevel|getPlayerFromName|getPlayerMapBoundingBox|getPlayerMoney|getPlayerName|getPlayerNametagColor|getPlayerNametagText|getPlayerPing|getPlayerSerial|getPlayerTeam|getPlayerWantedLevel|isPlayerMapForced|isPlayerMapVisible|isPlayerNametagShowing|isPlayerHudComponentVisible)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.player.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createProjectile|getProjectileCreator|getProjectileForce|getProjectileTarget|getProjectileType|detonateSatchels|getProjectileCounter|setProjectileCounter)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.projectile.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createRadarArea|getRadarAreaColor|getRadarAreaSize|isInsideRadarArea|isRadarAreaFlashing|setRadarAreaColor|setRadarAreaFlashing|setRadarAreaSize)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.radar-area.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(call|fetchRemote|getResourceConfig|getResourceDynamicElementRoot|getResourceExportedFunctions|getResourceFromName|getResourceGUIElement|getResourceName|getResourceState|getResourceRootElement|getThisResource)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.resource.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(countPlayersInTeam|getTeamColor|getTeamFriendlyFire|getTeamFromName|getTeamName|getPlayersInTeam)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.team.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(base64Encode|base64Decode|bitAnd|bitNot|bitOr|bitXor|bitTest|bitLRotate|bitRRotate|bitLShift|bitRShift|bitArShift|bitExtract|bitReplace|downloadFile|fromJSON|getDistanceBetweenPoints2D|getDistanceBetweenPoints3D|getEasingValue|getColorFromString|getDevelopmentMode|getFPSLimit|getLocalization|getNetworkStats|getNetworkUsageData|getPerformanceStats|getRealTime|getTickCount|getTimers|getTimerDetails|gettok|getVersion|hash|interpolateBetween|isTimer|killTimer|md5|pregFind|pregReplace|pregMatch|resetTimer|setClipboard|setDevelopmentMode|setFPSLimit|setTimer|sha256|split|teaEncode|teaDecode|tocolor|toJSON|utfChar|utfCode|utfLen|utfSeek|utfSub|addDebugHook|removeDebugHook)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.utility.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(addVehicleUpgrade|attachTrailerToVehicle|blowVehicle|createVehicle|detachTrailerFromVehicle|fixVehicle|getHeliBladeCollisionsEnabled|getHelicopterRotorSpeed|getOriginalHandling|getTrainDirection|getTrainSpeed|getVehicleAdjustableProperty|getVehicleColor|getVehicleCompatibleUpgrades|getVehicleComponents|getVehicleComponentPosition|getVehicleComponentRotation|getVehicleComponentVisible|getVehicleController|getVehicleDoorOpenRatio|getVehicleDoorState|getVehicleEngineState|getVehicleGravity|getVehicleHandling|getVehicleHeadLightColor|getVehicleLandingGearDown|getVehicleLightState|getVehicleMaxPassengers|getVehicleModelFromName|getVehicleName|getVehicleNameFromModel|getVehicleNitroCount|getVehicleNitroLevel|getVehicleOccupant|getVehicleOccupants|getVehicleCurrentGear|getVehicleOverrideLights|getVehiclePaintjob|getVehiclePanelState|getVehiclePlateText|getVehicleSirens|getVehicleSirensOn|getVehicleSirenParams|getVehicleTowedByVehicle|getVehicleTowingVehicle|getVehicleTurnVelocity|getVehicleTurretPosition|getVehicleType|getVehicleUpgradeOnSlot|getVehicleUpgrades|getVehicleUpgradeSlotName|getVehicleVariant|getVehicleWheelStates|isTrainChainEngine|isTrainDerailable|isTrainDerailed|isVehicleBlown|isVehicleDamageProof|isVehicleFuelTankExplodable|isVehicleLocked|isVehicleNitroRecharging|isVehicleNitroActivated|isVehicleOnGround|isVehicleTaxiLightOn|removeVehicleUpgrade|resetVehicleComponentPosition|resetVehicleComponentRotation|setHeliBladeCollisionsEnabled|setHelicopterRotorSpeed|setVehicleAdjustableProperty|setVehicleColor|setVehicleComponentPosition|setVehicleComponentRotation|setVehicleComponentVisible|setVehicleDamageProof|setVehicleDirtLevel|setVehicleDoorOpenRatio|setVehicleDoorState|setVehicleDoorsUndamageable|setVehicleEngineState|setVehicleFuelTankExplodable|setVehicleGravity|setVehicleHeadLightColor|setVehicleLandingGearDown|setVehicleLightState|setVehicleLocked|setVehicleNitroActivated|setVehicleNitroCount|setVehicleNitroLevel|setVehicleOverrideLights|setVehiclePaintjob|setVehiclePanelState|setVehiclePlateText|setVehicleSirens|setVehicleSirensOn|setVehicleTurretPosition|setVehicleTaxiLightOn|setVehicleTurnVelocity|setVehicleWheelStates|setTrainDerailable|setTrainDerailed|setTrainDirection|setTrainSpeed)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.vehicle.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createWater|getWaterColor|getWaterVertexPosition|getWaterLevel|getWaveHeight|resetWaterColor|resetWaterLevel|isWaterDrawnLast|setWaterColor|setWaterLevel|setWaterVertexPosition|setWaveHeight|setWaterDrawnLast)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.water.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(getWeaponIDFromName|getWeaponNameFromID|getSlotFromWeapon|getWeaponProperty|getOriginalWeaponProperty)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.weapon.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(createWeapon|fireWeapon|getWeaponProperty|getWeaponState|getWeaponTarget|getWeaponOwner|getWeaponFlags|getWeaponFiringRate|getWeaponAmmo|getWeaponClipAmmo|resetWeaponFiringRate|setWeaponProperty|setWeaponState|setWeaponTarget|setWeaponFlags|setWeaponFiringRate|setWeaponAmmo|setWeaponClipAmmo)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.weapon.creation.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(areTrafficLightsLocked|createSWATRope|getAircraftMaxHeight|getAircraftMaxVelocity|getBirdsEnabled|getCloudsEnabled|getFarClipDistance|getFogDistance|getGameSpeed|getGarageBoundingBox|getGaragePosition|getGarageSize|getGravity|getGroundPosition|getHeatHaze|getInteriorFurnitureEnabled|getInteriorSoundsEnabled|getJetpackMaxHeight|getMinuteDuration|getMoonSize|getNearClipDistance|getOcclusionsEnabled|getPlayerBlurLevel|getRainLevel|getScreenFromWorldPosition|getSunColor|getSunSize|getTime|getTrafficLightState|getWeather|getWindVelocity|getWorldFromScreenPosition|getZoneName|isAmbientSoundEnabled|isGarageOpen|isLineOfSightClear|isWorldSoundEnabled|isWorldSpecialPropertyEnabled|processLineOfSight|removeWorldModel|resetAmbientSounds|resetFarClipDistance|resetFogDistance|resetHeatHaze|resetMoonSize|resetRainLevel|resetSkyGradient|resetSunColor|resetSunSize|resetWindVelocity|resetWorldSounds|restoreAllWorldModels|restoreWorldModel|setAircraftMaxHeight|setAircraftMaxVelocity|setAmbientSoundEnabled|setBirdsEnabled|setCloudsEnabled|setFarClipDistance|setFogDistance|setGameSpeed|setGarageOpen|setGravity|setHeatHaze|setInteriorFurnitureEnabled|setInteriorSoundsEnabled|setJetpackMaxHeight|setMinuteDuration|setMoonSize|setNearClipDistance|setOcclusionsEnabled|setPlayerBlurLevel|setRainLevel|setSkyGradient|setSunColor|setSunSize|setTime|setTrafficLightState|setTrafficLightsLocked|setWeather|setWeatherBlended|setWindVelocity|setWorldSoundEnabled|setWorldSpecialPropertyEnabled|testLineAgainstWater)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.world.lua'
+  }
+  {
+    'match': '(?<![^.]\\.|:)\\b(xmlCopyFile|xmlCreateFile|xmlDestroyNode|xmlLoadFile|xmlNodeGetAttribute|xmlNodeGetValue|xmlNodeSetAttribute|xmlNodeSetValue|xmlSaveFile|xmlUnloadFile|xmlCreateChild|xmlFindChild|xmlNodeGetAttributes|xmlNodeGetChildren|xmlNodeGetName|xmlNodeGetParent|xmlNodeSetName)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.mta.client.xml.lua'
+  }
 ]
 'scopeName': 'source.lua'
