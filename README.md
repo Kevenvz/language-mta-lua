@@ -28,8 +28,6 @@ Common snippets
 | print         | print                    | print("logging")     |
 | rep           | repeat loop shortcut     | repeat -- body... until condition |
 | repeat        | repeat loop              | repeat -- body... until condition |
-| req           | require shortcut         | local name = require "module" |
-| require       | require                  | local name = require "module" |
 | ret           | return definition shortcut | return value       |
 | return        | return definition        | return value         |
 | tab           | table definition         | name = {}            |
@@ -81,24 +79,32 @@ Math function snippets
 | tan           | math.tan                 | math.tan(x)          |
 | tanh          | math.tanh                | math.tanh(x)         |
 
+Multi Theft Auto client snippets
+---
+| Name            | Link to wiki                                  |
+| --------------- | --------------------------------------------- |
+| Audio functions | https://wiki.multitheftauto.com/wiki/Client_Scripting_Functions#Audio_functions |
+
+Multi Theft Auto server snippets
+---
+| Name            | Link to wiki                                  |
+| --------------- | --------------------------------------------- |
+| None            | None                                          |
+
 Authors
 ------
-__Jorge Garrido Oval__ creator of [FireZenk/language-lua](https://github.com/FireZenk/language-lua)
-* https://github.com/FireZenk
-
-__Keven / Crusax__
-* https://github.com/Kevenvz
-
+* [__Jorge Garrido Oval__](https://github.com/FireZenk) creator of [FireZenk/language-lua](https://github.com/FireZenk/language-lua)
+* [__Keven / Crusax__](https://github.com/Kevenvz)
 
 Contributors
 ---
-
 Contributions are greatly appreciated. Please fork this repository and open a
 pull request to add snippets, make grammar tweaks, etc.
 
 License
 ------
-Atom language-lua is released under the MIT license.
+Atom language-mta-lua is released under the MIT license.
+Atom langauge-lua is released under the MIT license.
 
->Originally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)
+>Originally [based](http://atom.io/docs/latest/converting-a-text-mate-bundle)
 from the [Lua TextMate bundle](https://github.com/textmate/lua.tmbundle).
