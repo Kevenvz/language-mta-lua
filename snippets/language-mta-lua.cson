@@ -34,7 +34,7 @@
     'body': 'for ${1:k},${2:v} in pairs(${3:table_name}) do\n\t${0:-- body...}\nend'
   'local function':
     'prefix': 'lfun'
-    'body': 'local function ${1:FunctionName} (${2:args})\n\t${0:-- body...}\nend'  
+    'body': 'local function ${1:FunctionName} (${2:args})\n\t${0:-- body...}\nend'
   'local variable definition':
     'prefix': 'local'
     'body': 'local ${1:x} = ${0:1}'
@@ -173,3 +173,112 @@
   'math.tanh':
     'prefix': 'tanh',
     'body': 'math.tanh(${0:x})'
+  # Client Audio Functions
+  'getRadioChannel':
+    'prefix': 'getRadioChannel',
+    'body': 'getRadioChannel()'
+  'getRadioChannelName':
+    'prefix': 'getRadioChannelName',
+    'body': 'getRadioChannelName(${0:id})'
+  'getSFXStatus':
+    'prefix': 'getSFXStatus',
+    'body': 'getSFXStatus(${0:audioContainer})'
+  'getSoundBPM':
+    'prefix': 'getSoundBPM',
+    'body': 'getSoundBPM(${0:sound})'
+  'getSoundEffects':
+    'prefix': 'getSoundEffects',
+    'body': 'getSoundEffects(${0:sound})'
+  'getSoundFFTData':
+    'prefix': 'getSoundFFTData',
+    'body': 'getSoundFFTData(${1:sound}, ${2:iSamples})'
+  'getSoundLength':
+    'prefix': 'getSoundLength',
+    'body': 'getSoundLength(${0:sound})'
+  'getSoundLevelData':
+    'prefix': 'getSoundLevelData',
+    'body': 'getSoundLevelData(${0:sound})'
+  'getSoundMaxDistance':
+    'prefix': 'getSoundMaxDistance',
+    'body': 'getSoundMaxDistance(${0:sound})'
+  'getSoundMetaTags':
+    'prefix': 'getSoundMetaTags',
+    'body': 'getSoundMetaTags(${0:sound})'
+  'getSoundMinDistance':
+    'prefix': 'getSoundMinDistance',
+    'body': 'getSoundMinDistance(${0:sound})'
+  'getSoundPan':
+    'prefix': 'getSoundPan',
+    'body': 'getSoundPan(${0:sound})'
+  'getSoundPosition':
+    'prefix': 'getSoundPosition',
+    'body': 'getSoundPosition(${0:sound})'
+  'getSoundProperties':
+    'prefix': 'getSoundProperties',
+    'body': 'getSoundProperties(${0:sound})'
+  'getSoundSpeed':
+    'prefix': 'getSoundSpeed',
+    'body': 'getSoundSpeed(${0:sound})'
+  'getSoundVolume':
+    'prefix': 'getSoundVolume',
+    'body': 'getSoundVolume(${0:sound})'
+  'getSoundWaveData':
+    'prefix': 'getSoundWaveData',
+    'body': 'getSoundWaveData(${1:sound}, ${2:iSamples})'
+  'isSoundPanningEnabled':
+    'prefix': 'isSoundPanningEnabled',
+    'body': 'isSoundPanningEnabled(${0:sound})'
+  'isSoundPaused':
+    'prefix': 'isSoundPaused',
+    'body': 'isSoundPaused(${0:sound})'
+  'playSFX':
+    'prefix': 'playSFX',
+    'body': 'playSFX(${1:containerName}, ${2:bankId}, ${3:soundId})'
+  'playSFX3D':
+    'prefix': 'playSFX3D',
+    'body': 'playSFX3D(${1:containerName}, ${2:bankId}, ${3:soundId}, ${4:x}, ${5:y}, ${5:z})'
+  'playSound':
+    'prefix': 'playSound',
+    'body': 'playSound(${0:soundPath})'
+  'playSound3D':
+    'prefix': 'playSound3D',
+    'body': 'playSound3D(${1:soundPath}, ${2:x}, ${3:y}, ${4:z})'
+  'playSoundFrontEnd':
+    'prefix': 'playSoundFrontEnd',
+    'body': 'playSoundFrontEnd(${0:sound})'
+  'setRadioChannel':
+    'prefix': 'setRadioChannel',
+    'body': 'setRadioChannel(${0:sound})'
+  'setSoundEffectEnabled':
+    'prefix': 'setSoundEffectEnabled',
+    'body': 'setSoundEffectEnabled(${1:sound}, ${2:effectName}, ${3:bEnable})'
+  'setSoundMaxDistance':
+    'prefix': 'setSoundMaxDistance',
+    'body': 'setSoundMaxDistance(${1:sound}, ${2:distance})'
+  'setSoundMinDistance':
+    'prefix': 'setSoundMinDistance',
+    'body': 'setSoundMinDistance(${1:sound}, ${2:distance})'
+  'setSoundPan':
+    'prefix': 'setSoundPan',
+    'body': 'setSoundPan(${1:sound}, ${2:pan})'
+  'setSoundPanningEnabled':
+    'prefix': 'setSoundPanningEnabled',
+    'body': 'setSoundPanningEnabled(${1:sound}, ${2:enable})'
+  'setSoundPaused':
+    'prefix': 'setSoundPaused',
+    'body': 'setSoundPaused(${1:sound}, ${2:paused})'
+  'setSoundPosition':
+    'prefix': 'setSoundPosition',
+    'body': 'setSoundPosition(${1:sound}, ${2:pos})'
+  'setSoundProperties':
+    'prefix': 'setSoundProperties',
+    'body': 'setSoundProperties(${1:sound}, ${2:fSampleRate}, ${3:fTempo}, ${4:fPitch}, ${5:bReverse})'
+  'setSoundSpeed':
+    'prefix': 'setSoundSpeed',
+    'body': 'setSoundSpeed(${1:sound}, ${2:speed})'
+  'setSoundVolume':
+    'prefix': 'setSoundVolume',
+    'body': 'setSoundVolume(${1:sound}, ${2:volume})'
+  'stopSound':
+    'prefix': 'stopSound',
+    'body': 'stopSound(${0:sound})'
