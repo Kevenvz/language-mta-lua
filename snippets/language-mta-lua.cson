@@ -173,112 +173,4062 @@
   'math.tanh':
     'prefix': 'tanh',
     'body': 'math.tanh(${0:x})'
-  # Client Audio Functions
+  'aclCreate':
+    'prefix': 'aclCreate'
+    'body': 'aclCreate(${1:string aclName})'
+  'aclCreateGroup':
+    'prefix': 'aclCreateGroup'
+    'body': 'aclCreateGroup(${1:string groupName})'
+  'aclDestroy':
+    'prefix': 'aclDestroy'
+    'body': 'aclDestroy(${1:acl theACL})'
+  'aclDestroyGroup':
+    'prefix': 'aclDestroyGroup'
+    'body': 'aclDestroyGroup(${1:string aclGroupName})'
+  'aclGet':
+    'prefix': 'aclGet'
+    'body': 'aclGet(${1:string aclName})'
+  'aclGetGroup':
+    'prefix': 'aclGetGroup'
+    'body': 'aclGetGroup(${1:string groupName})'
+  'aclGetName':
+    'prefix': 'aclGetName'
+    'body': 'aclGetName(${1:acl theAcl})'
+  'aclGetRight':
+    'prefix': 'aclGetRight'
+    'body': 'aclGetRight(${1:acl theAcl}, ${2:string rightName})'
+  'aclGroupAddACL':
+    'prefix': 'aclGroupAddACL'
+    'body': 'aclGroupAddACL(${1:aclgroup theGroup}, ${2:acl theACL})'
+  'aclGroupAddObject':
+    'prefix': 'aclGroupAddObject'
+    'body': 'aclGroupAddObject(${1:aclgroup theGroup}, ${2:string theObjectName})'
+  'aclGroupGetName':
+    'prefix': 'aclGroupGetName'
+    'body': 'aclGroupGetName(${1:aclGroup})'
+  'aclGroupList':
+    'prefix': 'aclGroupList'
+    'body': 'aclGroupList()'
+  'aclGroupListACL':
+    'prefix': 'aclGroupListACL'
+    'body': 'aclGroupListACL(${1:aclgroup theGroup})'
+  'aclGroupListObjects':
+    'prefix': 'aclGroupListObjects'
+    'body': 'aclGroupListObjects(${1:aclgroup theGroup})'
+  'aclGroupRemoveACL':
+    'prefix': 'aclGroupRemoveACL'
+    'body': 'aclGroupRemoveACL(${1:aclgroup theGroup}, ${2:acl theACL})'
+  'aclGroupRemoveObject':
+    'prefix': 'aclGroupRemoveObject'
+    'body': 'aclGroupRemoveObject(${1:aclgroup theGroup}, ${2:string theObjectString})'
+  'aclList':
+    'prefix': 'aclList'
+    'body': 'aclList()'
+  'aclListRights':
+    'prefix': 'aclListRights'
+    'body': 'aclListRights(${1:acl theACL})'
+  'aclReload':
+    'prefix': 'aclReload'
+    'body': 'aclReload()'
+  'aclRemoveRight':
+    'prefix': 'aclRemoveRight'
+    'body': 'aclRemoveRight(${1:acl theAcl}, ${2:string rightName})'
+  'aclSave':
+    'prefix': 'aclSave'
+    'body': 'aclSave()'
+  'aclSetRight':
+    'prefix': 'aclSetRight'
+    'body': 'aclSetRight(${1:acl theAcl}, ${2:string rightName}, ${3:bool hasAccess})'
+  'addAccount':
+    'prefix': 'addAccount'
+    'body': 'addAccount(${1:string name}, ${2:string pass}, ${3:[bool allowCaseVariations = false]})'
+  'addBan':
+    'prefix': 'addBan'
+    'body': 'addBan(${1:[ string IP}, ${2:string Username}, ${3:string Serial}, ${4:player responsibleElement}, ${5:string reason}, ${6:int seconds = 0 ]})'
+  'addCommandHandler':
+    'prefix': 'addCommandHandler'
+    'body': 'addCommandHandler(${1:string commandName}, ${2:function handlerFunction}, ${3:[bool restricted = false]}, ${4:[bool caseSensitive = true]})'
+  'addEvent':
+    'prefix': 'addEvent'
+    'body': 'addEvent(${1:string eventName [}, ${2:bool allowRemoteTrigger = false ]})'
+  'addEventHandler':
+    'prefix': 'addEventHandler'
+    'body': 'addEventHandler(${1:string eventName}, ${2:element attachedTo}, ${3:function handlerFunction [}, ${4:bool getPropagated = true}, ${5: string priority = "normal" ]})'
+  'addPedClothes':
+    'prefix': 'addPedClothes'
+    'body': 'addPedClothes(${1:ped thePed}, ${2:string clothesTexture}, ${3:string clothesModel}, ${4:int clothesType})'
+  'addPlayerClothes':
+    'prefix': 'addPlayerClothes'
+    'body': 'addPlayerClothes(${1:player thePlayer}, ${2:string clothesTexture}, ${3:string clothesModel}, ${4:int clothesType})'
+  'addResourceConfig':
+    'prefix': 'addResourceConfig'
+    'body': 'addResourceConfig(${1:resource theResource}, ${2:string filename}, ${3:[ string filetype = "server" ]})'
+  'addResourceMap':
+    'prefix': 'addResourceMap'
+    'body': 'addResourceMap(${1:resource theResource}, ${2:string filename}, ${3:[ int dimension = 0 ]})'
+  'addVehicleSirens':
+    'prefix': 'addVehicleSirens'
+    'body': 'addVehicleSirens(${1:vehicle theVehicle}, ${2:int sirenCount}, ${3:int sirenType[}, ${4:bool 360flag = false}, ${5:bool checkLosFlag = true}, ${6:bool useRandomiser flag = true}, ${7:bool silentFlag = false]})'
+  'addVehicleUpgrade':
+    'prefix': 'addVehicleUpgrade'
+    'body': 'addVehicleUpgrade(${1:vehicle theVehicle}, ${2:int upgrade})'
+  'areTrafficLightsLocked':
+    'prefix': 'areTrafficLightsLocked'
+    'body': 'areTrafficLightsLocked()'
+  'attachElements':
+    'prefix': 'attachElements'
+    'body': 'attachElements(${1:element theElement}, ${2:element theAttachToElement}, ${3:[ float xPosOffset}, ${4:float yPosOffset}, ${5:float zPosOffset}, ${6:float xRotOffset}, ${7:float yRotOffset}, ${8:float zRotOffset ]})'
+  'attachElementToElement':
+    'prefix': 'attachElementToElement'
+    'body': 'attachElementToElement(${1:element theElement}, ${2:element theAttachToElement}, ${3:[ float xPosOffset}, ${4:float yPosOffset}, ${5:float zPosOffset}, ${6:float xRotOffset}, ${7:float yRotOffset}, ${8:float zRotOffset ]})'
+  'attachTrailerToVehicle':
+    'prefix': 'attachTrailerToVehicle'
+    'body': 'attachTrailerToVehicle(${1:vehicle theVehicle}, ${2:vehicle theTrailer})'
+  'banIP':
+    'prefix': 'banIP'
+    'body': 'banIP(${1:string theIP}, ${2:element responsibleElement}, ${3:string reason})'
+  'banPlayer':
+    'prefix': 'banPlayer'
+    'body': 'banPlayer(${1:player bannedPlayer [}, ${2:bool IP = true}, ${3:bool Username = false}, ${4:bool Serial = false}, ${5:player responsiblePlayer = nil}, ${6:string reason = nil}, ${7:int seconds = 0 ]})'
+  'banSerial':
+    'prefix': 'banSerial'
+    'body': 'banSerial(${1:string theSerial})'
+  'base64decode':
+    'prefix': 'base64decode'
+    'body': 'base64decode()'
+  'base64encode':
+    'prefix': 'base64encode'
+    'body': 'base64encode()'
+  'bindKey':
+    'prefix': 'bindKey'
+    'body': 'bindKey(${1:[Server: player thePlayer]}, ${2:string key}, ${3:string keyState}, ${4:function handlerFunction}, ${5:[ var arguments, ... ]})'
+  'bitAnd':
+    'prefix': 'bitAnd'
+    'body': 'bitAnd(${1:uint var1}, ${2:uint var2}, ${3:[ uint var3, ... ]})'
+  'bitArShift':
+    'prefix': 'bitArShift'
+    'body': 'bitArShift()'
+  'bitExtract':
+    'prefix': 'bitExtract'
+    'body': 'bitExtract(${1:uint var}, ${2:int field [}, ${3:int width = 1]})'
+  'bitLRotate':
+    'prefix': 'bitLRotate'
+    'body': 'bitLRotate()'
+  'bitLShift':
+    'prefix': 'bitLShift'
+    'body': 'bitLShift()'
+  'bitNot':
+    'prefix': 'bitNot'
+    'body': 'bitNot(${1:uint var})'
+  'bitOr':
+    'prefix': 'bitOr'
+    'body': 'bitOr(${1:uint var1}, ${2:uint var2}, ${3:[ uint var3, ... ]})'
+  'bitReplace':
+    'prefix': 'bitReplace'
+    'body': 'bitReplace()'
+  'bitRRotate':
+    'prefix': 'bitRRotate'
+    'body': 'bitRRotate()'
+  'bitRShift':
+    'prefix': 'bitRShift'
+    'body': 'bitRShift()'
+  'bitTest':
+    'prefix': 'bitTest'
+    'body': 'bitTest(${1:uint var1}, ${2:uint var2}, ${3:[ uint var3, ... ]})'
+  'bitXor':
+    'prefix': 'bitXor'
+    'body': 'bitXor(${1:uint var1}, ${2:uint var2}, ${3:[ uint var3, ... ]})'
+  'blowVehicle':
+    'prefix': 'blowVehicle'
+    'body': 'blowVehicle(${1:vehicle vehicleToBlow}, ${2:[ bool explode=true ]})'
+  'breakObject':
+    'prefix': 'breakObject'
+    'body': 'breakObject(${1:object theObject})'
+  'call':
+    'prefix': 'call'
+    'body': 'call(${1:resource theResource}, ${2:string theFunction}, ${3:[ arguments... ]})'
+  'callRemote':
+    'prefix': 'callRemote'
+    'body': 'callRemote(${1:string host}, ${2:string resourceName}, ${3:string functionName}, ${4:callback callbackFunction}, ${5:[ arguments... ]})'
+  'cancelEvent':
+    'prefix': 'cancelEvent'
+    'body': 'cancelEvent(${1:[ bool cancel}, ${2:string reason ]})'
+  'cancelLatentEvent':
+    'prefix': 'cancelLatentEvent'
+    'body': 'cancelLatentEvent(${1:[Server: player thePlayer]}, ${2:int handle})'
+  'canPedBeKnockedOffBike':
+    'prefix': 'canPedBeKnockedOffBike'
+    'body': 'canPedBeKnockedOffBike(${1:ped thePed})'
+  'canPlayerBeKnockedOffBike':
+    'prefix': 'canPlayerBeKnockedOffBike'
+    'body': 'canPlayerBeKnockedOffBike(${1:player thePlayer})'
+  'canPlayerUseFunction':
+    'prefix': 'canPlayerUseFunction'
+    'body': 'canPlayerUseFunction(${1:player thePlayer}, ${2:string functionName})'
+  'clearElementVisibleTo':
+    'prefix': 'clearElementVisibleTo'
+    'body': 'clearElementVisibleTo(${1:element theElement})'
+  'cloneElement':
+    'prefix': 'cloneElement'
+    'body': 'cloneElement(${1:element theElement}, ${2:[ float xPos = 0}, ${3:float yPos = 0}, ${4:float zPos = 0}, ${5:bool cloneChildren = false ]})'
+  'copyAccountData':
+    'prefix': 'copyAccountData'
+    'body': 'copyAccountData(${1:account theAccount}, ${2:account fromAccount})'
+  'copyResource':
+    'prefix': 'copyResource'
+    'body': 'copyResource(${1:resource theResource}, ${2:string newResourceName})'
+  'countPlayersInTeam':
+    'prefix': 'countPlayersInTeam'
+    'body': 'countPlayersInTeam(${1:team theTeam})'
+  'createBlip':
+    'prefix': 'createBlip'
+    'body': 'createBlip(${1:float x}, ${2:float y}, ${3:float z}, ${4:[int icon=0}, ${5:int size=2}, ${6:int r=255}, ${7:int g=0}, ${8:int b=0}, ${9:int a=255}, ${10:int ordering=0 *}, ${11:float visibleDistance=99999.0}, ${12:visibleTo = getRootElement()]})'
+  'createBlipAttachedTo':
+    'prefix': 'createBlipAttachedTo'
+    'body': 'createBlipAttachedTo(${1:element elementToAttachTo}, ${2:[int icon=0}, ${3:int size=2}, ${4:int r=255}, ${5:int g=0}, ${6:int b=0}, ${7:int a=255}, ${8:int ordering=0}, ${9:float visibleDistance=99999.0}, ${10:visibleTo = getRootElement()]})'
+  'createBrowser':
+    'prefix': 'createBrowser'
+    'body': 'createBrowser(${1:int width}, ${2:int height}, ${3:bool isLocal}, ${4:[bool transparent=false]})'
+  'createColCircle':
+    'prefix': 'createColCircle'
+    'body': 'createColCircle(${1:float fX}, ${2:float fY}, ${3:float radius})'
+  'createColCuboid':
+    'prefix': 'createColCuboid'
+    'body': 'createColCuboid(${1:float fX}, ${2:float fY}, ${3:float fZ}, ${4:float fWidth}, ${5:float fDepth}, ${6:float fHeight})'
+  'createColPolygon':
+    'prefix': 'createColPolygon'
+    'body': 'createColPolygon(${1:float fX}, ${2:float fY}, ${3:float fX1}, ${4:float fY1}, ${5:float fX2}, ${6:float fY2}, ${7:float fX3}, ${8:float fY3}, ${9:...})'
+  'createColRectangle':
+    'prefix': 'createColRectangle'
+    'body': 'createColRectangle(${1:float fX}, ${2:float fY}, ${3:float fWidth}, ${4:float fDepth})'
+  'createColSphere':
+    'prefix': 'createColSphere'
+    'body': 'createColSphere(${1:float fX}, ${2:float fY}, ${3:float fZ}, ${4:float fRadius})'
+  'createColTube':
+    'prefix': 'createColTube'
+    'body': 'createColTube(${1:float fX}, ${2:float fY}, ${3:float fZ}, ${4:float fRadius}, ${5:float fHeight})'
+  'createEffect':
+    'prefix': 'createEffect'
+    'body': 'createEffect(${1:string name}, ${2:float x}, ${3:float y}, ${4:float z [}, ${5:float rX}, ${6:float rY}, ${7:float rZ ]})'
+  'createElement':
+    'prefix': 'createElement'
+    'body': 'createElement(${1:string elementType}, ${2:[ string elementID ]})'
+  'createExplosion':
+    'prefix': 'createExplosion'
+    'body': 'createExplosion(${1:float x}, ${2:float y}, ${3:float z}, ${4:int type [}, ${5:player creator = nil})'
+  'createFire':
+    'prefix': 'createFire'
+    'body': 'createFire(${1:float x}, ${2:float y}, ${3:float z [}, ${4:float size = 1.8 ]})'
+  'createLight':
+    'prefix': 'createLight'
+    'body': 'createLight(${1:int lightType}, ${2:float posX}, ${3:float posY}, ${4:float posX}, ${5:[float radius = 3}, ${6:int r = 255}, ${7:int g = 0}, ${8:int b = 0}, ${9:float dirX = 0}, ${10:float dirY = 0}, ${11:float dirZ = 0}, ${12:bool createsShadow = false ]})'
+  'createMarker':
+    'prefix': 'createMarker'
+    'body': 'createMarker(${1:float x}, ${2:float y}, ${3:float z}, ${4:[string type}, ${5:int size}, ${6:int r}, ${7:int g}, ${8:int b}, ${9:int a}, ${10:visibleTo = getRootElement()]})'
+  'createObject':
+    'prefix': 'createObject'
+    'body': 'createObject(${1:int modelid}, ${2:float x}, ${3:float y}, ${4:float z}, ${5:[float rx}, ${6:float ry}, ${7:float rz]})'
+  'createPed':
+    'prefix': 'createPed'
+    'body': 'createPed(${1:int modelid}, ${2:float x}, ${3:float y}, ${4:float z [}, ${5:float rot = 0.0}, ${6:bool bSynced = true ]})'
+  'createPickup':
+    'prefix': 'createPickup'
+    'body': 'createPickup(${1:float x}, ${2:float y}, ${3:float z}, ${4:int type}, ${5:int amount/weapon/model}, ${6:[ int respawnTime = 30000}, ${7:int ammo = 50 ]})'
+  'createProjectile':
+    'prefix': 'createProjectile'
+    'body': 'createProjectile(${1:element creator}, ${2:int weaponType}, ${3:[ float posX}, ${4:float posY}, ${5:float posZ}, ${6:float force = 1.0}, ${7:element target = nil}, ${8:float rotX}, ${9:float rotY}, ${10:float rotZ}, ${11:float velX}, ${12:float velY}, ${13:float velZ}, ${14:int model ]})'
+  'createRadarArea':
+    'prefix': 'createRadarArea'
+    'body': 'createRadarArea(${1:float centerX}, ${2:float centerY}, ${3:float sizeX}, ${4:float sizeY}, ${5:[ int r = 255}, ${6:int g = 0}, ${7:int b = 0}, ${8:int a = 255}, ${9:element visibleTo = getRootElement() ]})'
+  'createResource':
+    'prefix': 'createResource'
+    'body': 'createResource(${1:string resourceName})'
+  'createSWATRope':
+    'prefix': 'createSWATRope'
+    'body': 'createSWATRope(${1:float fx}, ${2:float fy}, ${3:float fZ}, ${4:int duration})'
+  'createTeam':
+    'prefix': 'createTeam'
+    'body': 'createTeam(${1:string teamName}, ${2:[int colorR = 255}, ${3:int colorG = 255}, ${4:int colorB = 255]})'
+  'createVehicle':
+    'prefix': 'createVehicle'
+    'body': 'createVehicle(${1:int model}, ${2:float x}, ${3:float y}, ${4:float z}, ${5:[float rx}, ${6:float ry}, ${7:float rz}, ${8:string numberplate]})'
+  'createWater':
+    'prefix': 'createWater'
+    'body': 'createWater(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float x3}, ${8:float y3}, ${9:float z3 [}, ${10:float x4}, ${11:float y4}, ${12:float z4 ]})'
+  'createWeapon':
+    'prefix': 'createWeapon'
+    'body': 'createWeapon(${1:string theType}, ${2:float x}, ${3:float y}, ${4:float z})'
+  'dbConnect':
+    'prefix': 'dbConnect'
+    'body': 'dbConnect(${1:string databaseType}, ${2:string host [}, ${3:string username}, ${4:string password}, ${5:string options]})'
+  'dbExec':
+    'prefix': 'dbExec'
+    'body': 'dbExec(${1:element databaseConnection}, ${2:string query [}, ${3:var parma1}, ${4:var parma2 ...]})'
+  'dbFree':
+    'prefix': 'dbFree'
+    'body': 'dbFree(${1:handle queryHandle})'
+  'dbPoll':
+    'prefix': 'dbPoll'
+    'body': 'dbPoll(${1:handle queryHandle}, ${2:int timeout})'
+  'dbQuery':
+    'prefix': 'dbQuery'
+    'body': 'dbQuery(${1:[ function callbackFunction}, ${2:table callbackArguments ]}, ${3:element databaseConnection}, ${4:string query [}, ${5:var parma1}, ${6:var parma2 ...]})'
+  'deleteResource':
+    'prefix': 'deleteResource'
+    'body': 'deleteResource(${1:string resourceName})'
+  'destroyElement':
+    'prefix': 'destroyElement'
+    'body': 'destroyElement(${1:element elementToDestroy})'
+  'detachElementFromElement':
+    'prefix': 'detachElementFromElement'
+    'body': 'detachElementFromElement(${1:element theElement}, ${2:[ element theAttachToElement ]})'
+  'detachElements':
+    'prefix': 'detachElements'
+    'body': 'detachElements(${1:element theElement}, ${2:[ element theAttachToElement ]})'
+  'detachTrailerFromVehicle':
+    'prefix': 'detachTrailerFromVehicle'
+    'body': 'detachTrailerFromVehicle(${1:vehicle theVehicle}, ${2:[vehicle theTrailer]})'
+  'DetonatePlayerSatchels':
+    'prefix': 'DetonatePlayerSatchels'
+    'body': 'DetonatePlayerSatchels()'
+  'detonateSatchels':
+    'prefix': 'detonateSatchels'
+    'body': 'detonateSatchels(${1:[Client: element Player]})'
+  'doesPedHaveJetPack':
+    'prefix': 'doesPedHaveJetPack'
+    'body': 'doesPedHaveJetPack(${1:ped thePed})'
+  'doesPlayerHaveJetPack':
+    'prefix': 'doesPlayerHaveJetPack'
+    'body': 'doesPlayerHaveJetPack(${1:player thePlayer})'
+  'downloadFile':
+    'prefix': 'downloadFile'
+    'body': 'downloadFile(${1:string fileName})'
+  'dxConvertPixels':
+    'prefix': 'dxConvertPixels'
+    'body': 'dxConvertPixels(${1:string pixels}, ${2:string newFormat [}, ${3:int quality ]})'
+  'dxCreateFont':
+    'prefix': 'dxCreateFont'
+    'body': 'dxCreateFont(${1:string filepath [}, ${2:int size=9}, ${3:bool bold = false]})'
+  'dxCreateRenderTarget':
+    'prefix': 'dxCreateRenderTarget'
+    'body': 'dxCreateRenderTarget(${1:int width}, ${2:itn height [}, ${3:bool withAlpha = false]})'
+  'dxCreateScreenSource':
+    'prefix': 'dxCreateScreenSource'
+    'body': 'dxCreateScreenSource(${1:int width}, ${2:itn height})'
+  'dxCreateShader':
+    'prefix': 'dxCreateShader'
+    'body': 'dxCreateShader(${1:string filepath})'
+  'dxCreateTexture':
+    'prefix': 'dxCreateTexture'
+    'body': 'dxCreateTexture(${1:string filepath/pixels [}, ${2:string textureFormat = argb}, ${3:bool mipmaps = true]})'
+  'dxDrawImage':
+    'prefix': 'dxDrawImage'
+    'body': 'dxDrawImage(${1:float posX}, ${2:float posY}, ${3:float width}, ${4:float height}, ${5:string filename [}, ${6:float rotation = 0}, ${7:float rotationCenterOffsetX = 0}, ${8:float rotationCenterOffsetY = 0}, ${9:int color = white}, ${10:bool postGUI = false ]})'
+  'dxDrawImageSection':
+    'prefix': 'dxDrawImageSection'
+    'body': 'dxDrawImageSection(${1:float posX}, ${2:float posY}, ${3:float width}, ${4:float height}, ${5:float u}, ${6:float v}, ${7:float usize}, ${8:float vsize}, ${9:mixed image [}, ${10:float rotation = 0}, ${11:float rotationCenterOffsetX = 0}, ${12:float rotationCenterOffsetY = 0}, ${13:int color = white}, ${14:bool postGUI = false ]})'
+  'dxDrawLine':
+    'prefix': 'dxDrawLine'
+    'body': 'dxDrawLine(${1:int startX}, ${2:int startY}, ${3:int endX}, ${4:int endY}, ${5:int color}, ${6:[float width=1}, ${7:bool postGUI=false]})'
+  'dxDrawLine3D':
+    'prefix': 'dxDrawLine3D'
+    'body': 'dxDrawLine3D(${1:float startX}, ${2:float startY}, ${3:float startZ}, ${4:float endX}, ${5:float endY}, ${6:float endZ}, ${7:int color[}, ${8:int width}, ${9:bool postGUI}, ${10:float zBuffer ]})'
+  'dxDrawMaterialLine3D':
+    'prefix': 'dxDrawMaterialLine3D'
+    'body': 'dxDrawMaterialLine3D(${1:float startX}, ${2:float startY}, ${3:float startZ}, ${4:float endX}, ${5:float endY}, ${6:float endZ}, ${7:element material}, ${8:int width [}, ${9:int color = white}, ${10:float faceTowardX}, ${11:float faceTowardY}, ${12:float faceTowardZ]})'
+  'dxDrawMaterialSectionLine3D':
+    'prefix': 'dxDrawMaterialSectionLine3D'
+    'body': 'dxDrawMaterialSectionLine3D(${1:float startX}, ${2:float startY}, ${3:float startZ}, ${4:float endX}, ${5:float endY}, ${6:float endZ}, ${7:float u}, ${8:float v}, ${9:float usize}, ${10:float vsize}, ${11:element material}, ${12:int width [}, ${13:int color = white}, ${14:float faceTowardX}, ${15:float faceTowardY}, ${16:float faceTowardZ ]})'
+  'dxDrawRectangle':
+    'prefix': 'dxDrawRectangle'
+    'body': 'dxDrawRectangle(${1:int startX}, ${2:startY}, ${3:float width}, ${4:float height [}, ${5:int color = white}, ${6:bool postGUI = false ]})'
+  'dxDrawText':
+    'prefix': 'dxDrawText'
+    'body': 'dxDrawText(${1:string text}, ${2:int left}, ${3:int top [}, ${4:int right=left}, ${5:int bottom=top}, ${6:int color=white}, ${7:float scale=1}, ${8:string font}, ${9:string alignX="left"}, ${10:string alignY="top"}, ${11:bool clip=false}, ${12:bool wordBreak=false}, ${13:bool postGUI]})'
+  'dxGetBlendMode':
+    'prefix': 'dxGetBlendMode'
+    'body': 'dxGetBlendMode()'
+  'dxGetFontHeight':
+    'prefix': 'dxGetFontHeight'
+    'body': 'dxGetFontHeight(${1:[float scale=1}, ${2:string font ]})'
+  'dxGetMaterialSize':
+    'prefix': 'dxGetMaterialSize'
+    'body': 'dxGetMaterialSize(${1:element material})'
+  'dxGetTexturePixels':
+    'prefix': 'dxGetTexturePixels'
+    'body': 'dxGetTexturePixels(${1:string pixels}, ${2:int x}, ${3:int y})'
+  'dxGetPixelsFormat':
+    'prefix': 'dxGetPixelsFormat'
+    'body': 'dxGetPixelsFormat(${1:string pixels})'
+  'dxGetPixelsSize':
+    'prefix': 'dxGetPixelsSize'
+    'body': 'dxGetPixelsSize(${1:string pixels})'
+  'dxGetStatus':
+    'prefix': 'dxGetStatus'
+    'body': 'dxGetStatus()'
+  'dxGetTexturePixels':
+    'prefix': 'dxGetTexturePixels'
+    'body': 'dxGetTexturePixels(${1:element texture [}, ${2:int X}, ${3:int Y}, ${4:int width}, ${5:int height ]})'
+  'dxGetTextWidth':
+    'prefix': 'dxGetTextWidth'
+    'body': 'dxGetTextWidth(${1:string text}, ${2:[float scale=1}, ${3:string font ]})'
+  'dxSetAspectRatioAdjustmentEnabled':
+    'prefix': 'dxSetAspectRatioAdjustmentEnabled'
+    'body': 'dxSetAspectRatioAdjustmentEnabled(${1:bool bEnabled [}, ${2:float sourceRatio = 4/3 ]})'
+  'dxSetBlendMode':
+    'prefix': 'dxSetBlendMode'
+    'body': 'dxSetBlendMode(${1:string blendMode})'
+  'dxSetPixelColor':
+    'prefix': 'dxSetPixelColor'
+    'body': 'dxSetPixelColor(${1:string pixels}, ${2:int x}, ${3:int y}, ${4:int r}, ${5:int g}, ${6:int b [}, ${7:int a = 255 ]})'
+  'dxSetRenderTarget':
+    'prefix': 'dxSetRenderTarget'
+    'body': 'dxSetRenderTarget(${1:element renderTarget}, ${2:bool clear = false})'
+  'dxSetShaderTessellation':
+    'prefix': 'dxSetShaderTessellation'
+    'body': 'dxSetShaderTessellation(${1:element shader}, ${2:int tessellationX}, ${3:int tessellationY})'
+  'dxSetShaderTransform':
+    'prefix': 'dxSetShaderTransform'
+    'body': 'dxSetShaderTransform(${1:element shader}, ${2:float rotationX}, ${3:float rotationY}, ${4:float rotationZ [}, ${5:float rotationCenterOffsetX = 0}, ${6:float rotationCenterOffsetY = 0}, ${7:float rotationCenterOffsetZ = 0}, ${8:bool bRotationCenterOffsetOriginIsScreen = false}, ${9:float perspectiveCenterOffsetX = 0}, ${10:float perspectiveCenterOffsetY = 0}, ${11:bool bPerspectiveCenterOffsetOriginIsScreen = false ]})'
+  'dxSetShaderValue':
+    'prefix': 'dxSetShaderValue'
+    'body': 'dxSetShaderValue(${1:element shader}, ${2:string parameterName}, ${3:mixed value})'
+  'dxSetTestMode':
+    'prefix': 'dxSetTestMode'
+    'body': 'dxSetTestMode(${1:string testMode})'
+  'dxSetTexturePixels':
+    'prefix': 'dxSetTexturePixels'
+    'body': 'dxSetTexturePixels(${1:element texture}, ${2:string pixels [}, ${3:int x}, ${4:int y}, ${5:int width}, ${6:int height ]})'
+  'dxUpdateScreenSource':
+    'prefix': 'dxUpdateScreenSource'
+    'body': 'dxUpdateScreenSource(${1:element screenSource})'
+  'engineApplyShaderToWorldTexture':
+    'prefix': 'engineApplyShaderToWorldTexture'
+    'body': 'engineApplyShaderToWorldTexture(${1:element shader}, ${2:string textureName})'
+  'engineGetModelIDFromName':
+    'prefix': 'engineGetModelIDFromName'
+    'body': 'engineGetModelIDFromName(${1:string modelName})'
+  'engineGetModelLODDistance':
+    'prefix': 'engineGetModelLODDistance'
+    'body': 'engineGetModelLODDistance(${1:int model})'
+  'engineGetModelNameFromID':
+    'prefix': 'engineGetModelNameFromID'
+    'body': 'engineGetModelNameFromID(${1:int modelID})'
+  'engineGetModelTextureNames':
+    'prefix': 'engineGetModelTextureNames'
+    'body': 'engineGetModelTextureNames()'
+  'engineGetVisibleTextureNames':
+    'prefix': 'engineGetVisibleTextureNames'
+    'body': 'engineGetVisibleTextureNames(${1:[ string nameFilter = "*"}, ${2:string modelId ]})'
+  'engineImportCOL':
+    'prefix': 'engineImportCOL'
+    'body': 'engineImportCOL(${1:col}, ${2:int model_id})'
+  'engineImportTXD':
+    'prefix': 'engineImportTXD'
+    'body': 'engineImportTXD(${1:txd texture}, ${2:int model_id})'
+  'engineLoadCOL':
+    'prefix': 'engineLoadCOL'
+    'body': 'engineLoadCOL(${1:string col_file})'
+  'engineLoadDFF':
+    'prefix': 'engineLoadDFF'
+    'body': 'engineLoadDFF(${1:string dff_file}, ${2:int model_id})'
+  'engineLoadTXD':
+    'prefix': 'engineLoadTXD'
+    'body': 'engineLoadTXD(${1:string txd_file})'
+  'engineRemoveShaderFromWorldTexture':
+    'prefix': 'engineRemoveShaderFromWorldTexture'
+    'body': 'engineRemoveShaderFromWorldTexture(${1:element shader}, ${2:string textureName})'
+  'engineReplaceCOL':
+    'prefix': 'engineReplaceCOL'
+    'body': 'engineReplaceCOL(${1:col theCol}, ${2:int modelID})'
+  'engineReplaceModel':
+    'prefix': 'engineReplaceModel'
+    'body': 'engineReplaceModel(${1:dff theModel}, ${2:int modelID})'
+  'engineRestoreCOL':
+    'prefix': 'engineRestoreCOL'
+    'body': 'engineRestoreCOL(${1:int modelID})'
+  'engineRestoreModel':
+    'prefix': 'engineRestoreModel'
+    'body': 'engineRestoreModel(${1:int modelID})'
+  'engineSetAsynchronousLoading':
+    'prefix': 'engineSetAsynchronousLoading'
+    'body': 'engineSetAsynchronousLoading(${1:bool enable}, ${2:bool force})'
+  'engineSetModelLODDistance':
+    'prefix': 'engineSetModelLODDistance'
+    'body': 'engineSetModelLODDistance(${1:int modelID}, ${2:float distance})'
+  'engineUnloadModel':
+    'prefix': 'engineUnloadModel'
+    'body': 'engineUnloadModel(${1:int model_id})'
+  'executeCommandHandler':
+    'prefix': 'executeCommandHandler'
+    'body': 'executeCommandHandler(${1:string commandName}, ${2:player thePlayer}, ${3:[ string args ]})'
+  'executeBrowserJavascript':
+    'prefix': 'executeBrowserJavascript'
+    'body': 'executeBrowserJavascript(${1:browser webBrowser}, ${2:string jsCode})'
+  'executeSQLCreateTable':
+    'prefix': 'executeSQLCreateTable'
+    'body': 'executeSQLCreateTable(${1:string tableName}, ${2:string definition})'
+  'executeSQLDelete':
+    'prefix': 'executeSQLDelete'
+    'body': 'executeSQLDelete(${1:string tableName}, ${2:string conditions})'
+  'executeSQLDropTable':
+    'prefix': 'executeSQLDropTable'
+    'body': 'executeSQLDropTable(${1:string tableName})'
+  'executeSQLInsert':
+    'prefix': 'executeSQLInsert'
+    'body': 'executeSQLInsert(${1:string tableName}, ${2:string values}, ${3:( [string columns] )})'
+  'executeSQLQuery':
+    'prefix': 'executeSQLQuery'
+    'body': 'executeSQLQuery(${1:string query [}, ${2:var param1 [}, ${3:var param2 ...]]})'
+  'executeSQLSelect':
+    'prefix': 'executeSQLSelect'
+    'body': 'executeSQLSelect(${1:string tableName}, ${2:string fields [}, ${3:string conditions}, ${4:int limit ]})'
+  'executeSQLUpdate':
+    'prefix': 'executeSQLUpdate'
+    'body': 'executeSQLUpdate(${1:string tableName}, ${2:string set [}, ${3:string conditions ]})'
+  'fadeCamera':
+    'prefix': 'fadeCamera'
+    'body': 'fadeCamera(${1:player thePlayer}, ${2:bool fadeIn [}, ${3:float timeToFade = 1.0}, ${4:int red = 0}, ${5:int green = 0}, ${6:int blue = 0 ]})'
+  'fetchRemote':
+    'prefix': 'fetchRemote'
+    'body': 'fetchRemote(${1:string URL}, ${2:callback callbackFunction [}, ${3:string postData = nil}, ${4:bool postIsBinary = false}, ${5:arguments... ]})'
+  'fileClose':
+    'prefix': 'fileClose'
+    'body': 'fileClose(${1:file theFile})'
+  'fileCopy':
+    'prefix': 'fileCopy'
+    'body': 'fileCopy(${1:string filePath}, ${2:string copyToFilePath [}, ${3:bool overwrite = false ]})'
+  'fileCreate':
+    'prefix': 'fileCreate'
+    'body': 'fileCreate(${1:string filename}, ${2:resource root = getThisResource ()})'
+  'fileDelete':
+    'prefix': 'fileDelete'
+    'body': 'fileDelete(${1:string filename [}, ${2:resource res = getThisResource()]})'
+  'fileExists':
+    'prefix': 'fileExists'
+    'body': 'fileExists(${1:string filePath})'
+  'fileFlush':
+    'prefix': 'fileFlush'
+    'body': 'fileFlush(${1:file theFile})'
+  'fileGetPos':
+    'prefix': 'fileGetPos'
+    'body': 'fileGetPos(${1:file theFile})'
+  'fileGetSize':
+    'prefix': 'fileGetSize'
+    'body': 'fileGetSize(${1:file theFile})'
+  'fileIsEOF':
+    'prefix': 'fileIsEOF'
+    'body': 'fileIsEOF(${1:file theFile})'
+  'fileOpen':
+    'prefix': 'fileOpen'
+    'body': 'fileOpen(${1:string filename [}, ${2:bool readonly = false}, ${3:resource root = getThisResource ()]})'
+  'fileRead':
+    'prefix': 'fileRead'
+    'body': 'fileRead(${1:file theFile}, ${2:int count})'
+  'fileRename':
+    'prefix': 'fileRename'
+    'body': 'fileRename(${1:string filePath}, ${2:string newFilePath})'
+  'fileSetPos':
+    'prefix': 'fileSetPos'
+    'body': 'fileSetPos(${1:file theFile}, ${2:int offset})'
+  'fileWrite':
+    'prefix': 'fileWrite'
+    'body': 'fileWrite(${1:file theFile}, ${2:string string1 [}, ${3:string string2}, ${4:string string3 ...]})'
+  'fireWeapon':
+    'prefix': 'fireWeapon'
+    'body': 'fireWeapon(${1:weapon theWeapon})'
+  'fixVehicle':
+    'prefix': 'fixVehicle'
+    'body': 'fixVehicle(${1:vehicle theVehicle})'
+  'focusBrowser':
+    'prefix': 'focusBrowser'
+    'body': 'focusBrowser(${1:browser webBrowser})'
+  'forcePlayerMap':
+    'prefix': 'forcePlayerMap'
+    'body': 'forcePlayerMap(${1:player thePlayer}, ${2:bool forceOn})'
+  'fromJSON':
+    'prefix': 'fromJSON'
+    'body': 'fromJSON(${1:string json})'
+  'fxAddBlood':
+    'prefix': 'fxAddBlood'
+    'body': 'fxAddBlood(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:float dirX}, ${5:float dirY}, ${6:float dirZ}, ${7:[int count=1}, ${8:float brightness=1.0]})'
+  'fxAddBulletImpact':
+    'prefix': 'fxAddBulletImpact'
+    'body': 'fxAddBulletImpact(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:float dirX}, ${5:float dirY}, ${6:float dirZ}, ${7:[int smokeSize=1}, ${8:int sparkCount=1}, ${9:float smokeIntensity=1.0]})'
+  'fxAddBulletSplash':
+    'prefix': 'fxAddBulletSplash'
+    'body': 'fxAddBulletSplash(${1:float posX}, ${2:float posY}, ${3:float posZ})'
+  'fxAddDebris':
+    'prefix': 'fxAddDebris'
+    'body': 'fxAddDebris(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:[int colorR=255}, ${5:int colorG=0}, ${6:int colorB=0}, ${7:int colorA=255}, ${8:float scale=1.0}, ${9:int count=1]})'
+  'fxAddFootSplash':
+    'prefix': 'fxAddFootSplash'
+    'body': 'fxAddFootSplash(${1:float posX}, ${2:float posY}, ${3:float posZ})'
+  'fxAddGlass':
+    'prefix': 'fxAddGlass'
+    'body': 'fxAddGlass(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:[int colorR=255}, ${5:int colorG=0}, ${6:int colorB=0}, ${7:int colorA=255}, ${8:float scale=1.0}, ${9:int count=1]})'
+  'fxAddGunshot':
+    'prefix': 'fxAddGunshot'
+    'body': 'fxAddGunshot(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:float dirX}, ${5:float dirY}, ${6:float dirZ}, ${7:[bool includeSparks=true]})'
+  'fxAddPunchImpact':
+    'prefix': 'fxAddPunchImpact'
+    'body': 'fxAddPunchImpact(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:float dirX}, ${5:float dirY}, ${6:float dirZ})'
+  'fxAddSparks':
+    'prefix': 'fxAddSparks'
+    'body': 'fxAddSparks(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:float dirX}, ${5:float dirY}, ${6:float dirZ}, ${7:[float force=1}, ${8:int count=1}, ${9:float acrossLineX=0}, ${10:float acrossLineY=0}, ${11:float acrossLineZ=0}, ${12:bool blur=false}, ${13:float spread=1}, ${14:float life=1]})'
+  'fxAddTankFire':
+    'prefix': 'fxAddTankFire'
+    'body': 'fxAddTankFire(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:float dirX}, ${5:float dirY}, ${6:float dirZ})'
+  'fxAddTyreBurst':
+    'prefix': 'fxAddTyreBurst'
+    'body': 'fxAddTyreBurst(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:float dirX}, ${5:float dirY}, ${6:float dirZ})'
+  'fxAddWaterHydrant':
+    'prefix': 'fxAddWaterHydrant'
+    'body': 'fxAddWaterHydrant(${1:float posX}, ${2:float posY}, ${3:float posZ})'
+  'fxAddWaterSplash':
+    'prefix': 'fxAddWaterSplash'
+    'body': 'fxAddWaterSplash(${1:float posX}, ${2:float posY}, ${3:float posZ})'
+  'fxAddWood':
+    'prefix': 'fxAddWood'
+    'body': 'fxAddWood(${1:float posX}, ${2:float posY}, ${3:float posZ}, ${4:float dirX}, ${5:float dirY}, ${6:float dirZ}, ${7:[int count=1}, ${8:float brightness=1.0]})'
+  'get':
+    'prefix': 'get'
+    'body': 'get(${1:string settingName})'
+  'getAccount':
+    'prefix': 'getAccount'
+    'body': 'getAccount(${1:string username}, ${2:[ string password ]})'
+  'getAccountsBySerial':
+    'prefix': 'getAccountsBySerial'
+    'body': 'getAccountsBySerial(${1:string serial})'
+  'getAccountSerial':
+    'prefix': 'getAccountSerial'
+    'body': 'getAccountSerial(${1:account theAccount})'
+  'getAccountClient':
+    'prefix': 'getAccountClient'
+    'body': 'getAccountClient(${1:account theAccount})'
+  'getAccountData':
+    'prefix': 'getAccountData'
+    'body': 'getAccountData(${1:account theAccount}, ${2:string key})'
+  'getAccountName':
+    'prefix': 'getAccountName'
+    'body': 'getAccountName(${1:account theAccount})'
+  'getAccountPlayer':
+    'prefix': 'getAccountPlayer'
+    'body': 'getAccountPlayer(${1:account theAccount})'
+  'getAccounts':
+    'prefix': 'getAccounts'
+    'body': 'getAccounts()'
+  'getAllAccountData':
+    'prefix': 'getAllAccountData'
+    'body': 'getAllAccountData(${1:account theAccount})'
+  'getAircraftMaxHeight':
+    'prefix': 'getAircraftMaxHeight'
+    'body': 'getAircraftMaxHeight()'
+  'getAircraftMaxVelocity':
+    'prefix': 'getAircraftMaxVelocity'
+    'body': 'getAircraftMaxVelocity()'
+  'getAlivePlayers':
+    'prefix': 'getAlivePlayers'
+    'body': 'getAlivePlayers()'
+  'getAllElementData':
+    'prefix': 'getAllElementData'
+    'body': 'getAllElementData(${1:element theElement})'
+  'getAnalogControlState':
+    'prefix': 'getAnalogControlState'
+    'body': 'getAnalogControlState(${1:string controlName})'
+  'getAttachedElements':
+    'prefix': 'getAttachedElements'
+    'body': 'getAttachedElements(${1:element theElement})'
+  'getBanAdmin':
+    'prefix': 'getBanAdmin'
+    'body': 'getBanAdmin(${1:ban theBan})'
+  'getBanIP':
+    'prefix': 'getBanIP'
+    'body': 'getBanIP(${1:ban theBan})'
+  'getBanNick':
+    'prefix': 'getBanNick'
+    'body': 'getBanNick(${1:ban theBan})'
+  'getBanReason':
+    'prefix': 'getBanReason'
+    'body': 'getBanReason(${1:ban theBan})'
+  'getBans':
+    'prefix': 'getBans'
+    'body': 'getBans()'
+  'getBanSerial':
+    'prefix': 'getBanSerial'
+    'body': 'getBanSerial(${1:ban theBan})'
+  'getBansXML':
+    'prefix': 'getBansXML'
+    'body': 'getBansXML()'
+  'getBanTime':
+    'prefix': 'getBanTime'
+    'body': 'getBanTime(${1:ban theBan})'
+  'getBanUsername':
+    'prefix': 'getBanUsername'
+    'body': 'getBanUsername(${1:ban theBan})'
+  'getBirdsEnabled':
+    'prefix': 'getBirdsEnabled'
+    'body': 'getBirdsEnabled()'
+  'getBlipColor':
+    'prefix': 'getBlipColor'
+    'body': 'getBlipColor(${1:blip theBlip})'
+  'getBlipIcon':
+    'prefix': 'getBlipIcon'
+    'body': 'getBlipIcon(${1:blip theBlip})'
+  'getBlipOrdering':
+    'prefix': 'getBlipOrdering'
+    'body': 'getBlipOrdering(${1:blip theBlip})'
+  'getBlipSize':
+    'prefix': 'getBlipSize'
+    'body': 'getBlipSize(${1:blip theBlip})'
+  'getBlipVisibleDistance':
+    'prefix': 'getBlipVisibleDistance'
+    'body': 'getBlipVisibleDistance(${1:blip theBlip})'
+  'getBlurLevel':
+    'prefix': 'getBlurLevel'
+    'body': 'getBlurLevel(${1:player thePlayer})'
+  'getBodyPartName':
+    'prefix': 'getBodyPartName'
+    'body': 'getBodyPartName(${1:int bodyPartID})'
+  'getBoundKeys':
+    'prefix': 'getBoundKeys'
+    'body': 'getBoundKeys(${1:string command/control})'
+  'getBrowserProperty':
+    'prefix': 'getBrowserProperty'
+    'body': 'getBrowserProperty(${1:string key})'
+  'getBrowserTitle':
+    'prefix': 'getBrowserTitle'
+    'body': 'getBrowserTitle(${1:browser webBrowser})'
+  'getBrowserURL':
+    'prefix': 'getBrowserURL'
+    'body': 'getBrowserURL(${1:browser webBrowser})'
+  'getCameraFieldOfView':
+    'prefix': 'getCameraFieldOfView'
+    'body': 'getCameraFieldOfView(${1:string cameraMode})'
+  'getCamera':
+    'prefix': 'getCamera'
+    'body': 'getCamera()'
+  'getCameraFixedModeTarget':
+    'prefix': 'getCameraFixedModeTarget'
+    'body': 'getCameraFixedModeTarget()'
+  'getCameraGoggleEffect':
+    'prefix': 'getCameraGoggleEffect'
+    'body': 'getCameraGoggleEffect()'
+  'getCameraInterior':
+    'prefix': 'getCameraInterior'
+    'body': 'getCameraInterior(${1:player thePlayer})'
+  'getCameraMatrix':
+    'prefix': 'getCameraMatrix'
+    'body': 'getCameraMatrix(${1:player thePlayer})'
+  'getCameraMode':
+    'prefix': 'getCameraMode'
+    'body': 'getCameraMode(${1:player thePlayer})'
+  'getCameraPosition':
+    'prefix': 'getCameraPosition'
+    'body': 'getCameraPosition()'
+  'getCameraRotation':
+    'prefix': 'getCameraRotation'
+    'body': 'getCameraRotation()'
+  'getCameraShakeLevel':
+    'prefix': 'getCameraShakeLevel'
+    'body': 'getCameraShakeLevel()'
+  'getCameraTarget':
+    'prefix': 'getCameraTarget'
+    'body': 'getCameraTarget(${1:player thePlayer})'
+  'getCameraViewMode':
+    'prefix': 'getCameraViewMode'
+    'body': 'getCameraViewMode()'
+  'getCancelReason':
+    'prefix': 'getCancelReason'
+    'body': 'getCancelReason()'
+  'getChatboxLayout':
+    'prefix': 'getChatboxLayout'
+    'body': 'getChatboxLayout(${1:string CVar})'
+  'getClientAccount':
+    'prefix': 'getClientAccount'
+    'body': 'getClientAccount(${1:client theClient})'
+  'getClientIP':
+    'prefix': 'getClientIP'
+    'body': 'getClientIP(${1:client theClient})'
+  'getClientName':
+    'prefix': 'getClientName'
+    'body': 'getClientName(${1:client theClient})'
+  'getClothesByTypeIndex':
+    'prefix': 'getClothesByTypeIndex'
+    'body': 'getClothesByTypeIndex(${1:int clothesType}, ${2:int clothesIndex})'
+  'getClothesTypeName':
+    'prefix': 'getClothesTypeName'
+    'body': 'getClothesTypeName(${1:int clothesType})'
+  'getColorFromString':
+    'prefix': 'getColorFromString'
+    'body': 'getColorFromString(${1:string theColor})'
+  'getCloudsEnabled':
+    'prefix': 'getCloudsEnabled'
+    'body': 'getCloudsEnabled()'
+  'getControlState':
+    'prefix': 'getControlState'
+    'body': 'getControlState(${1:player thePlayer}, ${2:string controlName})'
+  'getCursorAlpha':
+    'prefix': 'getCursorAlpha'
+    'body': 'getCursorAlpha()'
+  'getCursorPosition':
+    'prefix': 'getCursorPosition'
+    'body': 'getCursorPosition()'
+  'getDeadPlayers':
+    'prefix': 'getDeadPlayers'
+    'body': 'getDeadPlayers()'
+  'getDevelopmentMode':
+    'prefix': 'getDevelopmentMode'
+    'body': 'getDevelopmentMode()'
+  'getDistanceBetweenPoints2D':
+    'prefix': 'getDistanceBetweenPoints2D'
+    'body': 'getDistanceBetweenPoints2D(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2})'
+  'getDistanceBetweenPoints3D':
+    'prefix': 'getDistanceBetweenPoints3D'
+    'body': 'getDistanceBetweenPoints3D(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2})'
+  'getEasingValue':
+    'prefix': 'getEasingValue'
+    'body': 'getEasingValue(${1:float fProgress}, ${2:string strEasingType [}, ${3:float fEasingPeriod}, ${4:float fEasingAmplitude}, ${5:float fEasingOvershoot]})'
+  'getEffectSpeed':
+    'prefix': 'getEffectSpeed'
+    'body': 'getEffectSpeed(${1:effect theEffect})'
+  'getEffectDensity':
+    'prefix': 'getEffectDensity'
+    'body': 'getEffectDensity(${1:effect theEffect})'
+  'getElementAlpha':
+    'prefix': 'getElementAlpha'
+    'body': 'getElementAlpha(${1:element theElement})'
+  'getElementAttachedOffsets':
+    'prefix': 'getElementAttachedOffsets'
+    'body': 'getElementAttachedOffsets(${1:element theElement})'
+  'getElementAttachedTo':
+    'prefix': 'getElementAttachedTo'
+    'body': 'getElementAttachedTo(${1:element theElement})'
+  'getElementBoundingBox':
+    'prefix': 'getElementBoundingBox'
+    'body': 'getElementBoundingBox(${1:element theElement})'
+  'getElementByID':
+    'prefix': 'getElementByID'
+    'body': 'getElementByID(${1:string id})'
+  'getElementByIndex':
+    'prefix': 'getElementByIndex'
+    'body': 'getElementByIndex(${1:string type}, ${2:int index})'
+  'getElementChild':
+    'prefix': 'getElementChild'
+    'body': 'getElementChild(${1:element parent}, ${2:int index})'
+  'getElementChildren':
+    'prefix': 'getElementChildren'
+    'body': 'getElementChildren(${1:element parent})'
+  'getElementChildrenCount':
+    'prefix': 'getElementChildrenCount'
+    'body': 'getElementChildrenCount(${1:element parent})'
+  'getElementCollisionsEnabled':
+    'prefix': 'getElementCollisionsEnabled'
+    'body': 'getElementCollisionsEnabled(${1:element theElement})'
+  'getElementColShape':
+    'prefix': 'getElementColShape'
+    'body': 'getElementColShape(${1:element theElement})'
+  'getElementData':
+    'prefix': 'getElementData'
+    'body': 'getElementData(${1:element theElement}, ${2:string key [}, ${3:inherit = true]})'
+  'getElementDimension':
+    'prefix': 'getElementDimension'
+    'body': 'getElementDimension(${1:element theElement})'
+  'getElementDistanceFromCentreOfMassToBaseOfModel':
+    'prefix': 'getElementDistanceFromCentreOfMassToBaseOfModel'
+    'body': 'getElementDistanceFromCentreOfMassToBaseOfModel(${1:element theElement})'
+  'getElementHealth':
+    'prefix': 'getElementHealth'
+    'body': 'getElementHealth(${1:element theElement})'
+  'getElementID':
+    'prefix': 'getElementID'
+    'body': 'getElementID(${1:element theElement})'
+  'getElementInterior':
+    'prefix': 'getElementInterior'
+    'body': 'getElementInterior(${1:element theElement})'
+  'getElementMatrix':
+    'prefix': 'getElementMatrix'
+    'body': 'getElementMatrix(${1:element theElement})'
+  'getElementModel':
+    'prefix': 'getElementModel'
+    'body': 'getElementModel(${1:element theElement})'
+  'getElementParent':
+    'prefix': 'getElementParent'
+    'body': 'getElementParent(${1:element theElement})'
+  'getElementPosition':
+    'prefix': 'getElementPosition'
+    'body': 'getElementPosition(${1:element theElement})'
+  'getElementRadius':
+    'prefix': 'getElementRadius'
+    'body': 'getElementRadius(${1:element theElement})'
+  'getElementRotation':
+    'prefix': 'getElementRotation'
+    'body': 'getElementRotation(${1:element theElement})'
+  'getElementsByType':
+    'prefix': 'getElementsByType'
+    'body': 'getElementsByType(${1:string type}, ${2:[ element startat=getRootElement() ]})'
+  'getElementsWithinColShape':
+    'prefix': 'getElementsWithinColShape'
+    'body': 'getElementsWithinColShape(${1:colshape shape}, ${2:[ string elemType ]})'
+  'getElementSyncer':
+    'prefix': 'getElementSyncer'
+    'body': 'getElementSyncer(${1:element theElement})'
+  'getElementType':
+    'prefix': 'getElementType'
+    'body': 'getElementType(${1:element theElement})'
+  'getElementVelocity':
+    'prefix': 'getElementVelocity'
+    'body': 'getElementVelocity(${1:element theElement})'
+  'getElementZoneName':
+    'prefix': 'getElementZoneName'
+    'body': 'getElementZoneName(${1:element theElement}, ${2:[bool citiesonly=false]})'
+  'getEventHandlers':
+    'prefix': 'getEventHandlers'
+    'body': 'getEventHandlers(${1:string eventName}, ${2:element attachedTo})'
+  'getFarClipDistance':
+    'prefix': 'getFarClipDistance'
+    'body': 'getFarClipDistance()'
+  'getFogDistance':
+    'prefix': 'getFogDistance'
+    'body': 'getFogDistance()'
+  'getFPSLimit':
+    'prefix': 'getFPSLimit'
+    'body': 'getFPSLimit()'
+  'getFunctionsBoundToKey':
+    'prefix': 'getFunctionsBoundToKey'
+    'body': 'getFunctionsBoundToKey(${1:player thePlayer}, ${2:string theKey})'
+  'getGameSpeed':
+    'prefix': 'getGameSpeed'
+    'body': 'getGameSpeed()'
+  'getGameType':
+    'prefix': 'getGameType'
+    'body': 'getGameType()'
+  'getGarageBoundingBox':
+    'prefix': 'getGarageBoundingBox'
+    'body': 'getGarageBoundingBox(${1:int garageID})'
+  'getGaragePosition':
+    'prefix': 'getGaragePosition'
+    'body': 'getGaragePosition(${1:int garageID})'
+  'getGarageSize':
+    'prefix': 'getGarageSize'
+    'body': 'getGarageSize(${1:int garageID})'
+  'getGravity':
+    'prefix': 'getGravity'
+    'body': 'getGravity()'
+  'getGroundPosition':
+    'prefix': 'getGroundPosition'
+    'body': 'getGroundPosition(${1:float x}, ${2:float y}, ${3:float z})'
+  'getHeatHaze':
+    'prefix': 'getHeatHaze'
+    'body': 'getHeatHaze()'
+  'getHelicopterRotorSpeed':
+    'prefix': 'getHelicopterRotorSpeed'
+    'body': 'getHelicopterRotorSpeed(${1:vehicle heli})'
+  'getInteriorSoundsEnabled':
+    'prefix': 'getInteriorSoundsEnabled'
+    'body': 'getInteriorSoundsEnabled()'
+  'getJetpackMaxHeight':
+    'prefix': 'getJetpackMaxHeight'
+    'body': 'getJetpackMaxHeight()'
+  'getJetpackWeaponEnabled':
+    'prefix': 'getJetpackWeaponEnabled'
+    'body': 'getJetpackWeaponEnabled(${1:string weapon})'
+  'getKeyBoundToCommand':
+    'prefix': 'getKeyBoundToCommand'
+    'body': 'getKeyBoundToCommand(${1:string command})'
+  'getKeyBoundToFunction':
+    'prefix': 'getKeyBoundToFunction'
+    'body': 'getKeyBoundToFunction(${1:player thePlayer}, ${2:function theFunction})'
+  'getCommandsBoundToKey':
+    'prefix': 'getCommandsBoundToKey'
+    'body': 'getCommandsBoundToKey(${1:string theKey}, ${2:string keyState})'
+  'getKeyState':
+    'prefix': 'getKeyState'
+    'body': 'getKeyState(${1:string keyName})'
+  'getLatentEventHandles':
+    'prefix': 'getLatentEventHandles'
+    'body': 'getLatentEventHandles(${1:[Server: player thePlayer]})'
+  'getLatentEventStatus':
+    'prefix': 'getLatentEventStatus'
+    'body': 'getLatentEventStatus(${1:[Server: player thePlayer]}, ${2:int handle})'
+  'getLightColor':
+    'prefix': 'getLightColor'
+    'body': 'getLightColor(${1:light theLight})'
+  'getLightDirection':
+    'prefix': 'getLightDirection'
+    'body': 'getLightDirection(${1:light theLight})'
+  'getLightType':
+    'prefix': 'getLightType'
+    'body': 'getLightType(${1:light theLight})'
+  'getLightRadius':
+    'prefix': 'getLightRadius'
+    'body': 'getLightRadius(${1:light theLight})'
+  'getLoadedModules':
+    'prefix': 'getLoadedModules'
+    'body': 'getLoadedModules()'
+  'getLocalization':
+    'prefix': 'getLocalization'
+    'body': 'getLocalization()'
+  'getLocalPlayer':
+    'prefix': 'getLocalPlayer'
+    'body': 'getLocalPlayer()'
+  'getLowLODElement':
+    'prefix': 'getLowLODElement'
+    'body': 'getLowLODElement(${1:element theElement})'
+  'getMapName':
+    'prefix': 'getMapName'
+    'body': 'getMapName()'
+  'getMarkerColor':
+    'prefix': 'getMarkerColor'
+    'body': 'getMarkerColor(${1:marker theMarker})'
+  'getMarkerCount':
+    'prefix': 'getMarkerCount'
+    'body': 'getMarkerCount()'
+  'getMarkerIcon':
+    'prefix': 'getMarkerIcon'
+    'body': 'getMarkerIcon(${1:marker theMarker})'
+  'getMarkerSize':
+    'prefix': 'getMarkerSize'
+    'body': 'getMarkerSize(${1:marker myMarker})'
+  'getMarkerTarget':
+    'prefix': 'getMarkerTarget'
+    'body': 'getMarkerTarget(${1:marker theMarker})'
+  'getMarkerType':
+    'prefix': 'getMarkerType'
+    'body': 'getMarkerType(${1:marker theMarker})'
+  'getMaxPlayers':
+    'prefix': 'getMaxPlayers'
+    'body': 'getMaxPlayers()'
+  'getMinuteDuration':
+    'prefix': 'getMinuteDuration'
+    'body': 'getMinuteDuration()'
+  'getModelHandling':
+    'prefix': 'getModelHandling'
+    'body': 'getModelHandling(${1:int modelId})'
+  'getModuleInfo':
+    'prefix': 'getModuleInfo'
+    'body': 'getModuleInfo(${1:string moduleName})'
+  'getModules':
+    'prefix': 'getModules'
+    'body': 'getModules()'
+  'getMoonSize':
+    'prefix': 'getMoonSize'
+    'body': 'getMoonSize()'
+  'getMTAVersion':
+    'prefix': 'getMTAVersion'
+    'body': 'getMTAVersion()'
+  'getNetworkStats':
+    'prefix': 'getNetworkStats'
+    'body': 'getNetworkStats(${1:[Server: element thePlayer = nil]})'
+  'getNetworkUsageData':
+    'prefix': 'getNetworkUsageData'
+    'body': 'getNetworkUsageData()'
+  'getOcclusionsEnabled':
+    'prefix': 'getOcclusionsEnabled'
+    'body': 'getOcclusionsEnabled()'
+  'getObjectMass':
+    'prefix': 'getObjectMass'
+    'body': 'getObjectMass(${1:object theObject})'
+  'getObjectModel':
+    'prefix': 'getObjectModel'
+    'body': 'getObjectModel(${1:object theObject})'
+  'getObjectScale':
+    'prefix': 'getObjectScale'
+    'body': 'getObjectScale(${1:object theObject})'
+  'getObjectRotation':
+    'prefix': 'getObjectRotation'
+    'body': 'getObjectRotation(${1:object theObject})'
+  'getOriginalHandling':
+    'prefix': 'getOriginalHandling'
+    'body': 'getOriginalHandling(${1:int modelID})'
+  'getOriginalWeaponProperty':
+    'prefix': 'getOriginalWeaponProperty'
+    'body': 'getOriginalWeaponProperty(${1:int weaponID/string weaponName}, ${2:string weaponType}, ${3:string property/int property})'
+  'getPacketInfo':
+    'prefix': 'getPacketInfo'
+    'body': 'getPacketInfo()'
+  'getPedAmmoInClip':
+    'prefix': 'getPedAmmoInClip'
+    'body': 'getPedAmmoInClip(${1:ped thePed [}, ${2:int weaponSlot = current ]})'
+  'getPedAnalogControlState':
+    'prefix': 'getPedAnalogControlState'
+    'body': 'getPedAnalogControlState(${1:ped thePed})'
+  'getPedAnimation':
+    'prefix': 'getPedAnimation'
+    'body': 'getPedAnimation(${1:ped thePed})'
+  'getPedAnimationData':
+    'prefix': 'getPedAnimationData'
+    'body': 'getPedAnimationData(${1:ped thePed})'
+  'getPedArmor':
+    'prefix': 'getPedArmor'
+    'body': 'getPedArmor(${1:ped thePed})'
+  'getPedBonePosition':
+    'prefix': 'getPedBonePosition'
+    'body': 'getPedBonePosition(${1:ped thePed}, ${2:int bone})'
+  'getPedCameraRotation':
+    'prefix': 'getPedCameraRotation'
+    'body': 'getPedCameraRotation(${1:ped thePed})'
+  'getPedClothes':
+    'prefix': 'getPedClothes'
+    'body': 'getPedClothes(${1:ped thePed}, ${2:int clothesType})'
+  'getPedContactElement':
+    'prefix': 'getPedContactElement'
+    'body': 'getPedContactElement(${1:ped thePed})'
+  'getPedControlState':
+    'prefix': 'getPedControlState'
+    'body': 'getPedControlState(${1:ped thePed}, ${2:string control})'
+  'getPedFightingStyle':
+    'prefix': 'getPedFightingStyle'
+    'body': 'getPedFightingStyle(${1:ped thePed})'
+  'getPedFrozen':
+    'prefix': 'getPedFrozen'
+    'body': 'getPedFrozen(${1:ped thePed})'
+  'getPedGravity':
+    'prefix': 'getPedGravity'
+    'body': 'getPedGravity(${1:ped thePed})'
+  'getPedMoveState':
+    'prefix': 'getPedMoveState'
+    'body': 'getPedMoveState(${1:ped thePed})'
+  'getPedOccupiedVehicle':
+    'prefix': 'getPedOccupiedVehicle'
+    'body': 'getPedOccupiedVehicle(${1:ped thePed})'
+  'getPedOccupiedVehicleSeat':
+    'prefix': 'getPedOccupiedVehicleSeat'
+    'body': 'getPedOccupiedVehicleSeat(${1:ped thePed})'
+  'getPedOxygenLevel':
+    'prefix': 'getPedOxygenLevel'
+    'body': 'getPedOxygenLevel(${1:ped thePed})'
+  'getPedRotation':
+    'prefix': 'getPedRotation'
+    'body': 'getPedRotation(${1:ped thePed})'
+  'getPedSimplestTask':
+    'prefix': 'getPedSimplestTask'
+    'body': 'getPedSimplestTask(${1:ped thePed})'
+  'getPedSkin':
+    'prefix': 'getPedSkin'
+    'body': 'getPedSkin(${1:ped thePed})'
+  'getPedStat':
+    'prefix': 'getPedStat'
+    'body': 'getPedStat(${1:ped thePed}, ${2:int stat})'
+  'getPedTarget':
+    'prefix': 'getPedTarget'
+    'body': 'getPedTarget(${1:ped thePed})'
+  'getPedTargetCollision':
+    'prefix': 'getPedTargetCollision'
+    'body': 'getPedTargetCollision(${1:ped targetingPed})'
+  'getPedTargetEnd':
+    'prefix': 'getPedTargetEnd'
+    'body': 'getPedTargetEnd(${1:ped targetingPed})'
+  'getPedTargetRange':
+    'prefix': 'getPedTargetRange'
+    'body': 'getPedTargetRange(${1:ped targetingPed})'
+  'getPedTargetStart':
+    'prefix': 'getPedTargetStart'
+    'body': 'getPedTargetStart(${1:ped targetingPed})'
+  'getPedTask':
+    'prefix': 'getPedTask'
+    'body': 'getPedTask(${1:ped thePed}, ${2:string priority}, ${3:int taskType}, ${4:[int index = 0]})'
+  'getPedTotalAmmo':
+    'prefix': 'getPedTotalAmmo'
+    'body': 'getPedTotalAmmo(${1:ped thePed}, ${2:[ int weaponSlot = current ]})'
+  'getPedVoice':
+    'prefix': 'getPedVoice'
+    'body': 'getPedVoice(${1:ped thePed})'
+  'getPedWeapon':
+    'prefix': 'getPedWeapon'
+    'body': 'getPedWeapon(${1:ped thePed}, ${2:[ int weaponSlot = current ]})'
+  'getPedWeaponMuzzlePosition':
+    'prefix': 'getPedWeaponMuzzlePosition'
+    'body': 'getPedWeaponMuzzlePosition(${1:ped thePed})'
+  'getPedWeaponSlot':
+    'prefix': 'getPedWeaponSlot'
+    'body': 'getPedWeaponSlot(${1:ped thePed})'
+  'getPerformanceStats':
+    'prefix': 'getPerformanceStats'
+    'body': 'getPerformanceStats()'
+  'getPickupAmmo':
+    'prefix': 'getPickupAmmo'
+    'body': 'getPickupAmmo(${1:pickup thePickup})'
+  'getPickupAmount':
+    'prefix': 'getPickupAmount'
+    'body': 'getPickupAmount(${1:pickup thePickup})'
+  'getPickupRespawnInterval':
+    'prefix': 'getPickupRespawnInterval'
+    'body': 'getPickupRespawnInterval(${1:pickup thePickup})'
+  'getPickupType':
+    'prefix': 'getPickupType'
+    'body': 'getPickupType(${1:pickup thePickup})'
+  'getPickupWeapon':
+    'prefix': 'getPickupWeapon'
+    'body': 'getPickupWeapon(${1:pickup thePickup})'
+  'getPlayerAccount':
+    'prefix': 'getPlayerAccount'
+    'body': 'getPlayerAccount(${1:player thePlayer})'
+  'getPlayerACInfo':
+    'prefix': 'getPlayerACInfo'
+    'body': 'getPlayerACInfo(${1:element thePlayer})'
+  'getPlayerAmmoInClip':
+    'prefix': 'getPlayerAmmoInClip'
+    'body': 'getPlayerAmmoInClip(${1:player thePlayer})'
+  'getPlayerAnnounceValue':
+    'prefix': 'getPlayerAnnounceValue'
+    'body': 'getPlayerAnnounceValue(${1:player thePlayer}, ${2:string key})'
+  'getPlayerArmor':
+    'prefix': 'getPlayerArmor'
+    'body': 'getPlayerArmor(${1:player thePlayer})'
+  'getPlayerBlurLevel':
+    'prefix': 'getPlayerBlurLevel'
+    'body': 'getPlayerBlurLevel(${1:player thePlayer})'
+  'getPlayerClothes':
+    'prefix': 'getPlayerClothes'
+    'body': 'getPlayerClothes(${1:player thePlayer}, ${2:int clothesType})'
+  'getPlayerContactElement':
+    'prefix': 'getPlayerContactElement'
+    'body': 'getPlayerContactElement(${1:player thePlayer})'
+  'getPlayerCount':
+    'prefix': 'getPlayerCount'
+    'body': 'getPlayerCount()'
+  'getPlayerFightingStyle':
+    'prefix': 'getPlayerFightingStyle'
+    'body': 'getPlayerFightingStyle(${1:player thePlayer})'
+  'getPlayerFromName':
+    'prefix': 'getPlayerFromName'
+    'body': 'getPlayerFromName(${1:string playerName})'
+  'getPlayerGravity':
+    'prefix': 'getPlayerGravity'
+    'body': 'getPlayerGravity(${1:player thePlayer})'
+  'getPlayerIdleTime':
+    'prefix': 'getPlayerIdleTime'
+    'body': 'getPlayerIdleTime(${1:player thePlayer})'
+  'getPlayerIP':
+    'prefix': 'getPlayerIP'
+    'body': 'getPlayerIP(${1:player thePlayer})'
+  'getPlayerMapBoundingBox':
+    'prefix': 'getPlayerMapBoundingBox'
+    'body': 'getPlayerMapBoundingBox()'
+  'getPlayerMoney':
+    'prefix': 'getPlayerMoney'
+    'body': 'getPlayerMoney(${1:player thePlayer})'
+  'getPlayerName':
+    'prefix': 'getPlayerName'
+    'body': 'getPlayerName(${1:player thePlayer})'
+  'getPlayerNametagColor':
+    'prefix': 'getPlayerNametagColor'
+    'body': 'getPlayerNametagColor(${1:player thePlayer})'
+  'getPlayerNametagText':
+    'prefix': 'getPlayerNametagText'
+    'body': 'getPlayerNametagText(${1:player thePlayer})'
+  'getPlayerOccupiedVehicle':
+    'prefix': 'getPlayerOccupiedVehicle'
+    'body': 'getPlayerOccupiedVehicle(${1:player thePlayer})'
+  'getPlayerOccupiedVehicleSeat':
+    'prefix': 'getPlayerOccupiedVehicleSeat'
+    'body': 'getPlayerOccupiedVehicleSeat(${1:player thePlayer})'
+  'getPlayerPing':
+    'prefix': 'getPlayerPing'
+    'body': 'getPlayerPing(${1:player thePlayer})'
+  'getPlayerRotation':
+    'prefix': 'getPlayerRotation'
+    'body': 'getPlayerRotation(${1:player thePlayer})'
+  'getPlayerSerial':
+    'prefix': 'getPlayerSerial'
+    'body': 'getPlayerSerial(${1:[Server: player thePlayer]})'
+  'getPlayerSimplestTask':
+    'prefix': 'getPlayerSimplestTask'
+    'body': 'getPlayerSimplestTask(${1:player thePlayer})'
+  'getPlayersInTeam':
+    'prefix': 'getPlayersInTeam'
+    'body': 'getPlayersInTeam(${1:team theTeam})'
+  'getPlayerSkin':
+    'prefix': 'getPlayerSkin'
+    'body': 'getPlayerSkin(${1:player thePlayer})'
+  'getPlayerStat':
+    'prefix': 'getPlayerStat'
+    'body': 'getPlayerStat(${1:player thePlayer}, ${2:int stat})'
+  'getPlayerTarget':
+    'prefix': 'getPlayerTarget'
+    'body': 'getPlayerTarget(${1:player thePlayer})'
+  'getPlayerTargetCollision':
+    'prefix': 'getPlayerTargetCollision'
+    'body': 'getPlayerTargetCollision(${1:player targetingPlayer})'
+  'getPlayerTargetEnd':
+    'prefix': 'getPlayerTargetEnd'
+    'body': 'getPlayerTargetEnd(${1:player targetingPlayer})'
+  'getPlayerTargetRange':
+    'prefix': 'getPlayerTargetRange'
+    'body': 'getPlayerTargetRange(${1:player targetingPlayer})'
+  'getPlayerTargetStart':
+    'prefix': 'getPlayerTargetStart'
+    'body': 'getPlayerTargetStart(${1:player targetingPlayer})'
+  'getPlayerTask':
+    'prefix': 'getPlayerTask'
+    'body': 'getPlayerTask(${1:player thePlayer}, ${2:string priority}, ${3:int taskType}, ${4:[int index = 0]})'
+  'getPlayerTeam':
+    'prefix': 'getPlayerTeam'
+    'body': 'getPlayerTeam(${1:player thePlayer})'
+  'getPlayerTotalAmmo':
+    'prefix': 'getPlayerTotalAmmo'
+    'body': 'getPlayerTotalAmmo(${1:player thePlayer})'
+  'getPlayerUserName':
+    'prefix': 'getPlayerUserName'
+    'body': 'getPlayerUserName(${1:player thePlayer})'
+  'getPlayerVersion':
+    'prefix': 'getPlayerVersion'
+    'body': 'getPlayerVersion(${1:player thePlayer})'
+  'getPlayerWantedLevel':
+    'prefix': 'getPlayerWantedLevel'
+    'body': 'getPlayerWantedLevel(${1:player thePlayer})'
+  'getPlayerWeapon':
+    'prefix': 'getPlayerWeapon'
+    'body': 'getPlayerWeapon(${1:player thePlayer})'
+  'getPlayerWeaponSlot':
+    'prefix': 'getPlayerWeaponSlot'
+    'body': 'getPlayerWeaponSlot(${1:player thePlayer})'
+  'getProjectileCounter':
+    'prefix': 'getProjectileCounter'
+    'body': 'getProjectileCounter(${1:projectile theProjectile})'
+  'getProjectileCreator':
+    'prefix': 'getProjectileCreator'
+    'body': 'getProjectileCreator(${1:projectile theProjectile})'
+  'getProjectileForce':
+    'prefix': 'getProjectileForce'
+    'body': 'getProjectileForce(${1:projectile theProjectile})'
+  'getProjectileTarget':
+    'prefix': 'getProjectileTarget'
+    'body': 'getProjectileTarget(${1:projectile theProjectile})'
+  'getProjectileType':
+    'prefix': 'getProjectileType'
+    'body': 'getProjectileType(${1:projectile theProjectile})'
+  'getRadarAreaColor':
+    'prefix': 'getRadarAreaColor'
+    'body': 'getRadarAreaColor(${1:radararea theRadararea})'
+  'getRadarAreaSize':
+    'prefix': 'getRadarAreaSize'
+    'body': 'getRadarAreaSize(${1:radararea theRadararea})'
   'getRadioChannel':
-    'prefix': 'getRadioChannel',
+    'prefix': 'getRadioChannel'
     'body': 'getRadioChannel()'
   'getRadioChannelName':
-    'prefix': 'getRadioChannelName',
-    'body': 'getRadioChannelName(${0:id})'
-  'getSFXStatus':
-    'prefix': 'getSFXStatus',
-    'body': 'getSFXStatus(${0:audioContainer})'
+    'prefix': 'getRadioChannelName'
+    'body': 'getRadioChannelName(${1:int id})'
+  'getRainLevel':
+    'prefix': 'getRainLevel'
+    'body': 'getRainLevel()'
+  'getRandomPlayer':
+    'prefix': 'getRandomPlayer'
+    'body': 'getRandomPlayer()'
+  'getRealTime':
+    'prefix': 'getRealTime'
+    'body': 'getRealTime(${1:[int seconds = current]})'
+  'getResourceACLRequests':
+    'prefix': 'getResourceACLRequests'
+    'body': 'getResourceACLRequests(${1:resource theResource})'
+  'getResourceConfig':
+    'prefix': 'getResourceConfig'
+    'body': 'getResourceConfig(${1:[resource theResource = getThisResource()]}, ${2:string filename})'
+  'getResourceDynamicElementRoot':
+    'prefix': 'getResourceDynamicElementRoot'
+    'body': 'getResourceDynamicElementRoot(${1:resource theResource})'
+  'getResourceExportedFunctions':
+    'prefix': 'getResourceExportedFunctions'
+    'body': 'getResourceExportedFunctions(${1:resource res})'
+  'getResourceFromName':
+    'prefix': 'getResourceFromName'
+    'body': 'getResourceFromName(${1:string resourceName})'
+  'getResourceGUIElement':
+    'prefix': 'getResourceGUIElement'
+    'body': 'getResourceGUIElement()'
+  'getResourceInfo':
+    'prefix': 'getResourceInfo'
+    'body': 'getResourceInfo(${1:resource theResource}, ${2:string attribute})'
+  'getResourceLastStartTime':
+    'prefix': 'getResourceLastStartTime'
+    'body': 'getResourceLastStartTime(${1:resource theResource})'
+  'getResourceLoadFailureReason':
+    'prefix': 'getResourceLoadFailureReason'
+    'body': 'getResourceLoadFailureReason(${1:resource})'
+  'getResourceLoadTime':
+    'prefix': 'getResourceLoadTime'
+    'body': 'getResourceLoadTime(${1:resource res})'
+  'getResourceMapRootElement':
+    'prefix': 'getResourceMapRootElement'
+    'body': 'getResourceMapRootElement(${1:resource theResource}, ${2:string mapName})'
+  'getResourceName':
+    'prefix': 'getResourceName'
+    'body': 'getResourceName(${1:resource res})'
+  'getResourceRootElement':
+    'prefix': 'getResourceRootElement'
+    'body': 'getResourceRootElement(${1:[resource theResource=getThisResource()]})'
+  'getResources':
+    'prefix': 'getResources'
+    'body': 'getResources()'
+  'getResourceState':
+    'prefix': 'getResourceState'
+    'body': 'getResourceState(${1:resource theResource})'
+  'getRootElement':
+    'prefix': 'getRootElement'
+    'body': 'getRootElement()'
+  'getRuleValue':
+    'prefix': 'getRuleValue'
+    'body': 'getRuleValue(${1:string key})'
+  'getScreenFromWorldPosition':
+    'prefix': 'getScreenFromWorldPosition'
+    'body': 'getScreenFromWorldPosition(${1:float x}, ${2:float y}, ${3:float z})'
+  'getServerConfigSetting':
+    'prefix': 'getServerConfigSetting'
+    'body': 'getServerConfigSetting(${1:string name})'
+  'getServerHttpPort':
+    'prefix': 'getServerHttpPort'
+    'body': 'getServerHttpPort()'
+  'getServerName':
+    'prefix': 'getServerName'
+    'body': 'getServerName()'
+  'getServerPassword':
+    'prefix': 'getServerPassword'
+    'body': 'getServerPassword()'
+  'getServerPort':
+    'prefix': 'getServerPort'
+    'body': 'getServerPort()'
+  'getSkyGradient':
+    'prefix': 'getSkyGradient'
+    'body': 'getSkyGradient()'
+  'getSlotFromWeapon':
+    'prefix': 'getSlotFromWeapon'
+    'body': 'getSlotFromWeapon(${1:int weaponid})'
   'getSoundBPM':
-    'prefix': 'getSoundBPM',
-    'body': 'getSoundBPM(${0:sound})'
+    'prefix': 'getSoundBPM'
+    'body': 'getSoundBPM(${1:element theSound})'
   'getSoundEffects':
-    'prefix': 'getSoundEffects',
-    'body': 'getSoundEffects(${0:sound})'
+    'prefix': 'getSoundEffects'
+    'body': 'getSoundEffects(${1:element theSound})'
   'getSoundFFTData':
-    'prefix': 'getSoundFFTData',
-    'body': 'getSoundFFTData(${1:sound}, ${2:iSamples})'
+    'prefix': 'getSoundFFTData'
+    'body': 'getSoundFFTData(${1:element theSound}, ${2:int iSamples [}, ${3:int iBands = 0 ]})'
   'getSoundLength':
-    'prefix': 'getSoundLength',
-    'body': 'getSoundLength(${0:sound})'
+    'prefix': 'getSoundLength'
+    'body': 'getSoundLength(${1:element theSound})'
   'getSoundLevelData':
-    'prefix': 'getSoundLevelData',
-    'body': 'getSoundLevelData(${0:sound})'
+    'prefix': 'getSoundLevelData'
+    'body': 'getSoundLevelData(${1:element theSound})'
   'getSoundMaxDistance':
-    'prefix': 'getSoundMaxDistance',
-    'body': 'getSoundMaxDistance(${0:sound})'
+    'prefix': 'getSoundMaxDistance'
+    'body': 'getSoundMaxDistance(${1:element sound})'
   'getSoundMetaTags':
-    'prefix': 'getSoundMetaTags',
-    'body': 'getSoundMetaTags(${0:sound})'
+    'prefix': 'getSoundMetaTags'
+    'body': 'getSoundMetaTags(${1:element sound})'
   'getSoundMinDistance':
-    'prefix': 'getSoundMinDistance',
-    'body': 'getSoundMinDistance(${0:sound})'
+    'prefix': 'getSoundMinDistance'
+    'body': 'getSoundMinDistance(${1:element sound})'
   'getSoundPan':
-    'prefix': 'getSoundPan',
-    'body': 'getSoundPan(${0:sound})'
+    'prefix': 'getSoundPan'
+    'body': 'getSoundPan()'
   'getSoundPosition':
-    'prefix': 'getSoundPosition',
-    'body': 'getSoundPosition(${0:sound})'
+    'prefix': 'getSoundPosition'
+    'body': 'getSoundPosition(${1:element theSound})'
   'getSoundProperties':
-    'prefix': 'getSoundProperties',
-    'body': 'getSoundProperties(${0:sound})'
+    'prefix': 'getSoundProperties'
+    'body': 'getSoundProperties(${1:element theSound})'
   'getSoundSpeed':
-    'prefix': 'getSoundSpeed',
-    'body': 'getSoundSpeed(${0:sound})'
+    'prefix': 'getSoundSpeed'
+    'body': 'getSoundSpeed(${1:element theSound})'
   'getSoundVolume':
-    'prefix': 'getSoundVolume',
-    'body': 'getSoundVolume(${0:sound})'
+    'prefix': 'getSoundVolume'
+    'body': 'getSoundVolume(${1:element theSound})'
   'getSoundWaveData':
-    'prefix': 'getSoundWaveData',
-    'body': 'getSoundWaveData(${1:sound}, ${2:iSamples})'
+    'prefix': 'getSoundWaveData'
+    'body': 'getSoundWaveData(${1:element theSound}, ${2:int iSamples})'
+  'getSunColor':
+    'prefix': 'getSunColor'
+    'body': 'getSunColor()'
+  'getSunSize':
+    'prefix': 'getSunSize'
+    'body': 'getSunSize()'
+  'getTeamColor':
+    'prefix': 'getTeamColor'
+    'body': 'getTeamColor(${1:team theTeam})'
+  'getTeamFriendlyFire':
+    'prefix': 'getTeamFriendlyFire'
+    'body': 'getTeamFriendlyFire(${1:team theTeam})'
+  'getTeamFromName':
+    'prefix': 'getTeamFromName'
+    'body': 'getTeamFromName(${1:string teamName})'
+  'getTeamName':
+    'prefix': 'getTeamName'
+    'body': 'getTeamName(${1:team theTeam})'
+  'getThisResource':
+    'prefix': 'getThisResource'
+    'body': 'getThisResource()'
+  'getTickCount':
+    'prefix': 'getTickCount'
+    'body': 'getTickCount()'
+  'getTime':
+    'prefix': 'getTime'
+    'body': 'getTime()'
+  'getTimerDetails':
+    'prefix': 'getTimerDetails'
+    'body': 'getTimerDetails(${1:timer theTimer})'
+  'getTimers':
+    'prefix': 'getTimers'
+    'body': 'getTimers(${1:[ time ]})'
+  'gettok':
+    'prefix': 'gettok'
+    'body': 'gettok(${1:string text}, ${2:int tokenNumber}, ${3:int separatingCharacter})'
+  'getTrafficLightState':
+    'prefix': 'getTrafficLightState'
+    'body': 'getTrafficLightState()'
+  'getTrainDirection':
+    'prefix': 'getTrainDirection'
+    'body': 'getTrainDirection(${1:vehicle train})'
+  'getTrainSpeed':
+    'prefix': 'getTrainSpeed'
+    'body': 'getTrainSpeed(${1:vehicle train})'
+  'getTypeIndexFromClothes':
+    'prefix': 'getTypeIndexFromClothes'
+    'body': 'getTypeIndexFromClothes(${1:string clothesTexture}, ${2:string clothesModel})'
+  'getUnbanTime':
+    'prefix': 'getUnbanTime'
+    'body': 'getUnbanTime(${1:ban theBan})'
+  'getValidPedModels':
+    'prefix': 'getValidPedModels'
+    'body': 'getValidPedModels()'
+  'getVehicleAdjustableProperty':
+    'prefix': 'getVehicleAdjustableProperty'
+    'body': 'getVehicleAdjustableProperty(${1:vehicle})'
+  'getVehicleColor':
+    'prefix': 'getVehicleColor'
+    'body': 'getVehicleColor(${1:vehicle theVehicle}, ${2:bool bRGB})'
+  'getVehicleColor':
+    'prefix': 'getVehicleColor'
+    'body': 'getVehicleColor(${1:vehicle theVehicle})'
+  'getVehicleCompatibleUpgrades':
+    'prefix': 'getVehicleCompatibleUpgrades'
+    'body': 'getVehicleCompatibleUpgrades(${1:vehicle theVehicle}, ${2:[int slot]})'
+  'getVehicleComponentPosition':
+    'prefix': 'getVehicleComponentPosition'
+    'body': 'getVehicleComponentPosition(${1:vehicle theVehicle}, ${2:string theComponent})'
+  'getVehicleComponentRotation':
+    'prefix': 'getVehicleComponentRotation'
+    'body': 'getVehicleComponentRotation(${1:vehicle theVehicle}, ${2:string theComponent})'
+  'getVehicleComponents':
+    'prefix': 'getVehicleComponents'
+    'body': 'getVehicleComponents(${1:vehicle theVehicle})'
+  'getVehicleComponentVisible':
+    'prefix': 'getVehicleComponentVisible'
+    'body': 'getVehicleComponentVisible(${1:vehicle theVehicle}, ${2:string theComponent})'
+  'getVehicleController':
+    'prefix': 'getVehicleController'
+    'body': 'getVehicleController(${1:vehicle theVehicle})'
+  'getVehicleCurrentGear':
+    'prefix': 'getVehicleCurrentGear'
+    'body': 'getVehicleCurrentGear(${1:vehicle theVehicle})'
+  'getVehicleDoorOpenRatio':
+    'prefix': 'getVehicleDoorOpenRatio'
+    'body': 'getVehicleDoorOpenRatio(${1:vehicle theVehicle}, ${2:int door})'
+  'getVehicleDoorState':
+    'prefix': 'getVehicleDoorState'
+    'body': 'getVehicleDoorState(${1:vehicle theVehicle}, ${2:int door})'
+  'getVehicleEngineState':
+    'prefix': 'getVehicleEngineState'
+    'body': 'getVehicleEngineState(${1:vehicle theVehicle})'
+  'getVehicleGravity':
+    'prefix': 'getVehicleGravity'
+    'body': 'getVehicleGravity(${1:vehicle theVehicle})'
+  'getVehicleHandling':
+    'prefix': 'getVehicleHandling'
+    'body': 'getVehicleHandling(${1:vehicle theVehicle})'
+  'getVehicleHeadLightColor':
+    'prefix': 'getVehicleHeadLightColor'
+    'body': 'getVehicleHeadLightColor(${1:vehicle theVehicle})'
+  'getVehicleID':
+    'prefix': 'getVehicleID'
+    'body': 'getVehicleID(${1:vehicle theVehicle})'
+  'getVehicleIDFromName':
+    'prefix': 'getVehicleIDFromName'
+    'body': 'getVehicleIDFromName(${1:string name})'
+  'getVehicleLandingGearDown':
+    'prefix': 'getVehicleLandingGearDown'
+    'body': 'getVehicleLandingGearDown(${1:vehicle theVehicle})'
+  'getVehicleLightState':
+    'prefix': 'getVehicleLightState'
+    'body': 'getVehicleLightState(${1:vehicle theVehicle}, ${2:int light})'
+  'getVehicleMaxPassengers':
+    'prefix': 'getVehicleMaxPassengers'
+    'body': 'getVehicleMaxPassengers(${1:vehicle theVehicle})'
+  'getVehicleModelFromName':
+    'prefix': 'getVehicleModelFromName'
+    'body': 'getVehicleModelFromName(${1:string name})'
+  'getVehicleName':
+    'prefix': 'getVehicleName'
+    'body': 'getVehicleName(${1:vehicle theVehicle})'
+  'getVehicleNameFromID':
+    'prefix': 'getVehicleNameFromID'
+    'body': 'getVehicleNameFromID(${1:int id})'
+  'getVehicleNameFromModel':
+    'prefix': 'getVehicleNameFromModel'
+    'body': 'getVehicleNameFromModel(${1:int model})'
+  'getVehicleNitroCount':
+    'prefix': 'getVehicleNitroCount'
+    'body': 'getVehicleNitroCount(${1:vehicle theVehicle})'
+  'getVehicleNitroLevel':
+    'prefix': 'getVehicleNitroLevel'
+    'body': 'getVehicleNitroLevel(${1:vehicle theVehicle})'
+  'getVehicleOccupant':
+    'prefix': 'getVehicleOccupant'
+    'body': 'getVehicleOccupant(${1:vehicle theVehicle}, ${2:[ int seat=0 ]})'
+  'getVehicleOccupants':
+    'prefix': 'getVehicleOccupants'
+    'body': 'getVehicleOccupants(${1:vehicle theVehicle})'
+  'getVehicleOverrideLights':
+    'prefix': 'getVehicleOverrideLights'
+    'body': 'getVehicleOverrideLights(${1:vehicle theVehicle})'
+  'getVehiclePaintjob':
+    'prefix': 'getVehiclePaintjob'
+    'body': 'getVehiclePaintjob(${1:vehicle theVehicle})'
+  'getVehiclePanelState':
+    'prefix': 'getVehiclePanelState'
+    'body': 'getVehiclePanelState(${1:vehicle theVehicle}, ${2:int panel})'
+  'getVehiclePlateText':
+    'prefix': 'getVehiclePlateText'
+    'body': 'getVehiclePlateText(${1:vehicle theVehicle})'
+  'getVehicleRotation':
+    'prefix': 'getVehicleRotation'
+    'body': 'getVehicleRotation(${1:vehicle theVehicle})'
+  'getVehicleSirenParams':
+    'prefix': 'getVehicleSirenParams'
+    'body': 'getVehicleSirenParams(${1:vehicle theVehicle})'
+  'getVehicleSirens':
+    'prefix': 'getVehicleSirens'
+    'body': 'getVehicleSirens(${1:vehicle theVehicle})'
+  'getVehicleSirensOn':
+    'prefix': 'getVehicleSirensOn'
+    'body': 'getVehicleSirensOn(${1:vehicle theVehicle})'
+  'getVehiclesOfType':
+    'prefix': 'getVehiclesOfType'
+    'body': 'getVehiclesOfType(${1:int model})'
+  'getVehicleTowedByVehicle':
+    'prefix': 'getVehicleTowedByVehicle'
+    'body': 'getVehicleTowedByVehicle(${1:vehicle theVehicle})'
+  'getVehicleTowingVehicle':
+    'prefix': 'getVehicleTowingVehicle'
+    'body': 'getVehicleTowingVehicle(${1:vehicle theVehicle})'
+  'getVehicleTurnVelocity':
+    'prefix': 'getVehicleTurnVelocity'
+    'body': 'getVehicleTurnVelocity(${1:vehicle theVehicle})'
+  'getVehicleTurretPosition':
+    'prefix': 'getVehicleTurretPosition'
+    'body': 'getVehicleTurretPosition(${1:vehicle turretVehicle})'
+  'getVehicleType':
+    'prefix': 'getVehicleType'
+    'body': 'getVehicleType(${1:vehicle theVehicle})'
+  'getVehicleType':
+    'prefix': 'getVehicleType'
+    'body': 'getVehicleType(${1:vehicle theVehicle})'
+  'getVehicleUpgradeOnSlot':
+    'prefix': 'getVehicleUpgradeOnSlot'
+    'body': 'getVehicleUpgradeOnSlot(${1:vehicle theVehicle}, ${2:int slot})'
+  'getVehicleUpgrades':
+    'prefix': 'getVehicleUpgrades'
+    'body': 'getVehicleUpgrades(${1:vehicle theVehicle})'
+  'getVehicleUpgradeSlotName':
+    'prefix': 'getVehicleUpgradeSlotName'
+    'body': 'getVehicleUpgradeSlotName(${1:int slot/upgrade})'
+  'getVehicleVariant':
+    'prefix': 'getVehicleVariant'
+    'body': 'getVehicleVariant(${1:vehicle theVehicle})'
+  'getVehicleWheelStates':
+    'prefix': 'getVehicleWheelStates'
+    'body': 'getVehicleWheelStates(${1:vehicle theVehicle})'
+  'getVersion':
+    'prefix': 'getVersion'
+    'body': 'getVersion()'
+  'getWaterColor':
+    'prefix': 'getWaterColor'
+    'body': 'getWaterColor()'
+  'getWaterLevel':
+    'prefix': 'getWaterLevel'
+    'body': 'getWaterLevel(${1:float posX}, ${2:float posY}, ${3:float posZ})'
+  'getWaterVertexPosition':
+    'prefix': 'getWaterVertexPosition'
+    'body': 'getWaterVertexPosition(${1:water theWater}, ${2:int vertexIndex})'
+  'getWaveHeight':
+    'prefix': 'getWaveHeight'
+    'body': 'getWaveHeight()'
+  'getWeaponAmmo':
+    'prefix': 'getWeaponAmmo'
+    'body': 'getWeaponAmmo(${1:weapon theWeapon})'
+  'getWeaponClipAmmo':
+    'prefix': 'getWeaponClipAmmo'
+    'body': 'getWeaponClipAmmo(${1:weapon theWeapon})'
+  'getWeaponFiringRate':
+    'prefix': 'getWeaponFiringRate'
+    'body': 'getWeaponFiringRate(${1:weapon theWeapon})'
+  'getWeaponFlags':
+    'prefix': 'getWeaponFlags'
+    'body': 'getWeaponFlags(${1:weapon theWeapon}, ${2:string theFlag})'
+  'getWeaponIDFromName':
+    'prefix': 'getWeaponIDFromName'
+    'body': 'getWeaponIDFromName(${1:string name})'
+  'getWeaponNameFromID':
+    'prefix': 'getWeaponNameFromID'
+    'body': 'getWeaponNameFromID(${1:int id})'
+  'getWeaponOwner':
+    'prefix': 'getWeaponOwner'
+    'body': 'getWeaponOwner(${1:weapon theWeapon})'
+  'getWeaponProperty':
+    'prefix': 'getWeaponProperty'
+    'body': 'getWeaponProperty(${1:int weaponID/string weaponName}, ${2:string weaponType}, ${3:string property/int property})'
+  'getWeaponState':
+    'prefix': 'getWeaponState'
+    'body': 'getWeaponState(${1:weapon theWeapon})'
+  'getWeaponTarget':
+    'prefix': 'getWeaponTarget'
+    'body': 'getWeaponTarget(${1:weapon theWeapon})'
+  'getWeather':
+    'prefix': 'getWeather'
+    'body': 'getWeather()'
+  'getWindVelocity':
+    'prefix': 'getWindVelocity'
+    'body': 'getWindVelocity()'
+  'getWorldFromScreenPosition':
+    'prefix': 'getWorldFromScreenPosition'
+    'body': 'getWorldFromScreenPosition(${1:float x}, ${2:float y}, ${3:float depth})'
+  'getZoneName':
+    'prefix': 'getZoneName'
+    'body': 'getZoneName(${1:float x}, ${2:float y}, ${3:float z}, ${4:[bool citiesonly=false]})'
+  'givePedJetPack':
+    'prefix': 'givePedJetPack'
+    'body': 'givePedJetPack(${1:ped thePed})'
+  'givePlayerJetPack':
+    'prefix': 'givePlayerJetPack'
+    'body': 'givePlayerJetPack(${1:player thePlayer})'
+  'givePlayerMoney':
+    'prefix': 'givePlayerMoney'
+    'body': 'givePlayerMoney(${1:player thePlayer}, ${2:int amount})'
+  'giveWeapon':
+    'prefix': 'giveWeapon'
+    'body': 'giveWeapon(${1:player thePlayer}, ${2:int weapon}, ${3:[int ammo=30}, ${4:bool setAsCurrent=false]})'
+  'giveWeaponAmmo':
+    'prefix': 'giveWeaponAmmo'
+    'body': 'giveWeaponAmmo(${1:player thePlayer}, ${2:int weapon}, ${3:int ammo})'
+  'guiBringToFront':
+    'prefix': 'guiBringToFront'
+    'body': 'guiBringToFront(${1:element guiElement})'
+  'guiCheckBoxGetSelected':
+    'prefix': 'guiCheckBoxGetSelected'
+    'body': 'guiCheckBoxGetSelected(${1:element theCheckbox})'
+  'guiCheckBoxSetSelected':
+    'prefix': 'guiCheckBoxSetSelected'
+    'body': 'guiCheckBoxSetSelected(${1:element theCheckbox}, ${2:bool state})'
+  'guiComboBoxAddItem':
+    'prefix': 'guiComboBoxAddItem'
+    'body': 'guiComboBoxAddItem(${1:element comboBox}, ${2:string value})'
+  'guiComboBoxClear':
+    'prefix': 'guiComboBoxClear'
+    'body': 'guiComboBoxClear(${1:element comboBox})'
+  'guiComboBoxGetItemText':
+    'prefix': 'guiComboBoxGetItemText'
+    'body': 'guiComboBoxGetItemText(${1:element comboBox}, ${2:int itemID})'
+  'guiComboBoxSetItemText':
+    'prefix': 'guiComboBoxSetItemText'
+    'body': 'guiComboBoxSetItemText(${1:element comboBox}, ${2:int itemID}, ${3:string text})'
+  'guiComboBoxRemoveItem':
+    'prefix': 'guiComboBoxRemoveItem'
+    'body': 'guiComboBoxRemoveItem(${1:element comboBox}, ${2:int itemID})'
+  'guiComboBoxGetSelected':
+    'prefix': 'guiComboBoxGetSelected'
+    'body': 'guiComboBoxGetSelected(${1:element comboBox})'
+  'guiComboBoxSetSelected':
+    'prefix': 'guiComboBoxSetSelected'
+    'body': 'guiComboBoxSetSelected(${1:element comboBox}, ${2:int itemIndex})'
+  'guiCreateButton':
+    'prefix': 'guiCreateButton'
+    'body': 'guiCreateButton(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:string text}, ${6:bool relative}, ${7:[ element parent = nil ]})'
+  'guiCreateCheckBox':
+    'prefix': 'guiCreateCheckBox'
+    'body': 'guiCreateCheckBox(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:string text}, ${6:bool selected}, ${7:bool relative}, ${8:[element parent = nil]})'
+  'guiCreateComboBox':
+    'prefix': 'guiCreateComboBox'
+    'body': 'guiCreateComboBox(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:string caption}, ${6:bool relative}, ${7:[element parent = nil]})'
+  'guiCreateEdit':
+    'prefix': 'guiCreateEdit'
+    'body': 'guiCreateEdit(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:string text}, ${6:bool relative}, ${7:[element parent = nil]})'
+  'guiCreateFont':
+    'prefix': 'guiCreateFont'
+    'body': 'guiCreateFont(${1:string filepath[}, ${2:int size = 9]})'
+  'guiCreateGridList':
+    'prefix': 'guiCreateGridList'
+    'body': 'guiCreateGridList(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:bool relative}, ${6:[ element parent = nil ]})'
+  'guiCreateLabel':
+    'prefix': 'guiCreateLabel'
+    'body': 'guiCreateLabel(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:string text}, ${6:bool relative}, ${7:[element parent = nil]})'
+  'guiCreateMemo':
+    'prefix': 'guiCreateMemo'
+    'body': 'guiCreateMemo(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:string text}, ${6:bool relative}, ${7:[element parent = nil]})'
+  'guiCreateProgressBar':
+    'prefix': 'guiCreateProgressBar'
+    'body': 'guiCreateProgressBar(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:bool relative}, ${6:[element parent = nil]})'
+  'guiCreateRadioButton':
+    'prefix': 'guiCreateRadioButton'
+    'body': 'guiCreateRadioButton(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:string text}, ${6:bool relative}, ${7:[element parent = nil]})'
+  'guiCreateScrollBar':
+    'prefix': 'guiCreateScrollBar'
+    'body': 'guiCreateScrollBar(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:bool horizontal}, ${6:bool relative}, ${7:[gui-element parent = nil]})'
+  'guiCreateScrollPane':
+    'prefix': 'guiCreateScrollPane'
+    'body': 'guiCreateScrollPane(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:bool relative}, ${6:[gui-element parent = nil]})'
+  'guiCreateStaticImage':
+    'prefix': 'guiCreateStaticImage'
+    'body': 'guiCreateStaticImage(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:string filename}, ${6:bool relative}, ${7:[element parent = nil]})'
+  'guiCreateTab':
+    'prefix': 'guiCreateTab'
+    'body': 'guiCreateTab(${1:string text}, ${2:element parent})'
+  'guiCreateTabPanel':
+    'prefix': 'guiCreateTabPanel'
+    'body': 'guiCreateTabPanel(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:bool relative}, ${6:[element parent = nil ]})'
+  'guiCreateWindow':
+    'prefix': 'guiCreateWindow'
+    'body': 'guiCreateWindow(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height}, ${5:string titleBarText}, ${6:bool relative})'
+  'guiDeleteTab':
+    'prefix': 'guiDeleteTab'
+    'body': 'guiDeleteTab(${1:element tabToDelete})'
+  'guiEditSetCaratIndex':
+    'prefix': 'guiEditSetCaratIndex'
+    'body': 'guiEditSetCaratIndex(${1:element theElement}, ${2:int index})'
+  'guiEditSetCaretIndex':
+    'prefix': 'guiEditSetCaretIndex'
+    'body': 'guiEditSetCaretIndex(${1:element theElement}, ${2:int index})'
+  'guiEditSetMasked':
+    'prefix': 'guiEditSetMasked'
+    'body': 'guiEditSetMasked(${1:element theElement}, ${2:bool status})'
+  'guiEditSetMaxLength':
+    'prefix': 'guiEditSetMaxLength'
+    'body': 'guiEditSetMaxLength(${1:element theElement}, ${2:int length})'
+  'guiEditSetReadOnly':
+    'prefix': 'guiEditSetReadOnly'
+    'body': 'guiEditSetReadOnly(${1:element editField}, ${2:bool status})'
+  'guiGetAlpha':
+    'prefix': 'guiGetAlpha'
+    'body': 'guiGetAlpha(${1:element guiElement})'
+  'guiGetEnabled':
+    'prefix': 'guiGetEnabled'
+    'body': 'guiGetEnabled(${1:element guiElement})'
+  'guiGetFont':
+    'prefix': 'guiGetFont'
+    'body': 'guiGetFont(${1:element guiElement})'
+  'guiGetInputEnabled':
+    'prefix': 'guiGetInputEnabled'
+    'body': 'guiGetInputEnabled()'
+  'guiGetInputMode':
+    'prefix': 'guiGetInputMode'
+    'body': 'guiGetInputMode()'
+  'guiGetPosition':
+    'prefix': 'guiGetPosition'
+    'body': 'guiGetPosition(${1:element guiElement}, ${2:bool relative})'
+  'guiGetProperties':
+    'prefix': 'guiGetProperties'
+    'body': 'guiGetProperties(${1:element guiElement})'
+  'guiGetProperty':
+    'prefix': 'guiGetProperty'
+    'body': 'guiGetProperty(${1:element guiElement}, ${2:string property})'
+  'guiGetScreenSize':
+    'prefix': 'guiGetScreenSize'
+    'body': 'guiGetScreenSize()'
+  'guiGetSelectedTab':
+    'prefix': 'guiGetSelectedTab'
+    'body': 'guiGetSelectedTab(${1:element tabPanel})'
+  'guiGetSize':
+    'prefix': 'guiGetSize'
+    'body': 'guiGetSize(${1:element theElement}, ${2:bool relative})'
+  'guiGetText':
+    'prefix': 'guiGetText'
+    'body': 'guiGetText(${1:element guiElement})'
+  'guiGetVisible':
+    'prefix': 'guiGetVisible'
+    'body': 'guiGetVisible(${1:element guiElement})'
+  'guiGridListAddColumn':
+    'prefix': 'guiGridListAddColumn'
+    'body': 'guiGridListAddColumn(${1:element gridList}, ${2:string title}, ${3:float width})'
+  'guiGridListAddRow':
+    'prefix': 'guiGridListAddRow'
+    'body': 'guiGridListAddRow(${1:element gridList})'
+  'guiGridListAutoSizeColumn':
+    'prefix': 'guiGridListAutoSizeColumn'
+    'body': 'guiGridListAutoSizeColumn(${1:element gridList}, ${2:int columnIndex})'
+  'guiGridListClear':
+    'prefix': 'guiGridListClear'
+    'body': 'guiGridListClear(${1:element gridList})'
+  'guiGridListGetColumnCount':
+    'prefix': 'guiGridListGetColumnCount'
+    'body': 'guiGridListGetColumnCount(${1:element gridList})'
+  'guiGridListGetColumnTitle':
+    'prefix': 'guiGridListGetColumnTitle'
+    'body': 'guiGridListGetColumnTitle(${1:element guiGridList}, ${2:int columnIndex})'
+  'guiGridListGetHorizontalScrollPosition':
+    'prefix': 'guiGridListGetHorizontalScrollPosition'
+    'body': 'guiGridListGetHorizontalScrollPosition(${1:element guiGridList})'
+  'guiGridListGetItemColor':
+    'prefix': 'guiGridListGetItemColor'
+    'body': 'guiGridListGetItemColor(${1:element gridList}, ${2:int rowIndex}, ${3:int columnIndex})'
+  'guiGridListGetItemData':
+    'prefix': 'guiGridListGetItemData'
+    'body': 'guiGridListGetItemData(${1:element gridList}, ${2:int rowIndex}, ${3:int columnIndex})'
+  'guiGridListGetItemText':
+    'prefix': 'guiGridListGetItemText'
+    'body': 'guiGridListGetItemText(${1:element gridList}, ${2:int rowIndex}, ${3:int columnIndex})'
+  'guiGridListGetRowCount':
+    'prefix': 'guiGridListGetRowCount'
+    'body': 'guiGridListGetRowCount(${1:element theList})'
+  'guiGridListGetSelectedCount':
+    'prefix': 'guiGridListGetSelectedCount'
+    'body': 'guiGridListGetSelectedCount(${1:element gridList})'
+  'guiGridListGetSelectedItem':
+    'prefix': 'guiGridListGetSelectedItem'
+    'body': 'guiGridListGetSelectedItem(${1:element gridList})'
+  'guiGridListGetSelectedItems':
+    'prefix': 'guiGridListGetSelectedItems'
+    'body': 'guiGridListGetSelectedItems(${1:element gridList})'
+  'guiGridListGetVerticalScrollPosition':
+    'prefix': 'guiGridListGetVerticalScrollPosition'
+    'body': 'guiGridListGetVerticalScrollPosition(${1:element guiGridList})'
+  'guiGridListInsertRowAfter':
+    'prefix': 'guiGridListInsertRowAfter'
+    'body': 'guiGridListInsertRowAfter(${1:element gridList}, ${2:int rowIndex})'
+  'guiGridListRemoveColumn':
+    'prefix': 'guiGridListRemoveColumn'
+    'body': 'guiGridListRemoveColumn(${1:element gridList}, ${2:int columnIndex})'
+  'guiGridListRemoveRow':
+    'prefix': 'guiGridListRemoveRow'
+    'body': 'guiGridListRemoveRow(${1:element gridList}, ${2:int rowIndex})'
+  'guiGridListSetColumnTitle':
+    'prefix': 'guiGridListSetColumnTitle'
+    'body': 'guiGridListSetColumnTitle(${1:element gridList}, ${2:int columnIndex}, ${3:string title})'
+  'guiGridListSetColumnWidth':
+    'prefix': 'guiGridListSetColumnWidth'
+    'body': 'guiGridListSetColumnWidth(${1:element gridList}, ${2:int columnIndex}, ${3:number width}, ${4:[bool relative = true]})'
+  'guiGridListSetHorizontalScrollPosition':
+    'prefix': 'guiGridListSetHorizontalScrollPosition'
+    'body': 'guiGridListSetHorizontalScrollPosition(${1:element guiGridList}, ${2:float fPosition})'
+  'guiGridListSetItemColor':
+    'prefix': 'guiGridListSetItemColor'
+    'body': 'guiGridListSetItemColor(${1:element gridList}, ${2:int rowIndex}, ${3:int columnIndex}, ${4:int red}, ${5:int green}, ${6:int blue [}, ${7:int alpha = 255 ]})'
+  'guiGridListSetItemData':
+    'prefix': 'guiGridListSetItemData'
+    'body': 'guiGridListSetItemData(${1:element gridList}, ${2:int rowIndex}, ${3:int columnIndex}, ${4:var data})'
+  'guiGridListSetItemText':
+    'prefix': 'guiGridListSetItemText'
+    'body': 'guiGridListSetItemText(${1:element gridList}, ${2:int rowIndex}, ${3:int columnIndex}, ${4:string text}, ${5:bool section}, ${6:bool number})'
+  'guiGridListSetScrollBars':
+    'prefix': 'guiGridListSetScrollBars'
+    'body': 'guiGridListSetScrollBars(${1:element guiGridlist}, ${2:bool horizontalBar}, ${3:bool verticalBar})'
+  'guiGridListSetSelectedItem':
+    'prefix': 'guiGridListSetSelectedItem'
+    'body': 'guiGridListSetSelectedItem(${1:element gridList}, ${2:int rowIndex}, ${3:int columnIndex})'
+  'guiGridListSetSelectionMode':
+    'prefix': 'guiGridListSetSelectionMode'
+    'body': 'guiGridListSetSelectionMode(${1:guiElement gridlist}, ${2:int mode})'
+  'guiGridListSetSortingEnabled':
+    'prefix': 'guiGridListSetSortingEnabled'
+    'body': 'guiGridListSetSortingEnabled(${1:element guiGridlist}, ${2:bool enabled})'
+  'guiGridListSetVerticalScrollPosition':
+    'prefix': 'guiGridListSetVerticalScrollPosition'
+    'body': 'guiGridListSetVerticalScrollPosition(${1:element guiGridlist}, ${2:float fPosition})'
+  'guiLabelGetColor':
+    'prefix': 'guiLabelGetColor'
+    'body': 'guiLabelGetColor(${1:element theLabel})'
+  'guiLabelGetFontHeight':
+    'prefix': 'guiLabelGetFontHeight'
+    'body': 'guiLabelGetFontHeight(${1:element theLabel})'
+  'guiLabelGetTextExtent':
+    'prefix': 'guiLabelGetTextExtent'
+    'body': 'guiLabelGetTextExtent(${1:element theLabel})'
+  'guiLabelSetColor':
+    'prefix': 'guiLabelSetColor'
+    'body': 'guiLabelSetColor(${1:element theElement}, ${2:int red}, ${3:int green}, ${4:int blue})'
+  'guiLabelSetHorizontalAlign':
+    'prefix': 'guiLabelSetHorizontalAlign'
+    'body': 'guiLabelSetHorizontalAlign(${1:element theLabel}, ${2:string align}, ${3:[ bool wordwrap = false ]})'
+  'guiLabelSetVerticalAlign':
+    'prefix': 'guiLabelSetVerticalAlign'
+    'body': 'guiLabelSetVerticalAlign(${1:element theLabel}, ${2:string align})'
+  'guiMemoSetCaratIndex':
+    'prefix': 'guiMemoSetCaratIndex'
+    'body': 'guiMemoSetCaratIndex(${1:gui-memo theMemo}, ${2:int index})'
+  'guiMemoSetCaretIndex':
+    'prefix': 'guiMemoSetCaretIndex'
+    'body': 'guiMemoSetCaretIndex(${1:gui-memo theMemo}, ${2:int index})'
+  'guiMemoSetReadOnly':
+    'prefix': 'guiMemoSetReadOnly'
+    'body': 'guiMemoSetReadOnly(${1:gui-memo theMemo}, ${2:bool status})'
+  'guiMoveToBack':
+    'prefix': 'guiMoveToBack'
+    'body': 'guiMoveToBack(${1:element guiElement})'
+  'guiProgressBarGetProgress':
+    'prefix': 'guiProgressBarGetProgress'
+    'body': 'guiProgressBarGetProgress(${1:progressBar theProgressbar})'
+  'guiProgressBarSetProgress':
+    'prefix': 'guiProgressBarSetProgress'
+    'body': 'guiProgressBarSetProgress(${1:progressBar theProgressbar}, ${2:float progress})'
+  'guiRadioButtonGetSelected':
+    'prefix': 'guiRadioButtonGetSelected'
+    'body': 'guiRadioButtonGetSelected(${1:element guiRadioButton})'
+  'guiRadioButtonSetSelected':
+    'prefix': 'guiRadioButtonSetSelected'
+    'body': 'guiRadioButtonSetSelected(${1:element guiRadioButton}, ${2:bool state})'
+  'guiScrollBarGetScrollPosition':
+    'prefix': 'guiScrollBarGetScrollPosition'
+    'body': 'guiScrollBarGetScrollPosition(${1:gui-scrollBar theScrollBar})'
+  'guiScrollPaneGetHorizontalScrollPosition':
+    'prefix': 'guiScrollPaneGetHorizontalScrollPosition'
+    'body': 'guiScrollPaneGetHorizontalScrollPosition()'
+  'guiScrollPaneGetVerticalScrollPosition':
+    'prefix': 'guiScrollPaneGetVerticalScrollPosition'
+    'body': 'guiScrollPaneGetVerticalScrollPosition()'
+  'guiScrollBarSetScrollPosition':
+    'prefix': 'guiScrollBarSetScrollPosition'
+    'body': 'guiScrollBarSetScrollPosition(${1:gui-scrollBar theScrollBar}, ${2:float amount})'
+  'guiScrollPaneSetScrollBars':
+    'prefix': 'guiScrollPaneSetScrollBars'
+    'body': 'guiScrollPaneSetScrollBars(${1:element scrollPane}, ${2:bool horizontal}, ${3:bool vertical})'
+  'guiScrollPaneSetHorizontalScrollPosition':
+    'prefix': 'guiScrollPaneSetHorizontalScrollPosition'
+    'body': 'guiScrollPaneSetHorizontalScrollPosition()'
+  'guiScrollPaneSetVerticalScrollPosition':
+    'prefix': 'guiScrollPaneSetVerticalScrollPosition'
+    'body': 'guiScrollPaneSetVerticalScrollPosition()'
+  'guiSetAlpha':
+    'prefix': 'guiSetAlpha'
+    'body': 'guiSetAlpha(${1:element guielement}, ${2:float alpha})'
+  'guiSetEnabled':
+    'prefix': 'guiSetEnabled'
+    'body': 'guiSetEnabled(${1:element guiElement}, ${2:bool enabled})'
+  'guiSetFont':
+    'prefix': 'guiSetFont'
+    'body': 'guiSetFont(${1:element guiElement}, ${2:string font})'
+  'guiSetInputEnabled':
+    'prefix': 'guiSetInputEnabled'
+    'body': 'guiSetInputEnabled(${1:bool enabled})'
+  'guiSetInputMode':
+    'prefix': 'guiSetInputMode'
+    'body': 'guiSetInputMode(${1:string mode})'
+  'guiSetPosition':
+    'prefix': 'guiSetPosition'
+    'body': 'guiSetPosition(${1:element theElement}, ${2:float x}, ${3:float y}, ${4:bool relative})'
+  'guiSetProperty':
+    'prefix': 'guiSetProperty'
+    'body': 'guiSetProperty(${1:element guiElement}, ${2:string property}, ${3:string value})'
+  'guiSetSelectedTab':
+    'prefix': 'guiSetSelectedTab'
+    'body': 'guiSetSelectedTab(${1:element tabPanel}, ${2:element theTab})'
+  'guiSetSize':
+    'prefix': 'guiSetSize'
+    'body': 'guiSetSize(${1:element gui}, ${2:float width}, ${3:float height}, ${4:bool relative})'
+  'guiSetText':
+    'prefix': 'guiSetText'
+    'body': 'guiSetText(${1:element guiElement}, ${2:string text})'
+  'guiSetVisible':
+    'prefix': 'guiSetVisible'
+    'body': 'guiSetVisible(${1:element guiElement}, ${2:bool state})'
+  'guiStaticImageGetNativeSize':
+    'prefix': 'guiStaticImageGetNativeSize'
+    'body': 'guiStaticImageGetNativeSize()'
+  'guiStaticImageLoadImage':
+    'prefix': 'guiStaticImageLoadImage'
+    'body': 'guiStaticImageLoadImage(${1:element theElement}, ${2:string filename})'
+  'guiWindowSetMovable':
+    'prefix': 'guiWindowSetMovable'
+    'body': 'guiWindowSetMovable(${1:element theElement}, ${2:bool status})'
+  'guiWindowSetSizable':
+    'prefix': 'guiWindowSetSizable'
+    'body': 'guiWindowSetSizable(${1:element theElement}, ${2:bool status})'
+  'hasObjectPermissionTo':
+    'prefix': 'hasObjectPermissionTo'
+    'body': 'hasObjectPermissionTo(${1:string / element theObject}, ${2:string theAction [}, ${3:bool defaultPermission = true ]})'
+  'httpClear':
+    'prefix': 'httpClear'
+    'body': 'httpClear()'
+  'httpRequestLogin':
+    'prefix': 'httpRequestLogin'
+    'body': 'httpRequestLogin()'
+  'httpSetResponseCode':
+    'prefix': 'httpSetResponseCode'
+    'body': 'httpSetResponseCode(${1:int code})'
+  'httpSetResponseCookie':
+    'prefix': 'httpSetResponseCookie'
+    'body': 'httpSetResponseCookie(${1:string cookieName}, ${2:string cookieValue})'
+  'httpSetResponseHeader':
+    'prefix': 'httpSetResponseHeader'
+    'body': 'httpSetResponseHeader(${1:string headerName}, ${2:string headerValue})'
+  'httpWrite':
+    'prefix': 'httpWrite'
+    'body': 'httpWrite(${1:string data}, ${2:[int length]})'
+  'injectBrowserMouseDown':
+    'prefix': 'injectBrowserMouseDown'
+    'body': 'injectBrowserMouseDown(${1:browser webBrowser}, ${2:string mouseButton})'
+  'injectBrowserMouseMove':
+    'prefix': 'injectBrowserMouseMove'
+    'body': 'injectBrowserMouseMove(${1:browser webBrowser}, ${2:int posX}, ${3:int posY})'
+  'injectBrowserMouseUp':
+    'prefix': 'injectBrowserMouseUp'
+    'body': 'injectBrowserMouseUp(${1:browser webBrowser}, ${2:string mouseButton})'
+  'injectBrowserMouseWheel':
+    'prefix': 'injectBrowserMouseWheel'
+    'body': 'injectBrowserMouseWheel(${1:browser webBrowser}, ${2:int verticalScroll}, ${3:int horizontalScroll})'
+  'interpolateBetween':
+    'prefix': 'interpolateBetween'
+    'body': 'interpolateBetween(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float fProgress}, ${8:string strEasingType [}, ${9:float fEasingPeriod}, ${10:float fEasingAmplitude}, ${11:float fEasingOvershoot]})'
+  'isAmbientSoundEnabled':
+    'prefix': 'isAmbientSoundEnabled'
+    'body': 'isAmbientSoundEnabled(${1:string theType})'
+  'isBan':
+    'prefix': 'isBan'
+    'body': 'isBan(${1:ban theBan})'
+  'isBrowserFocused':
+    'prefix': 'isBrowserFocused'
+    'body': 'isBrowserFocused(${1:browser webBrowser})'
+  'isBrowserLoading':
+    'prefix': 'isBrowserLoading'
+    'body': 'isBrowserLoading(${1:browser webBrowser})'
+  'isBrowserDomainBlocked':
+    'prefix': 'isBrowserDomainBlocked'
+    'body': 'isBrowserDomainBlocked(${1:string address}, ${2:[bool isURL=false]})'
+  'isChatBoxInputActive':
+    'prefix': 'isChatBoxInputActive'
+    'body': 'isChatBoxInputActive()'
+  'isChatVisible':
+    'prefix': 'isChatVisible'
+    'body': 'isChatVisible()'
+  'isConsoleActive':
+    'prefix': 'isConsoleActive'
+    'body': 'isConsoleActive()'
+  'isControlEnabled':
+    'prefix': 'isControlEnabled'
+    'body': 'isControlEnabled(${1:player thePlayer}, ${2:string control})'
+  'isCursorShowing':
+    'prefix': 'isCursorShowing'
+    'body': 'isCursorShowing(${1:player thePlayer})'
+  'isDebugViewActive':
+    'prefix': 'isDebugViewActive'
+    'body': 'isDebugViewActive()'
+  'isElement':
+    'prefix': 'isElement'
+    'body': 'isElement(${1:var theValue})'
+  'isElementAttached':
+    'prefix': 'isElementAttached'
+    'body': 'isElementAttached(${1:element theElement})'
+  'isElementCollidableWith':
+    'prefix': 'isElementCollidableWith'
+    'body': 'isElementCollidableWith(${1:element theElement}, ${2:element withElement})'
+  'isElementDoubleSided':
+    'prefix': 'isElementDoubleSided'
+    'body': 'isElementDoubleSided(${1:element theElement})'
+  'isElementFrozen':
+    'prefix': 'isElementFrozen'
+    'body': 'isElementFrozen(${1:element theElement})'
+  'isElementInWater':
+    'prefix': 'isElementInWater'
+    'body': 'isElementInWater(${1:element theElement})'
+  'isElementLocal':
+    'prefix': 'isElementLocal'
+    'body': 'isElementLocal(${1:element theElement})'
+  'isElementLowLOD':
+    'prefix': 'isElementLowLOD'
+    'body': 'isElementLowLOD(${1:element theElement})'
+  'isElementOnScreen':
+    'prefix': 'isElementOnScreen'
+    'body': 'isElementOnScreen(${1:element theElement})'
+  'isElementStreamable':
+    'prefix': 'isElementStreamable'
+    'body': 'isElementStreamable(${1:element theElement})'
+  'isElementStreamedIn':
+    'prefix': 'isElementStreamedIn'
+    'body': 'isElementStreamedIn(${1:element theElement})'
+  'isElementSyncer':
+    'prefix': 'isElementSyncer'
+    'body': 'isElementSyncer(${1:element theElement})'
+  'isElementVisibleTo':
+    'prefix': 'isElementVisibleTo'
+    'body': 'isElementVisibleTo(${1:element theElement}, ${2:element visibleTo})'
+  'isElementWithinColShape':
+    'prefix': 'isElementWithinColShape'
+    'body': 'isElementWithinColShape(${1:element theElement}, ${2:colshape theShape})'
+  'isElementWithinMarker':
+    'prefix': 'isElementWithinMarker'
+    'body': 'isElementWithinMarker(${1:element theElement}, ${2:marker theMarker})'
+  'isGarageOpen':
+    'prefix': 'isGarageOpen'
+    'body': 'isGarageOpen(${1:int garageID})'
+  'isGlitchEnabled':
+    'prefix': 'isGlitchEnabled'
+    'body': 'isGlitchEnabled(${1:string glitch})'
+  'isGuestAccount':
+    'prefix': 'isGuestAccount'
+    'body': 'isGuestAccount(${1:account theAccount})'
+  'isInsideRadarArea':
+    'prefix': 'isInsideRadarArea'
+    'body': 'isInsideRadarArea(${1:radararea theArea}, ${2:float posX}, ${3:float posY})'
+  'isKeyBound':
+    'prefix': 'isKeyBound'
+    'body': 'isKeyBound(${1:player thePlayer}, ${2:string key}, ${3:[ string keyState}, ${4:function handler ]})'
+  'isLineOfSightClear':
+    'prefix': 'isLineOfSightClear'
+    'body': 'isLineOfSightClear(${1:float startX}, ${2:float startY}, ${3:float startZ}, ${4:float endX}, ${5:float endY}, ${6:float endZ}, ${7:[ bool checkBuildings = true}, ${8:bool checkVehicles = true}, ${9:bool checkPeds = true}, ${10:bool checkObjects = true}, ${11:bool checkDummies = true}, ${12:bool seeThroughStuff = false}, ${13:bool ignoreSomeObjectsForCamera = false}, ${14:element ignoredElement = nil ]})'
+  'isMainMenuActive':
+    'prefix': 'isMainMenuActive'
+    'body': 'isMainMenuActive()'
+  'isMTAWindowActive':
+    'prefix': 'isMTAWindowActive'
+    'body': 'isMTAWindowActive()'
+  'isObjectBreakable':
+    'prefix': 'isObjectBreakable'
+    'body': 'isObjectBreakable(${1:object theObject})'
+  'isObjectInACLGroup':
+    'prefix': 'isObjectInACLGroup'
+    'body': 'isObjectInACLGroup(${1:string theObject}, ${2:aclgroup theGroup})'
+  'isObjectStatic':
+    'prefix': 'isObjectStatic'
+    'body': 'isObjectStatic(${1:object theObject})'
+  'isPedChoking':
+    'prefix': 'isPedChoking'
+    'body': 'isPedChoking(${1:ped thePed})'
+  'isPedDead':
+    'prefix': 'isPedDead'
+    'body': 'isPedDead(${1:ped thePed})'
+  'isPedDoingGangDriveby':
+    'prefix': 'isPedDoingGangDriveby'
+    'body': 'isPedDoingGangDriveby(${1:ped thePed})'
+  'isPedDoingTask':
+    'prefix': 'isPedDoingTask'
+    'body': 'isPedDoingTask(${1:ped thePed}, ${2:string taskName})'
+  'isPedDucked':
+    'prefix': 'isPedDucked'
+    'body': 'isPedDucked(${1:ped thePed})'
+  'isPedFrozen':
+    'prefix': 'isPedFrozen'
+    'body': 'isPedFrozen(${1:ped thePed})'
+  'isPedHeadless':
+    'prefix': 'isPedHeadless'
+    'body': 'isPedHeadless(${1:ped thePed})'
+  'isPedInVehicle':
+    'prefix': 'isPedInVehicle'
+    'body': 'isPedInVehicle(${1:ped thePed})'
+  'isPedInWater':
+    'prefix': 'isPedInWater'
+    'body': 'isPedInWater(${1:ped thePed})'
+  'isPedOnFire':
+    'prefix': 'isPedOnFire'
+    'body': 'isPedOnFire(${1:ped thePed})'
+  'isPedOnGround':
+    'prefix': 'isPedOnGround'
+    'body': 'isPedOnGround(${1:ped thePed})'
+  'isPedTargetingMarkerEnabled':
+    'prefix': 'isPedTargetingMarkerEnabled'
+    'body': 'isPedTargetingMarkerEnabled()'
+  'isPickupSpawned':
+    'prefix': 'isPickupSpawned'
+    'body': 'isPickupSpawned(${1:pickup thePickup})'
+  'isPlayerChoking':
+    'prefix': 'isPlayerChoking'
+    'body': 'isPlayerChoking(${1:player thePlayer})'
+  'isPlayerDead':
+    'prefix': 'isPlayerDead'
+    'body': 'isPlayerDead(${1:player thePlayer})'
+  'isPlayerDoingTask':
+    'prefix': 'isPlayerDoingTask'
+    'body': 'isPlayerDoingTask(${1:player thePlayer}, ${2:string taskName})'
+  'isPlayerDucked':
+    'prefix': 'isPlayerDucked'
+    'body': 'isPlayerDucked(${1:player thePlayer})'
+  'isPlayerHudComponentVisible':
+    'prefix': 'isPlayerHudComponentVisible'
+    'body': 'isPlayerHudComponentVisible(${1:[player thePlayer}, ${2:] string component})'
+  'isPlayerInVehicle':
+    'prefix': 'isPlayerInVehicle'
+    'body': 'isPlayerInVehicle(${1:player thePlayer})'
+  'isPlayerInWater':
+    'prefix': 'isPlayerInWater'
+    'body': 'isPlayerInWater(${1:player thePlayer})'
+  'isPlayerMapForced':
+    'prefix': 'isPlayerMapForced'
+    'body': 'isPlayerMapForced(${1:player thePlayer})'
+  'isPlayerMapVisible':
+    'prefix': 'isPlayerMapVisible'
+    'body': 'isPlayerMapVisible()'
+  'isPlayerMuted':
+    'prefix': 'isPlayerMuted'
+    'body': 'isPlayerMuted(${1:player thePlayer})'
+  'isPlayerNametagShowing':
+    'prefix': 'isPlayerNametagShowing'
+    'body': 'isPlayerNametagShowing(${1:player thePlayer})'
+  'isPlayerOnGround':
+    'prefix': 'isPlayerOnGround'
+    'body': 'isPlayerOnGround(${1:player thePlayer})'
+  'isRadarAreaFlashing':
+    'prefix': 'isRadarAreaFlashing'
+    'body': 'isRadarAreaFlashing(${1:radararea theRadararea})'
   'isSoundPanningEnabled':
-    'prefix': 'isSoundPanningEnabled',
-    'body': 'isSoundPanningEnabled(${0:sound})'
+    'prefix': 'isSoundPanningEnabled'
+    'body': 'isSoundPanningEnabled(${1:element theSound})'
   'isSoundPaused':
-    'prefix': 'isSoundPaused',
-    'body': 'isSoundPaused(${0:sound})'
-  'playSFX':
-    'prefix': 'playSFX',
-    'body': 'playSFX(${1:containerName}, ${2:bankId}, ${3:soundId})'
-  'playSFX3D':
-    'prefix': 'playSFX3D',
-    'body': 'playSFX3D(${1:containerName}, ${2:bankId}, ${3:soundId}, ${4:x}, ${5:y}, ${5:z})'
+    'prefix': 'isSoundPaused'
+    'body': 'isSoundPaused(${1:element theSound})'
+  'isTimer':
+    'prefix': 'isTimer'
+    'body': 'isTimer(${1:var theVariable})'
+  'isTrainChainEngine':
+    'prefix': 'isTrainChainEngine'
+    'body': 'isTrainChainEngine(${1:vehicle theTrain})'
+  'isTrainDerailable':
+    'prefix': 'isTrainDerailable'
+    'body': 'isTrainDerailable(${1:vehicle vehicleToCheck})'
+  'isTrainDerailed':
+    'prefix': 'isTrainDerailed'
+    'body': 'isTrainDerailed(${1:vehicle vehicleToCheck})'
+  'isTransferBoxActive':
+    'prefix': 'isTransferBoxActive'
+    'body': 'isTransferBoxActive()'
+  'isVehicleBlown':
+    'prefix': 'isVehicleBlown'
+    'body': 'isVehicleBlown(${1:vehicle theVehicle})'
+  'isVehicleDamageProof':
+    'prefix': 'isVehicleDamageProof'
+    'body': 'isVehicleDamageProof(${1:vehicle theVehicle})'
+  'isVehicleFrozen':
+    'prefix': 'isVehicleFrozen'
+    'body': 'isVehicleFrozen(${1:vehicle theVehicle})'
+  'isVehicleFuelTankExplodable':
+    'prefix': 'isVehicleFuelTankExplodable'
+    'body': 'isVehicleFuelTankExplodable(${1:vehicle theVehicle})'
+  'isVehicleLocked':
+    'prefix': 'isVehicleLocked'
+    'body': 'isVehicleLocked(${1:vehicle theVehicle})'
+  'isVehicleNitroActivated':
+    'prefix': 'isVehicleNitroActivated'
+    'body': 'isVehicleNitroActivated(${1:vehicle theVehicle})'
+  'isVehicleNitroRecharging':
+    'prefix': 'isVehicleNitroRecharging'
+    'body': 'isVehicleNitroRecharging(${1:vehicle theVehicle})'
+  'isVehicleOnGround':
+    'prefix': 'isVehicleOnGround'
+    'body': 'isVehicleOnGround(${1:vehicle theVehicle})'
+  'isVehicleTaxiLightOn':
+    'prefix': 'isVehicleTaxiLightOn'
+    'body': 'isVehicleTaxiLightOn(${1:vehicle taxi})'
+  'isVoiceEnabled':
+    'prefix': 'isVoiceEnabled'
+    'body': 'isVoiceEnabled()'
+  'isWaterDrawnLast':
+    'prefix': 'isWaterDrawnLast'
+    'body': 'isWaterDrawnLast()'
+  'isWorldSoundEnabled':
+    'prefix': 'isWorldSoundEnabled'
+    'body': 'isWorldSoundEnabled(${1:int group [}, ${2:int index = -1 ]})'
+  'isWorldSpecialPropertyEnabled':
+    'prefix': 'isWorldSpecialPropertyEnabled'
+    'body': 'isWorldSpecialPropertyEnabled(${1:string propname})'
+  'kickPlayer':
+    'prefix': 'kickPlayer'
+    'body': 'kickPlayer(${1:player kickedPlayer}, ${2:[ player responsiblePlayer}, ${3:string reason ]})'
+  'killPed':
+    'prefix': 'killPed'
+    'body': 'killPed(${1:ped thePed}, ${2:[ ped theKiller = nil}, ${3:int weapon=255}, ${4:int bodyPart=255}, ${5:bool stealth ]})'
+  'killPlayer':
+    'prefix': 'killPlayer'
+    'body': 'killPlayer(${1:player thePlayer}, ${2:[ player theKiller = nil}, ${3:int weapon=255}, ${4:int bodyPart=255 ]})'
+  'killTimer':
+    'prefix': 'killTimer'
+    'body': 'killTimer(${1:timer theTimer})'
+  'loadBrowserURL':
+    'prefix': 'loadBrowserURL'
+    'body': 'loadBrowserURL(${1:browser webBrowser}, ${2:string url})'
+  'loadMapData':
+    'prefix': 'loadMapData'
+    'body': 'loadMapData(${1:xmlnode node}, ${2:element parent})'
+  'logIn':
+    'prefix': 'logIn'
+    'body': 'logIn(${1:player thePlayer}, ${2:account theAccount}, ${3:string thePassword})'
+  'logOut':
+    'prefix': 'logOut'
+    'body': 'logOut(${1:player thePlayer})'
+  'md5':
+    'prefix': 'md5'
+    'body': 'md5(${1:string str})'
+  'moveObject':
+    'prefix': 'moveObject'
+    'body': 'moveObject(${1:object theObject}, ${2:int time}, ${3:float targetx}, ${4:float targety}, ${5:float targetz}, ${6:[ float moverx}, ${7:float movery}, ${8:float moverz ]})'
+  'onAccountDataChange':
+    'prefix': 'onAccountDataChange'
+    'body': 'onAccountDataChange()'
+  'onBan':
+    'prefix': 'onBan'
+    'body': 'onBan()'
+  'onChatMessage':
+    'prefix': 'onChatMessage'
+    'body': 'onChatMessage()'
+  'onClientBrowserCreated':
+    'prefix': 'onClientBrowserCreated'
+    'body': 'onClientBrowserCreated()'
+  'onClientBrowserDocumentReady':
+    'prefix': 'onClientBrowserDocumentReady'
+    'body': 'onClientBrowserDocumentReady()'
+  'onClientBrowserLoadingStart':
+    'prefix': 'onClientBrowserLoadingStart'
+    'body': 'onClientBrowserLoadingStart()'
+  'onClientBrowserLoadingFailed':
+    'prefix': 'onClientBrowserLoadingFailed'
+    'body': 'onClientBrowserLoadingFailed()'
+  'onClientBrowserNavigate':
+    'prefix': 'onClientBrowserNavigate'
+    'body': 'onClientBrowserNavigate()'
+  'onClientBrowserPopup':
+    'prefix': 'onClientBrowserPopup'
+    'body': 'onClientBrowserPopup()'
+  'onClientBrowserCursorChange':
+    'prefix': 'onClientBrowserCursorChange'
+    'body': 'onClientBrowserCursorChange()'
+  'onClientBrowserTooltip':
+    'prefix': 'onClientBrowserTooltip'
+    'body': 'onClientBrowserTooltip()'
+  'onClientBrowserInputFocusChanged':
+    'prefix': 'onClientBrowserInputFocusChanged'
+    'body': 'onClientBrowserInputFocusChanged()'
+  'onClientBrowserWhistelistChange':
+    'prefix': 'onClientBrowserWhistelistChange'
+    'body': 'onClientBrowserWhistelistChange()'
+  'onClientBrowserResourceBlocked':
+    'prefix': 'onClientBrowserResourceBlocked'
+    'body': 'onClientBrowserResourceBlocked()'
+  'onClientChatMessage':
+    'prefix': 'onClientChatMessage'
+    'body': 'onClientChatMessage()'
+  'onClientClick':
+    'prefix': 'onClientClick'
+    'body': 'onClientClick()'
+  'onClientColShapeHit':
+    'prefix': 'onClientColShapeHit'
+    'body': 'onClientColShapeHit()'
+  'onClientColShapeLeave':
+    'prefix': 'onClientColShapeLeave'
+    'body': 'onClientColShapeLeave()'
+  'onClientConsole':
+    'prefix': 'onClientConsole'
+    'body': 'onClientConsole()'
+  'onClientCursorMove':
+    'prefix': 'onClientCursorMove'
+    'body': 'onClientCursorMove()'
+  'onClientDebugMessage':
+    'prefix': 'onClientDebugMessage'
+    'body': 'onClientDebugMessage()'
+  'onClientDoubleClick':
+    'prefix': 'onClientDoubleClick'
+    'body': 'onClientDoubleClick()'
+  'onClientElementColShapeHit':
+    'prefix': 'onClientElementColShapeHit'
+    'body': 'onClientElementColShapeHit()'
+  'onClientElementColShapeLeave':
+    'prefix': 'onClientElementColShapeLeave'
+    'body': 'onClientElementColShapeLeave()'
+  'onClientElementDataChange':
+    'prefix': 'onClientElementDataChange'
+    'body': 'onClientElementDataChange()'
+  'onClientElementDestroy':
+    'prefix': 'onClientElementDestroy'
+    'body': 'onClientElementDestroy()'
+  'onClientElementStreamIn':
+    'prefix': 'onClientElementStreamIn'
+    'body': 'onClientElementStreamIn()'
+  'onClientElementStreamOut':
+    'prefix': 'onClientElementStreamOut'
+    'body': 'onClientElementStreamOut()'
+  'onClientExplosion':
+    'prefix': 'onClientExplosion'
+    'body': 'onClientExplosion()'
+  'onClientFileDownloadComplete':
+    'prefix': 'onClientFileDownloadComplete'
+    'body': 'onClientFileDownloadComplete()'
+  'onClientGUIAccepted':
+    'prefix': 'onClientGUIAccepted'
+    'body': 'onClientGUIAccepted()'
+  'onClientGUIBlur':
+    'prefix': 'onClientGUIBlur'
+    'body': 'onClientGUIBlur()'
+  'onClientGUIChanged':
+    'prefix': 'onClientGUIChanged'
+    'body': 'onClientGUIChanged()'
+  'onClientGUIClick':
+    'prefix': 'onClientGUIClick'
+    'body': 'onClientGUIClick()'
+  'onClientGUIComboBoxAccepted':
+    'prefix': 'onClientGUIComboBoxAccepted'
+    'body': 'onClientGUIComboBoxAccepted()'
+  'onClientGUIDoubleClick':
+    'prefix': 'onClientGUIDoubleClick'
+    'body': 'onClientGUIDoubleClick()'
+  'onClientGUIFocus':
+    'prefix': 'onClientGUIFocus'
+    'body': 'onClientGUIFocus()'
+  'onClientGUIMouseDown':
+    'prefix': 'onClientGUIMouseDown'
+    'body': 'onClientGUIMouseDown()'
+  'onClientGUIMouseUp':
+    'prefix': 'onClientGUIMouseUp'
+    'body': 'onClientGUIMouseUp()'
+  'onClientGUIMove':
+    'prefix': 'onClientGUIMove'
+    'body': 'onClientGUIMove()'
+  'onClientGUIScroll':
+    'prefix': 'onClientGUIScroll'
+    'body': 'onClientGUIScroll()'
+  'onClientGUISize':
+    'prefix': 'onClientGUISize'
+    'body': 'onClientGUISize()'
+  'onClientGUITabSwitched':
+    'prefix': 'onClientGUITabSwitched'
+    'body': 'onClientGUITabSwitched()'
+  'onClientHUDRender':
+    'prefix': 'onClientHUDRender'
+    'body': 'onClientHUDRender()'
+  'onClientKey':
+    'prefix': 'onClientKey'
+    'body': 'onClientKey()'
+  'onClientMarkerHit':
+    'prefix': 'onClientMarkerHit'
+    'body': 'onClientMarkerHit()'
+  'onClientMarkerLeave':
+    'prefix': 'onClientMarkerLeave'
+    'body': 'onClientMarkerLeave()'
+  'onClientMinimize':
+    'prefix': 'onClientMinimize'
+    'body': 'onClientMinimize()'
+  'onClientMouseEnter':
+    'prefix': 'onClientMouseEnter'
+    'body': 'onClientMouseEnter()'
+  'onClientMouseLeave':
+    'prefix': 'onClientMouseLeave'
+    'body': 'onClientMouseLeave()'
+  'onClientMouseMove':
+    'prefix': 'onClientMouseMove'
+    'body': 'onClientMouseMove()'
+  'onClientMouseWheel':
+    'prefix': 'onClientMouseWheel'
+    'body': 'onClientMouseWheel()'
+  'onClientPedChoke':
+    'prefix': 'onClientPedChoke'
+    'body': 'onClientPedChoke()'
+  'onClientPedDamage':
+    'prefix': 'onClientPedDamage'
+    'body': 'onClientPedDamage()'
+  'onClientPedHeliKilled':
+    'prefix': 'onClientPedHeliKilled'
+    'body': 'onClientPedHeliKilled()'
+  'onClientPedHitByWaterCannon':
+    'prefix': 'onClientPedHitByWaterCannon'
+    'body': 'onClientPedHitByWaterCannon()'
+  'onClientPedWasted':
+    'prefix': 'onClientPedWasted'
+    'body': 'onClientPedWasted()'
+  'onClientPedWeaponFire':
+    'prefix': 'onClientPedWeaponFire'
+    'body': 'onClientPedWeaponFire()'
+  'onClientPlayerChangeNick':
+    'prefix': 'onClientPlayerChangeNick'
+    'body': 'onClientPlayerChangeNick()'
+  'onClientPlayerChoke':
+    'prefix': 'onClientPlayerChoke'
+    'body': 'onClientPlayerChoke()'
+  'onClientPlayerDamage':
+    'prefix': 'onClientPlayerDamage'
+    'body': 'onClientPlayerDamage()'
+  'onClientPlayerHeliKilled':
+    'prefix': 'onClientPlayerHeliKilled'
+    'body': 'onClientPlayerHeliKilled()'
+  'onClientPlayerHitByWaterCannon':
+    'prefix': 'onClientPlayerHitByWaterCannon'
+    'body': 'onClientPlayerHitByWaterCannon()'
+  'onClientPlayerJoin':
+    'prefix': 'onClientPlayerJoin'
+    'body': 'onClientPlayerJoin()'
+  'onClientPlayerNetworkStatus':
+    'prefix': 'onClientPlayerNetworkStatus'
+    'body': 'onClientPlayerNetworkStatus()'
+  'onClientPlayerPickupHit':
+    'prefix': 'onClientPlayerPickupHit'
+    'body': 'onClientPlayerPickupHit()'
+  'onClientPlayerPickupLeave':
+    'prefix': 'onClientPlayerPickupLeave'
+    'body': 'onClientPlayerPickupLeave()'
+  'onClientPlayerQuit':
+    'prefix': 'onClientPlayerQuit'
+    'body': 'onClientPlayerQuit()'
+  'onClientPlayerRadioSwitch':
+    'prefix': 'onClientPlayerRadioSwitch'
+    'body': 'onClientPlayerRadioSwitch()'
+  'onClientPlayerSpawn':
+    'prefix': 'onClientPlayerSpawn'
+    'body': 'onClientPlayerSpawn()'
+  'onClientPlayerStealthKill':
+    'prefix': 'onClientPlayerStealthKill'
+    'body': 'onClientPlayerStealthKill()'
+  'onClientPlayerStuntFinish':
+    'prefix': 'onClientPlayerStuntFinish'
+    'body': 'onClientPlayerStuntFinish()'
+  'onClientPlayerStuntStart':
+    'prefix': 'onClientPlayerStuntStart'
+    'body': 'onClientPlayerStuntStart()'
+  'onClientPlayerTarget':
+    'prefix': 'onClientPlayerTarget'
+    'body': 'onClientPlayerTarget()'
+  'onClientPlayerVehicleEnter':
+    'prefix': 'onClientPlayerVehicleEnter'
+    'body': 'onClientPlayerVehicleEnter()'
+  'onClientPlayerVehicleExit':
+    'prefix': 'onClientPlayerVehicleExit'
+    'body': 'onClientPlayerVehicleExit()'
+  'onClientPlayerVoicePause':
+    'prefix': 'onClientPlayerVoicePause'
+    'body': 'onClientPlayerVoicePause()'
+  'onClientPlayerVoiceResumed':
+    'prefix': 'onClientPlayerVoiceResumed'
+    'body': 'onClientPlayerVoiceResumed()'
+  'onClientPlayerVoiceStart':
+    'prefix': 'onClientPlayerVoiceStart'
+    'body': 'onClientPlayerVoiceStart()'
+  'onClientPlayerVoiceStop':
+    'prefix': 'onClientPlayerVoiceStop'
+    'body': 'onClientPlayerVoiceStop()'
+  'onClientPlayerWasted':
+    'prefix': 'onClientPlayerWasted'
+    'body': 'onClientPlayerWasted()'
+  'onClientPlayerWeaponSwitch':
+    'prefix': 'onClientPlayerWeaponSwitch'
+    'body': 'onClientPlayerWeaponSwitch()'
+  'onClientPreRender':
+    'prefix': 'onClientPreRender'
+    'body': 'onClientPreRender()'
+  'onClientProjectileCreation':
+    'prefix': 'onClientProjectileCreation'
+    'body': 'onClientProjectileCreation()'
+  'onClientRender':
+    'prefix': 'onClientRender'
+    'body': 'onClientRender()'
+  'onClientResourceStart':
+    'prefix': 'onClientResourceStart'
+    'body': 'onClientResourceStart()'
+  'onClientResourceStop':
+    'prefix': 'onClientResourceStop'
+    'body': 'onClientResourceStop()'
+  'onClientRestore':
+    'prefix': 'onClientRestore'
+    'body': 'onClientRestore()'
+  'onClientSoundBeat':
+    'prefix': 'onClientSoundBeat'
+    'body': 'onClientSoundBeat()'
+  'onClientSoundChangedMeta':
+    'prefix': 'onClientSoundChangedMeta'
+    'body': 'onClientSoundChangedMeta()'
+  'onClientSoundFinishedDownload':
+    'prefix': 'onClientSoundFinishedDownload'
+    'body': 'onClientSoundFinishedDownload()'
+  'onClientSoundStarted':
+    'prefix': 'onClientSoundStarted'
+    'body': 'onClientSoundStarted()'
+  'onClientSoundStopped':
+    'prefix': 'onClientSoundStopped'
+    'body': 'onClientSoundStopped()'
+  'onClientSoundStream':
+    'prefix': 'onClientSoundStream'
+    'body': 'onClientSoundStream()'
+  'onClientTrailerAttach':
+    'prefix': 'onClientTrailerAttach'
+    'body': 'onClientTrailerAttach()'
+  'onClientTrailerDetach':
+    'prefix': 'onClientTrailerDetach'
+    'body': 'onClientTrailerDetach()'
+  'onClientVehicleCollision':
+    'prefix': 'onClientVehicleCollision'
+    'body': 'onClientVehicleCollision()'
+  'onClientVehicleDrown':
+    'prefix': 'onClientVehicleDrown'
+    'body': 'onClientVehicleDrown()'
+  'onClientVehicleEnter':
+    'prefix': 'onClientVehicleEnter'
+    'body': 'onClientVehicleEnter()'
+  'onClientVehicleExit':
+    'prefix': 'onClientVehicleExit'
+    'body': 'onClientVehicleExit()'
+  'onClientVehicleExplode':
+    'prefix': 'onClientVehicleExplode'
+    'body': 'onClientVehicleExplode()'
+  'onClientVehicleNitroStateChange':
+    'prefix': 'onClientVehicleNitroStateChange'
+    'body': 'onClientVehicleNitroStateChange()'
+  'onClientVehicleRespawn':
+    'prefix': 'onClientVehicleRespawn'
+    'body': 'onClientVehicleRespawn()'
+  'onClientVehicleStartEnter':
+    'prefix': 'onClientVehicleStartEnter'
+    'body': 'onClientVehicleStartEnter()'
+  'onClientVehicleStartExit':
+    'prefix': 'onClientVehicleStartExit'
+    'body': 'onClientVehicleStartExit()'
+  'onClientWeaponFire':
+    'prefix': 'onClientWeaponFire'
+    'body': 'onClientWeaponFire()'
+  'onConsole':
+    'prefix': 'onConsole'
+    'body': 'onConsole()'
+  'onColShapeHit':
+    'prefix': 'onColShapeHit'
+    'body': 'onColShapeHit()'
+  'onColShapeLeave':
+    'prefix': 'onColShapeLeave'
+    'body': 'onColShapeLeave()'
+  'onDebugMessage':
+    'prefix': 'onDebugMessage'
+    'body': 'onDebugMessage()'
+  'onElementDataChange':
+    'prefix': 'onElementDataChange'
+    'body': 'onElementDataChange()'
+  'onElementDestroy':
+    'prefix': 'onElementDestroy'
+    'body': 'onElementDestroy()'
+  'onElementClicked':
+    'prefix': 'onElementClicked'
+    'body': 'onElementClicked()'
+  'onElementColShapeHit':
+    'prefix': 'onElementColShapeHit'
+    'body': 'onElementColShapeHit()'
+  'onElementColShapeLeave':
+    'prefix': 'onElementColShapeLeave'
+    'body': 'onElementColShapeLeave()'
+  'onElementStartSync':
+    'prefix': 'onElementStartSync'
+    'body': 'onElementStartSync()'
+  'onElementStopSync':
+    'prefix': 'onElementStopSync'
+    'body': 'onElementStopSync()'
+  'onElementModelChange':
+    'prefix': 'onElementModelChange'
+    'body': 'onElementModelChange()'
+  'onMarkerHit':
+    'prefix': 'onMarkerHit'
+    'body': 'onMarkerHit()'
+  'onMarkerLeave':
+    'prefix': 'onMarkerLeave'
+    'body': 'onMarkerLeave()'
+  'onPedWasted':
+    'prefix': 'onPedWasted'
+    'body': 'onPedWasted()'
+  'onPedWeaponSwitch':
+    'prefix': 'onPedWeaponSwitch'
+    'body': 'onPedWeaponSwitch()'
+  'onPickupHit':
+    'prefix': 'onPickupHit'
+    'body': 'onPickupHit()'
+  'onPickupSpawn':
+    'prefix': 'onPickupSpawn'
+    'body': 'onPickupSpawn()'
+  'onPickupUse':
+    'prefix': 'onPickupUse'
+    'body': 'onPickupUse()'
+  'onPlayerBan':
+    'prefix': 'onPlayerBan'
+    'body': 'onPlayerBan()'
+  'onPlayerChangeNick':
+    'prefix': 'onPlayerChangeNick'
+    'body': 'onPlayerChangeNick()'
+  'onPlayerChat':
+    'prefix': 'onPlayerChat'
+    'body': 'onPlayerChat()'
+  'onPlayerClick':
+    'prefix': 'onPlayerClick'
+    'body': 'onPlayerClick()'
+  'onPlayerCommand':
+    'prefix': 'onPlayerCommand'
+    'body': 'onPlayerCommand()'
+  'onPlayerConnect':
+    'prefix': 'onPlayerConnect'
+    'body': 'onPlayerConnect()'
+  'onPlayerContact':
+    'prefix': 'onPlayerContact'
+    'body': 'onPlayerContact()'
+  'onPlayerDamage':
+    'prefix': 'onPlayerDamage'
+    'body': 'onPlayerDamage()'
+  'onPlayerJoin':
+    'prefix': 'onPlayerJoin'
+    'body': 'onPlayerJoin()'
+  'onPlayerLogin':
+    'prefix': 'onPlayerLogin'
+    'body': 'onPlayerLogin()'
+  'onPlayerLogout':
+    'prefix': 'onPlayerLogout'
+    'body': 'onPlayerLogout()'
+  'onPlayerMarkerHit':
+    'prefix': 'onPlayerMarkerHit'
+    'body': 'onPlayerMarkerHit()'
+  'onPlayerMarkerLeave':
+    'prefix': 'onPlayerMarkerLeave'
+    'body': 'onPlayerMarkerLeave()'
+  'onPlayerModInfo':
+    'prefix': 'onPlayerModInfo'
+    'body': 'onPlayerModInfo()'
+  'onPlayerMute':
+    'prefix': 'onPlayerMute'
+    'body': 'onPlayerMute()'
+  'onPlayerNetworkStatus':
+    'prefix': 'onPlayerNetworkStatus'
+    'body': 'onPlayerNetworkStatus()'
+  'onClientObjectBreak':
+    'prefix': 'onClientObjectBreak'
+    'body': 'onClientObjectBreak()'
+  'onClientObjectDamage':
+    'prefix': 'onClientObjectDamage'
+    'body': 'onClientObjectDamage()'
+  'onPlayerPickupHit':
+    'prefix': 'onPlayerPickupHit'
+    'body': 'onPlayerPickupHit()'
+  'onPlayerPickupUse':
+    'prefix': 'onPlayerPickupUse'
+    'body': 'onPlayerPickupUse()'
+  'onPlayerPrivateMessage':
+    'prefix': 'onPlayerPrivateMessage'
+    'body': 'onPlayerPrivateMessage()'
+  'onPlayerQuit':
+    'prefix': 'onPlayerQuit'
+    'body': 'onPlayerQuit()'
+  'onPlayerSpawn':
+    'prefix': 'onPlayerSpawn'
+    'body': 'onPlayerSpawn()'
+  'onPlayerScreenShot':
+    'prefix': 'onPlayerScreenShot'
+    'body': 'onPlayerScreenShot()'
+  'onPlayerStealthKill':
+    'prefix': 'onPlayerStealthKill'
+    'body': 'onPlayerStealthKill()'
+  'onPlayerTarget':
+    'prefix': 'onPlayerTarget'
+    'body': 'onPlayerTarget()'
+  'onPlayerUnmute':
+    'prefix': 'onPlayerUnmute'
+    'body': 'onPlayerUnmute()'
+  'onPlayerVehicleEnter':
+    'prefix': 'onPlayerVehicleEnter'
+    'body': 'onPlayerVehicleEnter()'
+  'onPlayerVehicleExit':
+    'prefix': 'onPlayerVehicleExit'
+    'body': 'onPlayerVehicleExit()'
+  'onPlayerVoiceStart':
+    'prefix': 'onPlayerVoiceStart'
+    'body': 'onPlayerVoiceStart()'
+  'onPlayerVoiceStop':
+    'prefix': 'onPlayerVoiceStop'
+    'body': 'onPlayerVoiceStop()'
+  'onPlayerWasted':
+    'prefix': 'onPlayerWasted'
+    'body': 'onPlayerWasted()'
+  'onPlayerWeaponFire':
+    'prefix': 'onPlayerWeaponFire'
+    'body': 'onPlayerWeaponFire()'
+  'onPlayerWeaponSwitch':
+    'prefix': 'onPlayerWeaponSwitch'
+    'body': 'onPlayerWeaponSwitch()'
+  'onResourcePreStart':
+    'prefix': 'onResourcePreStart'
+    'body': 'onResourcePreStart()'
+  'onResourceStart':
+    'prefix': 'onResourceStart'
+    'body': 'onResourceStart()'
+  'onResourceStop':
+    'prefix': 'onResourceStop'
+    'body': 'onResourceStop()'
+  'onSettingChange':
+    'prefix': 'onSettingChange'
+    'body': 'onSettingChange()'
+  'onTrailerAttach':
+    'prefix': 'onTrailerAttach'
+    'body': 'onTrailerAttach()'
+  'onTrailerDetach':
+    'prefix': 'onTrailerDetach'
+    'body': 'onTrailerDetach()'
+  'onUnban':
+    'prefix': 'onUnban'
+    'body': 'onUnban()'
+  'onVehicleDamage':
+    'prefix': 'onVehicleDamage'
+    'body': 'onVehicleDamage()'
+  'onVehicleEnter':
+    'prefix': 'onVehicleEnter'
+    'body': 'onVehicleEnter()'
+  'onVehicleExit':
+    'prefix': 'onVehicleExit'
+    'body': 'onVehicleExit()'
+  'onVehicleExplode':
+    'prefix': 'onVehicleExplode'
+    'body': 'onVehicleExplode()'
+  'onVehicleRespawn':
+    'prefix': 'onVehicleRespawn'
+    'body': 'onVehicleRespawn()'
+  'onVehicleStartEnter':
+    'prefix': 'onVehicleStartEnter'
+    'body': 'onVehicleStartEnter()'
+  'onVehicleStartExit':
+    'prefix': 'onVehicleStartExit'
+    'body': 'onVehicleStartExit()'
+  'onWeaponFire':
+    'prefix': 'onWeaponFire'
+    'body': 'onWeaponFire()'
+  'outputChatBox':
+    'prefix': 'outputChatBox'
+    'body': 'outputChatBox(${1:string text}, ${2:[ element visibleTo=getRootElement()}, ${3:int r=255}, ${4:int g=255}, ${5:int b=255}, ${6:bool colorCoded=false ]})'
+  'outputConsole':
+    'prefix': 'outputConsole'
+    'body': 'outputConsole(${1:string text}, ${2:[ element visibleTo=getRootElement() ]})'
+  'outputDebugString':
+    'prefix': 'outputDebugString'
+    'body': 'outputDebugString(${1:string text}, ${2:[ int level=3}, ${3:int red=255}, ${4:int green=255}, ${5:int blue=255 ]})'
+  'outputServerLog':
+    'prefix': 'outputServerLog'
+    'body': 'outputServerLog(${1:string text})'
   'playSound':
-    'prefix': 'playSound',
-    'body': 'playSound(${0:soundPath})'
+    'prefix': 'playSound'
+    'body': 'playSound(${1:string soundName}, ${2:[ bool looped}, ${3:bool throttled = true ]})'
   'playSound3D':
-    'prefix': 'playSound3D',
-    'body': 'playSound3D(${1:soundPath}, ${2:x}, ${3:y}, ${4:z})'
+    'prefix': 'playSound3D'
+    'body': 'playSound3D(${1:string soundName}, ${2:float x}, ${3:float y}, ${4:float z}, ${5:[ bool looped}, ${6:bool throttled = true ]})'
   'playSoundFrontEnd':
-    'prefix': 'playSoundFrontEnd',
-    'body': 'playSoundFrontEnd(${0:sound})'
+    'prefix': 'playSoundFrontEnd'
+    'body': 'playSoundFrontEnd(${1:player thePlayer}, ${2:int sound})'
+  'pregFind':
+    'prefix': 'pregFind'
+    'body': 'pregFind(${1:string subject}, ${2:string pattern})'
+  'pregMatch':
+    'prefix': 'pregMatch'
+    'body': 'pregMatch(${1:string base}, ${2:string pattern})'
+  'pregReplace':
+    'prefix': 'pregReplace'
+    'body': 'pregReplace(${1:string subject}, ${2:string pattern}, ${3:string replacement})'
+  'processLineOfSight':
+    'prefix': 'processLineOfSight'
+    'body': 'processLineOfSight(${1:float startX}, ${2:float startY}, ${3:float startZ}, ${4:float endX}, ${5:float endY}, ${6:float endZ}, ${7:[ bool checkBuildings = true}, ${8:bool checkVehicles = true}, ${9:bool checkPlayers = true}, ${10:bool checkObjects = true}, ${11:bool checkDummies = true}, ${12:bool seeThroughStuff = false}, ${13:bool ignoreSomeObjectsForCamera = false}, ${14:bool shootThroughStuff = false}, ${15:element ignoredElement = nil ]})'
+  'randFloat':
+    'prefix': 'randFloat'
+    'body': 'randFloat()'
+  'randInt':
+    'prefix': 'randInt'
+    'body': 'randInt(${1:int lowerbound}, ${2:int upperbound})'
+  'redirectPlayer':
+    'prefix': 'redirectPlayer'
+    'body': 'redirectPlayer(${1:player thePlayer}, ${2:string serverIP}, ${3:int serverPort}, ${4:[ string serverPassword ]})'
+  'refreshResources':
+    'prefix': 'refreshResources'
+    'body': 'refreshResources(${1:[ bool refreshAll = false ]})'
+  'reloadBans':
+    'prefix': 'reloadBans'
+    'body': 'reloadBans()'
+  'reloadPedWeapon':
+    'prefix': 'reloadPedWeapon'
+    'body': 'reloadPedWeapon(${1:ped thePed})'
+  'removeAccount':
+    'prefix': 'removeAccount'
+    'body': 'removeAccount(${1:account theAccount})'
+  'removeBan':
+    'prefix': 'removeBan'
+    'body': 'removeBan(${1:ban theBan}, ${2:[ player responsibleElement ]})'
+  'removeCommandHandler':
+    'prefix': 'removeCommandHandler'
+    'body': 'removeCommandHandler(${1:string commandName [}, ${2:function handler]})'
+  'removeElementData':
+    'prefix': 'removeElementData'
+    'body': 'removeElementData(${1:element theElement}, ${2:string key})'
+  'removeEventHandler':
+    'prefix': 'removeEventHandler'
+    'body': 'removeEventHandler(${1:string eventName}, ${2:element attachedTo}, ${3:function functionVar})'
+  'removePedClothes':
+    'prefix': 'removePedClothes'
+    'body': 'removePedClothes(${1:ped thePed}, ${2:int clothesType}, ${3:[ string clothesTexture}, ${4:string clothesModel ]})'
+  'removePedFromVehicle':
+    'prefix': 'removePedFromVehicle'
+    'body': 'removePedFromVehicle(${1:ped thePed})'
+  'removePedJetPack':
+    'prefix': 'removePedJetPack'
+    'body': 'removePedJetPack(${1:ped thePed})'
+  'removePlayerClothes':
+    'prefix': 'removePlayerClothes'
+    'body': 'removePlayerClothes(${1:player thePlayer}, ${2:int clothesType}, ${3:[ string clothesTexture}, ${4:string clothesModel ]})'
+  'removePlayerFromVehicle':
+    'prefix': 'removePlayerFromVehicle'
+    'body': 'removePlayerFromVehicle(${1:player thePlayer})'
+  'removePlayerJetPack':
+    'prefix': 'removePlayerJetPack'
+    'body': 'removePlayerJetPack(${1:player thePlayer})'
+  'removeResourceDefaultSetting':
+    'prefix': 'removeResourceDefaultSetting'
+    'body': 'removeResourceDefaultSetting(${1:resource theResource}, ${2:string settingName})'
+  'removeResourceFile':
+    'prefix': 'removeResourceFile'
+    'body': 'removeResourceFile(${1:resource theResource}, ${2:string fileName})'
+  'removeRuleValue':
+    'prefix': 'removeRuleValue'
+    'body': 'removeRuleValue(${1:string key})'
+  'removeVehicleUpgrade':
+    'prefix': 'removeVehicleUpgrade'
+    'body': 'removeVehicleUpgrade(${1:vehicle theVehicle}, ${2:int upgrade})'
+  'removeWorldModel':
+    'prefix': 'removeWorldModel'
+    'body': 'removeWorldModel(${1:int modelID}, ${2:float radius}, ${3:float x}, ${4:float y}, ${5:float z})'
+  'renameResource':
+    'prefix': 'renameResource'
+    'body': 'renameResource(${1:string resourceName}, ${2:string newResourceName [}, ${3:string organizationalPath ]})'
+  'requestBrowserDomains ':
+    'prefix': 'requestBrowserDomains '
+    'body': 'requestBrowserDomains (${1:table pages}, ${2:[bool parseAsURL=false]})'
+  'resendPlayerModInfo':
+    'prefix': 'resendPlayerModInfo'
+    'body': 'resendPlayerModInfo(${1:player thePlayer})'
+  'resetAmbientSounds':
+    'prefix': 'resetAmbientSounds'
+    'body': 'resetAmbientSounds()'
+  'resetFarClipDistance':
+    'prefix': 'resetFarClipDistance'
+    'body': 'resetFarClipDistance()'
+  'resetFogDistance':
+    'prefix': 'resetFogDistance'
+    'body': 'resetFogDistance()'
+  'resetHeatHaze':
+    'prefix': 'resetHeatHaze'
+    'body': 'resetHeatHaze()'
+  'resetMapInfo':
+    'prefix': 'resetMapInfo'
+    'body': 'resetMapInfo(${1:[player thePlayer = getRootElement()]})'
+  'resetMoonSize':
+    'prefix': 'resetMoonSize'
+    'body': 'resetMoonSize()'
+  'resetRainLevel':
+    'prefix': 'resetRainLevel'
+    'body': 'resetRainLevel()'
+  'resetSkyGradient':
+    'prefix': 'resetSkyGradient'
+    'body': 'resetSkyGradient()'
+  'resetSunColor':
+    'prefix': 'resetSunColor'
+    'body': 'resetSunColor()'
+  'resetSunSize':
+    'prefix': 'resetSunSize'
+    'body': 'resetSunSize()'
+  'resetTimer':
+    'prefix': 'resetTimer'
+    'body': 'resetTimer(${1:timer theTimer})'
+  'resetVehicleComponentPosition':
+    'prefix': 'resetVehicleComponentPosition'
+    'body': 'resetVehicleComponentPosition(${1:vehicle theVehicle}, ${2:string theComponent})'
+  'resetVehicleComponentRotation':
+    'prefix': 'resetVehicleComponentRotation'
+    'body': 'resetVehicleComponentRotation(${1:vehicle theVehicle}, ${2:string theComponent})'
+  'resetVehicleExplosionTime':
+    'prefix': 'resetVehicleExplosionTime'
+    'body': 'resetVehicleExplosionTime(${1:vehicle theVehicle})'
+  'resetVehicleIdleTime':
+    'prefix': 'resetVehicleIdleTime'
+    'body': 'resetVehicleIdleTime(${1:vehicle theVehicle})'
+  'resetWaterColor':
+    'prefix': 'resetWaterColor'
+    'body': 'resetWaterColor()'
+  'resetWaterLevel':
+    'prefix': 'resetWaterLevel'
+    'body': 'resetWaterLevel()'
+  'resetWeaponFiringRate':
+    'prefix': 'resetWeaponFiringRate'
+    'body': 'resetWeaponFiringRate(${1:weapon theWeapon})'
+  'resetWindVelocity':
+    'prefix': 'resetWindVelocity'
+    'body': 'resetWindVelocity()'
+  'resetWorldSounds':
+    'prefix': 'resetWorldSounds'
+    'body': 'resetWorldSounds()'
+  'respawnObject':
+    'prefix': 'respawnObject'
+    'body': 'respawnObject(${1:object theObject})'
+  'respawnVehicle':
+    'prefix': 'respawnVehicle'
+    'body': 'respawnVehicle(${1:vehicle theVehicle})'
+  'restartResource':
+    'prefix': 'restartResource'
+    'body': 'restartResource(${1:resource theResource})'
+  'restoreAllWorldModels':
+    'prefix': 'restoreAllWorldModels'
+    'body': 'restoreAllWorldModels()'
+  'restoreWorldModel':
+    'prefix': 'restoreWorldModel'
+    'body': 'restoreWorldModel(${1:int modelID}, ${2:float radius}, ${3:float x}, ${4:float y}, ${5:float z})'
+  'rotateCameraRight':
+    'prefix': 'rotateCameraRight'
+    'body': 'rotateCameraRight()'
+  'rotateCameraUp':
+    'prefix': 'rotateCameraUp'
+    'body': 'rotateCameraUp()'
+  'saveMapData':
+    'prefix': 'saveMapData'
+    'body': 'saveMapData(${1:xmlnode node}, ${2:element baseElement [}, ${3:bool childrenOnly = false ]})'
+  'set':
+    'prefix': 'set'
+    'body': 'set(${1:string settingName}, ${2:var value})'
+  'setAccountData':
+    'prefix': 'setAccountData'
+    'body': 'setAccountData(${1:account theAccount}, ${2:string key}, ${3:string value})'
+  'setAccountPassword':
+    'prefix': 'setAccountPassword'
+    'body': 'setAccountPassword(${1:account theAccount}, ${2:string password})'
+  'setAircraftMaxHeight':
+    'prefix': 'setAircraftMaxHeight'
+    'body': 'setAircraftMaxHeight(${1:float Height})'
+  'setAircraftMaxVelocity':
+    'prefix': 'setAircraftMaxVelocity'
+    'body': 'setAircraftMaxVelocity(${1:float velocity})'
+  'setAmbientSoundEnabled':
+    'prefix': 'setAmbientSoundEnabled'
+    'body': 'setAmbientSoundEnabled(${1:string theType}, ${2:bool enable})'
+  'setAnalogControlState':
+    'prefix': 'setAnalogControlState'
+    'body': 'setAnalogControlState(${1:string controlName [}, ${2:float state ]})'
+  'setBanAdmin':
+    'prefix': 'setBanAdmin'
+    'body': 'setBanAdmin(${1:ban theBan}, ${2:string theAdmin})'
+  'setBanReason':
+    'prefix': 'setBanReason'
+    'body': 'setBanReason(${1:ban theBan}, ${2:string theReason})'
+  'setBirdsEnabled':
+    'prefix': 'setBirdsEnabled'
+    'body': 'setBirdsEnabled(${1:bool enable})'
+  'setBlipColor':
+    'prefix': 'setBlipColor'
+    'body': 'setBlipColor(${1:blip theBlip}, ${2:int red}, ${3:int green}, ${4:int blue}, ${5:int alpha})'
+  'setBlipIcon':
+    'prefix': 'setBlipIcon'
+    'body': 'setBlipIcon(${1:blip theBlip}, ${2:int icon})'
+  'setBlipOrdering':
+    'prefix': 'setBlipOrdering'
+    'body': 'setBlipOrdering(${1:blip theBlip}, ${2:int ordering})'
+  'setBlipSize':
+    'prefix': 'setBlipSize'
+    'body': 'setBlipSize(${1:blip theBlip}, ${2:int iconSize})'
+  'setBlipVisibleDistance':
+    'prefix': 'setBlipVisibleDistance'
+    'body': 'setBlipVisibleDistance(${1:blip theBlip}, ${2:float theDistance})'
+  'setBlurLevel':
+    'prefix': 'setBlurLevel'
+    'body': 'setBlurLevel(${1:player thePlayer}, ${2:int level})'
+  'setBrowserAjaxHandler':
+    'prefix': 'setBrowserAjaxHandler'
+    'body': 'setBrowserAjaxHandler(${1:browser thebrowser}, ${2:string url}, ${3:[function handler]})'
+  'setBrowserProperty':
+    'prefix': 'setBrowserProperty'
+    'body': 'setBrowserProperty(${1:browser thebrowser}, ${2:string key}, ${3:string value})'
+  'setBrowserRenderingPaused':
+    'prefix': 'setBrowserRenderingPaused'
+    'body': 'setBrowserRenderingPaused(${1:browser webBrowser}, ${2:bool paused})'
+  'setBrowserVolume':
+    'prefix': 'setBrowserVolume'
+    'body': 'setBrowserVolume(${1:[browser webBrowser]}, ${2:float volume})'
+  'setCameraClip':
+    'prefix': 'setCameraClip'
+    'body': 'setCameraClip(${1:bool objects}, ${2:bool vehicles})'
+  'setCameraFieldOfView ':
+    'prefix': 'setCameraFieldOfView '
+    'body': 'setCameraFieldOfView (${1:string cameraMode}, ${2:float fieldOfView})'
+  'setCameraGoggleEffect':
+    'prefix': 'setCameraGoggleEffect'
+    'body': 'setCameraGoggleEffect(${1:string goggleEffect})'
+  'setCameraInterior':
+    'prefix': 'setCameraInterior'
+    'body': 'setCameraInterior(${1:player thePlayer}, ${2:int interior})'
+  'setCameraLookAt':
+    'prefix': 'setCameraLookAt'
+    'body': 'setCameraLookAt(${1:player thePlayer}, ${2:float x}, ${3:float y}, ${4:float z})'
+  'setCameraMatrix':
+    'prefix': 'setCameraMatrix'
+    'body': 'setCameraMatrix(${1:player thePlayer}, ${2:float positionX}, ${3:float positionY}, ${4:float positionZ}, ${5:[float lookAtX}, ${6:float lookAtY}, ${7:float lookAtZ]})'
+  'setCameraMode':
+    'prefix': 'setCameraMode'
+    'body': 'setCameraMode(${1:player thePlayer}, ${2:string mode})'
+  'setCameraPosition':
+    'prefix': 'setCameraPosition'
+    'body': 'setCameraPosition(${1:player thePlayer}, ${2:float x}, ${3:float y}, ${4:float z})'
+  'setCameraShakeLevel':
+    'prefix': 'setCameraShakeLevel'
+    'body': 'setCameraShakeLevel(${1:int shakeLevel})'
+  'setCameraTarget':
+    'prefix': 'setCameraTarget'
+    'body': 'setCameraTarget(${1:player thePlayer}, ${2:element target})'
+  'setCameraViewMode':
+    'prefix': 'setCameraViewMode'
+    'body': 'setCameraViewMode(${1:int viewMode})'
+  'setClientName':
+    'prefix': 'setClientName'
+    'body': 'setClientName(${1:client theClient}, ${2:string newName})'
+  'setClipboard':
+    'prefix': 'setClipboard'
+    'body': 'setClipboard(${1:string theText})'
+  'setCloudsEnabled':
+    'prefix': 'setCloudsEnabled'
+    'body': 'setCloudsEnabled(${1:bool Enabled})'
+  'setControlState':
+    'prefix': 'setControlState'
+    'body': 'setControlState(${1:player thePlayer}, ${2:string control}, ${3:bool state})'
+  'setCursorAlpha':
+    'prefix': 'setCursorAlpha'
+    'body': 'setCursorAlpha(${1:float alpha})'
+  'setCursorPosition':
+    'prefix': 'setCursorPosition'
+    'body': 'setCursorPosition(${1:int cursorX}, ${2:int cursorY})'
+  'setDevelopmentMode':
+    'prefix': 'setDevelopmentMode'
+    'body': 'setDevelopmentMode(${1:bool enable})'
+  'setEffectDensity':
+    'prefix': 'setEffectDensity'
+    'body': 'setEffectDensity(${1:effect theEffect}, ${2:flot density})'
+  'setEffectSpeed':
+    'prefix': 'setEffectSpeed'
+    'body': 'setEffectSpeed(${1:effect theEffect}, ${2:flot speed})'
+  'setElementAlpha':
+    'prefix': 'setElementAlpha'
+    'body': 'setElementAlpha(${1:element theElement}, ${2:int alpha})'
+  'setElementAttachedOffsets':
+    'prefix': 'setElementAttachedOffsets'
+    'body': 'setElementAttachedOffsets(${1:element theElement}, ${2:[ float xPosOffset}, ${3:float yPosOffset}, ${4:float zPosOffset}, ${5:float xRotOffset}, ${6:float yRotOffset}, ${7:float zRotOffset ]})'
+  'setElementCollidableWith':
+    'prefix': 'setElementCollidableWith'
+    'body': 'setElementCollidableWith(${1:element theElement}, ${2:element withElement}, ${3:bool enabled})'
+  'setElementCollisionsEnabled':
+    'prefix': 'setElementCollisionsEnabled'
+    'body': 'setElementCollisionsEnabled(${1:element theElement}, ${2:bool enabled})'
+  'setElementData':
+    'prefix': 'setElementData'
+    'body': 'setElementData(${1:element theElement}, ${2:string key}, ${3:string value [}, ${4:bool synchronize]})'
+  'setElementDimension':
+    'prefix': 'setElementDimension'
+    'body': 'setElementDimension(${1:element theElement}, ${2:int dimension})'
+  'setElementDoubleSided':
+    'prefix': 'setElementDoubleSided'
+    'body': 'setElementDoubleSided(${1:element theElement}, ${2:bool enabled})'
+  'setElementFrozen':
+    'prefix': 'setElementFrozen'
+    'body': 'setElementFrozen(${1:element theElement}, ${2:bool freezeStatus})'
+  'setElementHealth':
+    'prefix': 'setElementHealth'
+    'body': 'setElementHealth(${1:element theElement}, ${2:float newHealth})'
+  'setElementID':
+    'prefix': 'setElementID'
+    'body': 'setElementID(${1:element theElement}, ${2:string name})'
+  'setElementInterior':
+    'prefix': 'setElementInterior'
+    'body': 'setElementInterior(${1:element theElement}, ${2:int interior}, ${3:[float x}, ${4:float y}, ${5:float z]})'
+  'setElementMatrix':
+    'prefix': 'setElementMatrix'
+    'body': 'setElementMatrix(${1:element theElement}, ${2:table theMatrix})'
+  'setElementModel':
+    'prefix': 'setElementModel'
+    'body': 'setElementModel(${1:element theElement}, ${2:int model})'
+  'setElementParent':
+    'prefix': 'setElementParent'
+    'body': 'setElementParent(${1:element theElement}, ${2:element parent})'
+  'setElementPosition':
+    'prefix': 'setElementPosition'
+    'body': 'setElementPosition(${1:element theElement}, ${2:float x}, ${3:float y}, ${4:float z})'
+  'setElementRotation':
+    'prefix': 'setElementRotation'
+    'body': 'setElementRotation(${1:element theElement}, ${2:float rotX}, ${3:float rotY}, ${4:float rotZ})'
+  'setElementStreamable':
+    'prefix': 'setElementStreamable'
+    'body': 'setElementStreamable(${1:element theElement}, ${2:bool streamable})'
+  'setElementSyncer':
+    'prefix': 'setElementSyncer'
+    'body': 'setElementSyncer(${1:element theElement}, ${2:bool streamable})'
+  'setElementVelocity':
+    'prefix': 'setElementVelocity'
+    'body': 'setElementVelocity(${1:element theElement}, ${2:float speedX}, ${3:float speedY}, ${4:float speedZ})'
+  'setElementVisibleTo':
+    'prefix': 'setElementVisibleTo'
+    'body': 'setElementVisibleTo(${1:element theElement}, ${2:element visibleTo}, ${3:bool visible})'
+  'setFarClipDistance':
+    'prefix': 'setFarClipDistance'
+    'body': 'setFarClipDistance(${1:float distance})'
+  'setFogDistance':
+    'prefix': 'setFogDistance'
+    'body': 'setFogDistance(${1:float distance})'
+  'setFPSLimit':
+    'prefix': 'setFPSLimit'
+    'body': 'setFPSLimit(${1:int fpsLimit})'
+  'setGameSpeed':
+    'prefix': 'setGameSpeed'
+    'body': 'setGameSpeed(${1:int value})'
+  'setGameType':
+    'prefix': 'setGameType'
+    'body': 'setGameType(${1:string gameType})'
+  'setGarageOpen':
+    'prefix': 'setGarageOpen'
+    'body': 'setGarageOpen(${1:int garageID}, ${2:bool open})'
+  'setGlitchEnabled':
+    'prefix': 'setGlitchEnabled'
+    'body': 'setGlitchEnabled(${1:string glitch}, ${2:bool enabled})'
+  'setGravity':
+    'prefix': 'setGravity'
+    'body': 'setGravity(${1:float level})'
+  'setHeatHaze':
+    'prefix': 'setHeatHaze'
+    'body': 'setHeatHaze(${1:int intensity [}, ${2:int randomShift = 0}, ${3:int speedMin = 12}, ${4:int speedMax = 18}, ${5:int scanSizeX = 75}, ${6:int scanSizeY = 80}, ${7:int renderSizeX = 80}, ${8:int renderSizeY = 85}, ${9:bool bShowInside = false]})'
+  'setHelicopterRotorSpeed':
+    'prefix': 'setHelicopterRotorSpeed'
+    'body': 'setHelicopterRotorSpeed(${1:vehicle heli}, ${2:float speed})'
+  'setInteriorSoundsEnabled':
+    'prefix': 'setInteriorSoundsEnabled'
+    'body': 'setInteriorSoundsEnabled(${1:bool enabled})'
+  'setLightColor':
+    'prefix': 'setLightColor'
+    'body': 'setLightColor(${1:light theLight}, ${2:float r}, ${3:float g}, ${4:float b})'
+  'setLightDirection':
+    'prefix': 'setLightDirection'
+    'body': 'setLightDirection(${1:light theLight}, ${2:float x}, ${3:float y}, ${4:float z})'
+  'setLightRadius':
+    'prefix': 'setLightRadius'
+    'body': 'setLightRadius(${1:light theLight}, ${2:float radius})'
+  'setLowLODElement':
+    'prefix': 'setLowLODElement'
+    'body': 'setLowLODElement(${1:element theElement}, ${2:element lowLODElement})'
+  'setMapName':
+    'prefix': 'setMapName'
+    'body': 'setMapName(${1:string mapName})'
+  'setMarkerColor':
+    'prefix': 'setMarkerColor'
+    'body': 'setMarkerColor(${1:marker theMarker}, ${2:int r}, ${3:int g}, ${4:int b}, ${5:int a})'
+  'setMarkerIcon':
+    'prefix': 'setMarkerIcon'
+    'body': 'setMarkerIcon(${1:marker theMarker}, ${2:string icon})'
+  'setMarkerSize':
+    'prefix': 'setMarkerSize'
+    'body': 'setMarkerSize(${1:marker theMarker}, ${2:float size})'
+  'setMarkerTarget':
+    'prefix': 'setMarkerTarget'
+    'body': 'setMarkerTarget(${1:marker theMarker}, ${2:float x}, ${3:float y}, ${4:float z})'
+  'setMarkerType':
+    'prefix': 'setMarkerType'
+    'body': 'setMarkerType(${1:marker theMarker}, ${2:string markerType})'
+  'setMaxPlayers':
+    'prefix': 'setMaxPlayers'
+    'body': 'setMaxPlayers(${1:int slots})'
+  'setMinuteDuration':
+    'prefix': 'setMinuteDuration'
+    'body': 'setMinuteDuration(${1:int milliseconds})'
+  'setModelHandling':
+    'prefix': 'setModelHandling'
+    'body': 'setModelHandling(${1:int modelId}, ${2:string property}, ${3:var value})'
+  'setMoonSize':
+    'prefix': 'setMoonSize'
+    'body': 'setMoonSize(${1:int size})'
+  'setObjectBreakable':
+    'prefix': 'setObjectBreakable'
+    'body': 'setObjectBreakable(${1:object theObject}, ${2:bool breakable})'
+  'setObjectMass':
+    'prefix': 'setObjectMass'
+    'body': 'setObjectMass(${1:object theObject}, ${2:float mass})'
+  'setObjectModel':
+    'prefix': 'setObjectModel'
+    'body': 'setObjectModel(${1:object theObject}, ${2:int id})'
+  'setObjectScale':
+    'prefix': 'setObjectScale'
+    'body': 'setObjectScale(${1:object theObject}, ${2:float scale})'
+  'setObjectRotation':
+    'prefix': 'setObjectRotation'
+    'body': 'setObjectRotation(${1:object theObject}, ${2:float rotX}, ${3:float rotY}, ${4:float rotZ})'
+  'setObjectScale':
+    'prefix': 'setObjectScale'
+    'body': 'setObjectScale(${1:object theObject}, ${2:float scale})'
+  'setObjectStatic':
+    'prefix': 'setObjectStatic'
+    'body': 'setObjectStatic(${1:object theObject}, ${2:bool toggle})'
+  'setOcclusionsEnabled':
+    'prefix': 'setOcclusionsEnabled'
+    'body': 'setOcclusionsEnabled(${1:bool enabled})'
+  'setPedAimTarget':
+    'prefix': 'setPedAimTarget'
+    'body': 'setPedAimTarget(${1:ped thePed}, ${2:float x}, ${3:float y}, ${4:float z})'
+  'setPedAnalogControlState':
+    'prefix': 'setPedAnalogControlState'
+    'body': 'setPedAnalogControlState(${1:ped thePed}, ${2:string control}, ${3:float state})'
+  'setPedAnimation':
+    'prefix': 'setPedAnimation'
+    'body': 'setPedAnimation(${1:ped thePed}, ${2:[string block=nil}, ${3:string anim=nil}, ${4:int time=-1}, ${5:bool loop=true}, ${6:bool updatePosition=true}, ${7:bool interruptible=true}, ${8:bool freezeLastFrame = true]})'
+  'setPedAnimationProgress':
+    'prefix': 'setPedAnimationProgress'
+    'body': 'setPedAnimationProgress(${1:ped thePed}, ${2:string anim}, ${3:float progress})'
+  'setPedArmor':
+    'prefix': 'setPedArmor'
+    'body': 'setPedArmor(${1:ped thePed}, ${2:float armor})'
+  'setPedCameraRotation':
+    'prefix': 'setPedCameraRotation'
+    'body': 'setPedCameraRotation(${1:ped thePed}, ${2:float cameraRotation})'
+  'setPedCanBeKnockedOffBike':
+    'prefix': 'setPedCanBeKnockedOffBike'
+    'body': 'setPedCanBeKnockedOffBike(${1:ped thePed}, ${2:bool canBeKnockedOffBike})'
+  'setPedChoking':
+    'prefix': 'setPedChoking'
+    'body': 'setPedChoking(${1:ped thePed}, ${2:bool choking})'
+  'setPedControlState':
+    'prefix': 'setPedControlState'
+    'body': 'setPedControlState(${1:ped thePed}, ${2:string control}, ${3:bool state})'
+  'setPedDoingGangDriveby':
+    'prefix': 'setPedDoingGangDriveby'
+    'body': 'setPedDoingGangDriveby(${1:ped thePed}, ${2:bool state})'
+  'setPedFightingStyle':
+    'prefix': 'setPedFightingStyle'
+    'body': 'setPedFightingStyle(${1:ped thePed}, ${2:int style})'
+  'setPedFootBloodEnabled':
+    'prefix': 'setPedFootBloodEnabled'
+    'body': 'setPedFootBloodEnabled(${1:element thePlayer}, ${2:bool enabled})'
+  'setPedFrozen':
+    'prefix': 'setPedFrozen'
+    'body': 'setPedFrozen(${1:ped thePed}, ${2:bool Frozen})'
+  'setPedGravity':
+    'prefix': 'setPedGravity'
+    'body': 'setPedGravity(${1:ped thePed}, ${2:float gravity})'
+  'setPedHeadless':
+    'prefix': 'setPedHeadless'
+    'body': 'setPedHeadless(${1:ped thePed}, ${2:bool headState})'
+  'setPedLookAt':
+    'prefix': 'setPedLookAt'
+    'body': 'setPedLookAt(${1:ped thePed}, ${2:float x}, ${3:float y}, ${4:float z [}, ${5:int time = 3000}, ${6:element target ]})'
+  'setPedOnFire':
+    'prefix': 'setPedOnFire'
+    'body': 'setPedOnFire(${1:ped thePed}, ${2:bool isOnFire})'
+  'setPedOxygenLevel':
+    'prefix': 'setPedOxygenLevel'
+    'body': 'setPedOxygenLevel(${1:ped thePed}, ${2:float oxygen})'
+  'setPedRotation':
+    'prefix': 'setPedRotation'
+    'body': 'setPedRotation(${1:ped thePed}, ${2:float rotation})'
+  'setPedSkin':
+    'prefix': 'setPedSkin'
+    'body': 'setPedSkin(${1:ped thePed}, ${2:int skinID})'
+  'setPedStat':
+    'prefix': 'setPedStat'
+    'body': 'setPedStat(${1:ped thePed}, ${2:int stat}, ${3:float value})'
+  'setPedTargetingMarkerEnabled':
+    'prefix': 'setPedTargetingMarkerEnabled'
+    'body': 'setPedTargetingMarkerEnabled(${1:bool enabled})'
+  'setPedVoice':
+    'prefix': 'setPedVoice'
+    'body': 'setPedVoice(${1:ped thePed}, ${2:string voiceType}, ${3:string voiceName})'
+  'setPedWalkingStyle':
+    'prefix': 'setPedWalkingStyle'
+    'body': 'setPedWalkingStyle(${1:ped thePed}, ${2:int style})'
+  'setPedWeaponSlot':
+    'prefix': 'setPedWeaponSlot'
+    'body': 'setPedWeaponSlot(${1:ped thePed}, ${2:int weaponSlot})'
+  'setPickupRespawnInterval':
+    'prefix': 'setPickupRespawnInterval'
+    'body': 'setPickupRespawnInterval(${1:pickup thePickup}, ${2:int ms})'
+  'setPickupType':
+    'prefix': 'setPickupType'
+    'body': 'setPickupType(${1:pickup thePickup}, ${2:int type}, ${3:int amount/weapon}, ${4:[int ammo]})'
+  'setPlayerArmor':
+    'prefix': 'setPlayerArmor'
+    'body': 'setPlayerArmor(${1:player thePlayer}, ${2:float playerArmor})'
+  'setPlayerAnnounceValue':
+    'prefix': 'setPlayerAnnounceValue'
+    'body': 'setPlayerAnnounceValue(${1:element thePlayer}, ${2:string key}, ${3:string value})'
+  'setPlayerBlurLevel':
+    'prefix': 'setPlayerBlurLevel'
+    'body': 'setPlayerBlurLevel(${1:player thePlayer}, ${2:int level})'
+  'setPlayerCanBeKnockedOffBike':
+    'prefix': 'setPlayerCanBeKnockedOffBike'
+    'body': 'setPlayerCanBeKnockedOffBike(${1:player thePlayer}, ${2:bool canBeKnockedOffBike})'
+  'setPlayerChoking':
+    'prefix': 'setPlayerChoking'
+    'body': 'setPlayerChoking(${1:player thePlayer}, ${2:bool choking})'
+  'setPlayerFightingStyle':
+    'prefix': 'setPlayerFightingStyle'
+    'body': 'setPlayerFightingStyle(${1:player thePlayer}, ${2:int style})'
+  'setPlayerGravity':
+    'prefix': 'setPlayerGravity'
+    'body': 'setPlayerGravity(${1:player thePlayer}, ${2:float level})'
+  'setPlayerHudComponentVisible':
+    'prefix': 'setPlayerHudComponentVisible'
+    'body': 'setPlayerHudComponentVisible(${1:player thePlayer}, ${2:string component}, ${3:bool show})'
+  'setPlayerMoney':
+    'prefix': 'setPlayerMoney'
+    'body': 'setPlayerMoney(${1:player thePlayer}, ${2:int amount [}, ${3:bool instant ]})'
+  'setPlayerMuted':
+    'prefix': 'setPlayerMuted'
+    'body': 'setPlayerMuted(${1:player thePlayer}, ${2:bool state})'
+  'setPlayerName':
+    'prefix': 'setPlayerName'
+    'body': 'setPlayerName(${1:player thePlayer}, ${2:string newName})'
+  'setPlayerNametagColor':
+    'prefix': 'setPlayerNametagColor'
+    'body': 'setPlayerNametagColor(${1:player thePlayer}, ${2:int r}, ${3:int g}, ${4:int b})'
+  'setPlayerNametagShowing':
+    'prefix': 'setPlayerNametagShowing'
+    'body': 'setPlayerNametagShowing(${1:player thePlayer}, ${2:bool showing})'
+  'setPlayerNametagText':
+    'prefix': 'setPlayerNametagText'
+    'body': 'setPlayerNametagText(${1:player thePlayer}, ${2:string text})'
+  'setPlayerRotation':
+    'prefix': 'setPlayerRotation'
+    'body': 'setPlayerRotation(${1:player thePlayer}, ${2:float rotation})'
+  'setPlayerSkin':
+    'prefix': 'setPlayerSkin'
+    'body': 'setPlayerSkin(${1:player thePlayer}, ${2:int skinID})'
+  'setPlayerStat':
+    'prefix': 'setPlayerStat'
+    'body': 'setPlayerStat(${1:player thePlayer}, ${2:int stat}, ${3:float value})'
+  'setPlayerTeam':
+    'prefix': 'setPlayerTeam'
+    'body': 'setPlayerTeam(${1:player thePlayer}, ${2:team theTeam})'
+  'setPlayerVoiceBroadcastTo':
+    'prefix': 'setPlayerVoiceBroadcastTo'
+    'body': 'setPlayerVoiceBroadcastTo(${1:element thePlayer}, ${2:mixed broadcastTo})'
+  'setPlayerVoiceIgnoreFrom':
+    'prefix': 'setPlayerVoiceIgnoreFrom'
+    'body': 'setPlayerVoiceIgnoreFrom(${1:element thePlayer}, ${2:mixed ignoreFrom})'
+  'setPlayerWantedLevel':
+    'prefix': 'setPlayerWantedLevel'
+    'body': 'setPlayerWantedLevel(${1:player thePlayer}, ${2:int stars})'
+  'setPlayerWeaponSlot':
+    'prefix': 'setPlayerWeaponSlot'
+    'body': 'setPlayerWeaponSlot(${1:player thePlayer}, ${2:int weapon_slot})'
+  'setProjectileCounter':
+    'prefix': 'setProjectileCounter'
+    'body': 'setProjectileCounter(${1:projectile theProjectile}, ${2:int timeToDetonate})'
+  'setRadarAreaColor':
+    'prefix': 'setRadarAreaColor'
+    'body': 'setRadarAreaColor(${1:radararea theRadarArea}, ${2:int r}, ${3:int g}, ${4:int b}, ${5:int a})'
+  'setRadarAreaFlashing':
+    'prefix': 'setRadarAreaFlashing'
+    'body': 'setRadarAreaFlashing(${1:radararea theRadarArea}, ${2:bool flash})'
+  'setRadarAreaSize':
+    'prefix': 'setRadarAreaSize'
+    'body': 'setRadarAreaSize(${1:radararea theRadararea}, ${2:float x}, ${3:float y})'
   'setRadioChannel':
-    'prefix': 'setRadioChannel',
-    'body': 'setRadioChannel(${0:sound})'
+    'prefix': 'setRadioChannel'
+    'body': 'setRadioChannel(${1:int ID})'
+  'setRadioChannel':
+    'prefix': 'setRadioChannel'
+    'body': 'setRadioChannel(${1:int ID})'
+  'setRainLevel':
+    'prefix': 'setRainLevel'
+    'body': 'setRainLevel(${1:float level})'
+  'setResourceDefaultSetting':
+    'prefix': 'setResourceDefaultSetting'
+    'body': 'setResourceDefaultSetting(${1:resource theResource}, ${2:string settingName}, ${3:string/int/float settingValue})'
+  'setResourceInfo':
+    'prefix': 'setResourceInfo'
+    'body': 'setResourceInfo(${1:resource theResource}, ${2:string attribute}, ${3:string value})'
+  'setRuleValue':
+    'prefix': 'setRuleValue'
+    'body': 'setRuleValue(${1:string key}, ${2:string value})'
+  'setServerConfigSetting':
+    'prefix': 'setServerConfigSetting'
+    'body': 'setServerConfigSetting(${1:string name}, ${2:string value [}, ${3:bool bSave = false]})'
+  'setServerPassword':
+    'prefix': 'setServerPassword'
+    'body': 'setServerPassword(${1:string thePassword})'
+  'setSkyGradient':
+    'prefix': 'setSkyGradient'
+    'body': 'setSkyGradient(${1:[ int topRed = 0}, ${2:int topGreen = 0}, ${3:int topBlue = 0}, ${4:int bottomRed = 0}, ${5:int bottomGreen = 0}, ${6:int bottomBlue = 0 ]})'
   'setSoundEffectEnabled':
-    'prefix': 'setSoundEffectEnabled',
-    'body': 'setSoundEffectEnabled(${1:sound}, ${2:effectName}, ${3:bEnable})'
+    'prefix': 'setSoundEffectEnabled'
+    'body': 'setSoundEffectEnabled(${1:element theSound}, ${2:string effectName}, ${3:bool bEnable})'
   'setSoundMaxDistance':
-    'prefix': 'setSoundMaxDistance',
-    'body': 'setSoundMaxDistance(${1:sound}, ${2:distance})'
+    'prefix': 'setSoundMaxDistance'
+    'body': 'setSoundMaxDistance(${1:element sound}, ${2:int distance})'
   'setSoundMinDistance':
-    'prefix': 'setSoundMinDistance',
-    'body': 'setSoundMinDistance(${1:sound}, ${2:distance})'
+    'prefix': 'setSoundMinDistance'
+    'body': 'setSoundMinDistance(${1:element sound}, ${2:int distance})'
   'setSoundPan':
-    'prefix': 'setSoundPan',
-    'body': 'setSoundPan(${1:sound}, ${2:pan})'
+    'prefix': 'setSoundPan'
+    'body': 'setSoundPan()'
   'setSoundPanningEnabled':
-    'prefix': 'setSoundPanningEnabled',
-    'body': 'setSoundPanningEnabled(${1:sound}, ${2:enable})'
+    'prefix': 'setSoundPanningEnabled'
+    'body': 'setSoundPanningEnabled()'
   'setSoundPaused':
-    'prefix': 'setSoundPaused',
-    'body': 'setSoundPaused(${1:sound}, ${2:paused})'
-  'setSoundPosition':
-    'prefix': 'setSoundPosition',
-    'body': 'setSoundPosition(${1:sound}, ${2:pos})'
+    'prefix': 'setSoundPaused'
+    'body': 'setSoundPaused(${1:element theSound}, ${2:bool paused})'
   'setSoundProperties':
-    'prefix': 'setSoundProperties',
-    'body': 'setSoundProperties(${1:sound}, ${2:fSampleRate}, ${3:fTempo}, ${4:fPitch}, ${5:bReverse})'
+    'prefix': 'setSoundProperties'
+    'body': 'setSoundProperties(${1:element theSound}, ${2:float fSampleRate}, ${3:float fTempo}, ${4:float fPitch}, ${5:bool bReverse})'
+  'setSunColor':
+    'prefix': 'setSunColor'
+    'body': 'setSunColor(${1:int aRed}, ${2:int aGreen}, ${3:int aBlue}, ${4:int bRed}, ${5:int bGreen}, ${6:int bBlue})'
+  'setSunSize':
+    'prefix': 'setSunSize'
+    'body': 'setSunSize(${1:int Size})'
+  'setSoundPosition':
+    'prefix': 'setSoundPosition'
+    'body': 'setSoundPosition(${1:element theSound}, ${2:int pos})'
   'setSoundSpeed':
-    'prefix': 'setSoundSpeed',
-    'body': 'setSoundSpeed(${1:sound}, ${2:speed})'
+    'prefix': 'setSoundSpeed'
+    'body': 'setSoundSpeed(${1:element theSound}, ${2:float speed})'
   'setSoundVolume':
-    'prefix': 'setSoundVolume',
-    'body': 'setSoundVolume(${1:sound}, ${2:volume})'
+    'prefix': 'setSoundVolume'
+    'body': 'setSoundVolume(${1:element theSound}, ${2:float volume})'
+  'setTeamColor':
+    'prefix': 'setTeamColor'
+    'body': 'setTeamColor(${1:team theTeam}, ${2:int colorR}, ${3:int colorG}, ${4:int colorB})'
+  'setTeamFriendlyFire':
+    'prefix': 'setTeamFriendlyFire'
+    'body': 'setTeamFriendlyFire(${1:team theTeam}, ${2:bool friendlyFire})'
+  'setTeamName':
+    'prefix': 'setTeamName'
+    'body': 'setTeamName(${1:team theTeam}, ${2:string newName})'
+  'setTime':
+    'prefix': 'setTime'
+    'body': 'setTime(${1:int hour}, ${2:int minute})'
+  'setTimer':
+    'prefix': 'setTimer'
+    'body': 'setTimer(${1:function theFunction}, ${2:int timeInterval}, ${3:int timesToExecute}, ${4:[ var arguments... ]})'
+  'setTrafficLightsLocked':
+    'prefix': 'setTrafficLightsLocked'
+    'body': 'setTrafficLightsLocked(${1:bool toogle})'
+  'setTrafficLightState':
+    'prefix': 'setTrafficLightState'
+    'body': 'setTrafficLightState(${1:int/string state})'
+  'setTrainDerailable':
+    'prefix': 'setTrainDerailable'
+    'body': 'setTrainDerailable(${1:vehicle derailableVehicle}, ${2:bool derailable})'
+  'setTrainDerailed':
+    'prefix': 'setTrainDerailed'
+    'body': 'setTrainDerailed(${1:vehicle vehicleToDerail}, ${2:bool derailed})'
+  'setTrainDirection':
+    'prefix': 'setTrainDirection'
+    'body': 'setTrainDirection(${1:vehicle train}, ${2:bool clockwise})'
+  'setTrainSpeed':
+    'prefix': 'setTrainSpeed'
+    'body': 'setTrainSpeed(${1:vehicle train}, ${2:int theTime})'
+  'setUnbanTime':
+    'prefix': 'setUnbanTime'
+    'body': 'setUnbanTime(${1:ban theBan}, ${2:string theReason})'
+  'setVehicleAdjustableProperty':
+    'prefix': 'setVehicleAdjustableProperty'
+    'body': 'setVehicleAdjustableProperty(${1:vehicle theVehicle}, ${2:int value})'
+  'setVehicleColor':
+    'prefix': 'setVehicleColor'
+    'body': 'setVehicleColor(${1:vehicle theVehicle}, ${2:int r1}, ${3:int g1}, ${4:int b1 [}, ${5:int r2}, ${6:int g2}, ${7:int b2}, ${8:int r3}, ${9:int g3}, ${10:int b3}, ${11:int r4}, ${12:int g4}, ${13:int b4]})'
+  'setVehicleComponentPosition':
+    'prefix': 'setVehicleComponentPosition'
+    'body': 'setVehicleComponentPosition(${1:vehicle theVehicle}, ${2:string theCoponent}, ${3:float posX}, ${4:float posY}, ${5:float posZ})'
+  'setVehicleComponentRotation':
+    'prefix': 'setVehicleComponentRotation'
+    'body': 'setVehicleComponentRotation(${1:vehicle theVehicle}, ${2:string theCoponent}, ${3:float posX}, ${4:float posY}, ${5:float posZ})'
+  'setVehicleComponentVisible':
+    'prefix': 'setVehicleComponentVisible'
+    'body': 'setVehicleComponentVisible(${1:vehicle theVehicle}, ${2:string theCoponent}, ${3:bool visible})'
+  'setVehicleDamageProof':
+    'prefix': 'setVehicleDamageProof'
+    'body': 'setVehicleDamageProof(${1:vehicle theVehicle}, ${2:bool damageProof})'
+  'setVehicleDirtLevel':
+    'prefix': 'setVehicleDirtLevel'
+    'body': 'setVehicleDirtLevel(${1:vehicle theVehicle}, ${2:int dirtLevel})'
+  'setVehicleDoorOpenRatio':
+    'prefix': 'setVehicleDoorOpenRatio'
+    'body': 'setVehicleDoorOpenRatio(${1:vehicle theVehicle}, ${2:int door}, ${3:float ratio [}, ${4:int time]})'
+  'setVehicleDoorState':
+    'prefix': 'setVehicleDoorState'
+    'body': 'setVehicleDoorState(${1:vehicle theVehicle}, ${2:int door}, ${3:int state})'
+  'setVehicleDoorsUndamageable':
+    'prefix': 'setVehicleDoorsUndamageable'
+    'body': 'setVehicleDoorsUndamageable(${1:vehicle theVehicle}, ${2:bool state})'
+  'setVehicleEngineState':
+    'prefix': 'setVehicleEngineState'
+    'body': 'setVehicleEngineState(${1:vehicle theVehicle}, ${2:bool engineState})'
+  'setVehicleFrozen':
+    'prefix': 'setVehicleFrozen'
+    'body': 'setVehicleFrozen(${1:vehicle theVehicle}, ${2:bool freezeStatus})'
+  'setVehicleFuelTankExplodable':
+    'prefix': 'setVehicleFuelTankExplodable'
+    'body': 'setVehicleFuelTankExplodable(${1:vehicle theVehicle}, ${2:bool explodable})'
+  'setVehicleGravity':
+    'prefix': 'setVehicleGravity'
+    'body': 'setVehicleGravity(${1:vehicle theVehicle}, ${2:float x}, ${3:float y}, ${4:float z})'
+  'setVehicleGunsEnabled':
+    'prefix': 'setVehicleGunsEnabled'
+    'body': 'setVehicleGunsEnabled(${1:vehicle theVehicle}, ${2:bool gunsEnabled})'
+  'setVehicleHandling':
+    'prefix': 'setVehicleHandling'
+    'body': 'setVehicleHandling(${1:vehicle theVehicle}, ${2:string property}, ${3:var value})'
+  'setVehicleHeadLightColor':
+    'prefix': 'setVehicleHeadLightColor'
+    'body': 'setVehicleHeadLightColor(${1:vehicle theVehicle}, ${2:int red}, ${3:int green}, ${4:int blue})'
+  'setVehicleIdleRespawnDelay':
+    'prefix': 'setVehicleIdleRespawnDelay'
+    'body': 'setVehicleIdleRespawnDelay(${1:vehicle theVehicle}, ${2:int timeDelay})'
+  'setVehicleLandingGearDown':
+    'prefix': 'setVehicleLandingGearDown'
+    'body': 'setVehicleLandingGearDown(${1:vehicle theVehicle}, ${2:bool gearState})'
+  'setVehicleLightState':
+    'prefix': 'setVehicleLightState'
+    'body': 'setVehicleLightState(${1:vehicle theVehicle}, ${2:int light}, ${3:int state})'
+  'setVehicleLocked':
+    'prefix': 'setVehicleLocked'
+    'body': 'setVehicleLocked(${1:vehicle theVehicle}, ${2:bool locked})'
+  'setVehicleModel':
+    'prefix': 'setVehicleModel'
+    'body': 'setVehicleModel(${1:vehicle theVehicle}, ${2:int model})'
+  'setVehicleNitroActivated':
+    'prefix': 'setVehicleNitroActivated'
+    'body': 'setVehicleNitroActivated(${1:vehicle theVehicle}, ${2:bool state})'
+  'setVehicleNitroCount':
+    'prefix': 'setVehicleNitroCount'
+    'body': 'setVehicleNitroCount(${1:vehicle theVehicle}, ${2:int count})'
+  'setVehicleNitroLevel':
+    'prefix': 'setVehicleNitroLevel'
+    'body': 'setVehicleNitroLevel(${1:vehicle theVehicle}, ${2:float level})'
+  'setVehicleOverrideLights':
+    'prefix': 'setVehicleOverrideLights'
+    'body': 'setVehicleOverrideLights(${1:vehicle theVehicle}, ${2:int value})'
+  'setVehiclePaintjob':
+    'prefix': 'setVehiclePaintjob'
+    'body': 'setVehiclePaintjob(${1:vehicle theVehicle}, ${2:int value})'
+  'setVehiclePanelState':
+    'prefix': 'setVehiclePanelState'
+    'body': 'setVehiclePanelState(${1:vehicle theVehicle}, ${2:int panelID}, ${3:int state})'
+  'setVehiclePlateText':
+    'prefix': 'setVehiclePlateText'
+    'body': 'setVehiclePlateText(${1:vehicle theVehicle}, ${2:string numberplate})'
+  'setVehicleRespawnDelay':
+    'prefix': 'setVehicleRespawnDelay'
+    'body': 'setVehicleRespawnDelay(${1:vehicle theVehicle}, ${2:int timeDelay})'
+  'setVehicleRespawnPosition':
+    'prefix': 'setVehicleRespawnPosition'
+    'body': 'setVehicleRespawnPosition(${1:vehicle theVehicle}, ${2:float x}, ${3:float y}, ${4:float z}, ${5:[float rx}, ${6:float ry}, ${7:float rz ]})'
+  'setVehicleRotation':
+    'prefix': 'setVehicleRotation'
+    'body': 'setVehicleRotation(${1:vehicle theVehicle}, ${2:rx}, ${3:ry}, ${4:rz})'
+  'setVehicleSirens':
+    'prefix': 'setVehicleSirens'
+    'body': 'setVehicleSirens(${1:vehicle theVehicle}, ${2:bool sirensOn}, ${3:int sirenPoint}, ${4:float posX}, ${5:float posY}, ${6:float posZ}, ${7:float red}, ${8:float green}, ${9:float blue[}, ${10:float alpha = 255}, ${11:float minAlpha = 0.0]})'
+  'setVehicleSirensOn':
+    'prefix': 'setVehicleSirensOn'
+    'body': 'setVehicleSirensOn(${1:vehicle theVehicle}, ${2:bool sirensOn})'
+  'setVehicleTaxiLightOn':
+    'prefix': 'setVehicleTaxiLightOn'
+    'body': 'setVehicleTaxiLightOn(${1:vehicle taxi}, ${2:bool LightState})'
+  'setVehicleTurnVelocity':
+    'prefix': 'setVehicleTurnVelocity'
+    'body': 'setVehicleTurnVelocity(${1:vehicle theVehicle}, ${2:float rx}, ${3:float ry}, ${4:float rz})'
+  'setVehicleTurretPosition':
+    'prefix': 'setVehicleTurretPosition'
+    'body': 'setVehicleTurretPosition(${1:vehicle turretVehicle}, ${2:float positionX}, ${3:float positionY})'
+  'setVehicleVariant':
+    'prefix': 'setVehicleVariant'
+    'body': 'setVehicleVariant(${1:vehicle theVehicle [}, ${2:int variant1}, ${3:int variant2 ]})'
+  'setVehicleWheelStates':
+    'prefix': 'setVehicleWheelStates'
+    'body': 'setVehicleWheelStates(${1:vehicle theVehicle}, ${2:int frontLeft}, ${3:int rearLeft}, ${4:int frontRight}, ${5:int rearRight})'
+  'setWaterColor':
+    'prefix': 'setWaterColor'
+    'body': 'setWaterColor(${1:float red}, ${2:float green}, ${3:float blue}, ${4:float alpha})'
+  'setWaterDrawnLast':
+    'prefix': 'setWaterDrawnLast'
+    'body': 'setWaterDrawnLast(${1:bool bEnabled})'
+  'setWaterLevel':
+    'prefix': 'setWaterLevel'
+    'body': 'setWaterLevel(${1:[water theWater]}, ${2:float level [}, ${3:bool includeWaterFeatures = true}, ${4:bool includeWaterElements = true]})'
+  'setWaterVertexPosition':
+    'prefix': 'setWaterVertexPosition'
+    'body': 'setWaterVertexPosition(${1:water theWater}, ${2:int vertexIndex}, ${3:float x}, ${4:float y}, ${5:float z})'
+  'setWaveHeight':
+    'prefix': 'setWaveHeight'
+    'body': 'setWaveHeight(${1:float height})'
+  'setWeaponAmmo':
+    'prefix': 'setWeaponAmmo'
+    'body': 'setWeaponAmmo(${1:player thePlayer}, ${2:int weapon}, ${3:int totalAmmo [}, ${4:int ammoInClip = 0]})'
+  'setWeaponClipAmmo':
+    'prefix': 'setWeaponClipAmmo'
+    'body': 'setWeaponClipAmmo(${1:weapon theWeapon}, ${2:int clipAmmo})'
+  'setWeaponFiringRate':
+    'prefix': 'setWeaponFiringRate'
+    'body': 'setWeaponFiringRate(${1:weapon theWeapon}, ${2:int firingRate})'
+  'setWeaponFlags':
+    'prefix': 'setWeaponFlags'
+    'body': 'setWeaponFlags(${1:weapon theWeapon}, ${2:string theFlag}, ${3:value theValue})'
+  'setWeaponOwner':
+    'prefix': 'setWeaponOwner'
+    'body': 'setWeaponOwner(${1:weapon theWeapon}, ${2:player theOwner})'
+  'setWeaponProperty':
+    'prefix': 'setWeaponProperty'
+    'body': 'setWeaponProperty(${1:int weaponID/string weaponName}, ${2:string weaponSkill}, ${3:string property}, ${4:int/float theValue})'
+  'setWeaponTarget':
+    'prefix': 'setWeaponTarget'
+    'body': 'setWeaponTarget(${1:weapon theWeapon}, ${2:element theTarget}, ${3:int iComponentID})'
+  'setWeaponState':
+    'prefix': 'setWeaponState'
+    'body': 'setWeaponState(${1:weapon theWeapon}, ${2:string theState})'
+  'setWeather':
+    'prefix': 'setWeather'
+    'body': 'setWeather(${1:int weatherID})'
+  'setWeatherBlended':
+    'prefix': 'setWeatherBlended'
+    'body': 'setWeatherBlended(${1:int weatherID})'
+  'setWindVelocity':
+    'prefix': 'setWindVelocity'
+    'body': 'setWindVelocity(${1:float velocityX}, ${2:float velocityY}, ${3:float velocityZ})'
+  'setWorldSoundEnabled':
+    'prefix': 'setWorldSoundEnabled'
+    'body': 'setWorldSoundEnabled(${1:int group}, ${2:[ int index = -1}, ${3:] bool enable})'
+  'setWorldSpecialPropertyEnabled':
+    'prefix': 'setWorldSpecialPropertyEnabled'
+    'body': 'setWorldSpecialPropertyEnabled(${1:string propname}, ${2:bool enable})'
+  'sha256':
+    'prefix': 'sha256'
+    'body': 'sha256(${1:string str})'
+  'showChat':
+    'prefix': 'showChat'
+    'body': 'showChat(${1:bool show})'
+  'showCursor':
+    'prefix': 'showCursor'
+    'body': 'showCursor(${1:player thePlayer}, ${2:bool show}, ${3:[ bool toggleControls = true ]})'
+  'showPlayerHudComponent':
+    'prefix': 'showPlayerHudComponent'
+    'body': 'showPlayerHudComponent(${1:player thePlayer}, ${2:string component}, ${3:bool show})'
+  'shutdown':
+    'prefix': 'shutdown'
+    'body': 'shutdown(${1:string reason})'
+  'spawnPlayer':
+    'prefix': 'spawnPlayer'
+    'body': 'spawnPlayer(${1:player thePlayer}, ${2:float x}, ${3:float y}, ${4:float z}, ${5:[ int rotation = 0}, ${6:int skinID = 0}, ${7:int interior = 0}, ${8:int dimension = 0}, ${9:team theTeam = nil ]})'
+  'spawnVehicle':
+    'prefix': 'spawnVehicle'
+    'body': 'spawnVehicle(${1:vehicle theVehicle}, ${2:float x}, ${3:float y}, ${4:float z}, ${5:float rx}, ${6:float ry}, ${7:float rz})'
+  'split':
+    'prefix': 'split'
+    'body': 'split(${1:string stringToSplit}, ${2:int separatingChar})'
+  'startResource':
+    'prefix': 'startResource'
+    'body': 'startResource(${1:resource resourceToStart}, ${2:[bool persistent = false}, ${3:bool startIncludedResources = true}, ${4:bool loadServerConfigs = true}, ${5:bool loadMaps = true}, ${6:bool loadServerScripts = true}, ${7:bool loadHTML = true}, ${8:bool loadClientConfigs = true}, ${9:bool loadClientScripts = true}, ${10:bool loadFiles = true]})'
+  'stopObject':
+    'prefix': 'stopObject'
+    'body': 'stopObject(${1:object theobject})'
+  'stopResource':
+    'prefix': 'stopResource'
+    'body': 'stopResource(${1:resource theResource})'
   'stopSound':
-    'prefix': 'stopSound',
-    'body': 'stopSound(${0:sound})'
+    'prefix': 'stopSound'
+    'body': 'stopSound(${1:element theSound})'
+  'takeAllWeapons':
+    'prefix': 'takeAllWeapons'
+    'body': 'takeAllWeapons(${1:player thePlayer})'
+  'takePlayerScreenShot':
+    'prefix': 'takePlayerScreenShot'
+    'body': 'takePlayerScreenShot(${1:player thePlayer}, ${2:int width}, ${3:int height [}, ${4:string tag = nil}, ${5:int quality = 30}, ${6:int maxBandwith = 5000 ]})'
+  'takePlayerMoney':
+    'prefix': 'takePlayerMoney'
+    'body': 'takePlayerMoney(${1:player thePlayer}, ${2:int amount})'
+  'takeWeapon':
+    'prefix': 'takeWeapon'
+    'body': 'takeWeapon(${1:player thePlayer}, ${2:int weapon})'
+  'takeWeaponAmmo':
+    'prefix': 'takeWeaponAmmo'
+    'body': 'takeWeaponAmmo(${1:player thePlayer}, ${2:int weapon}, ${3:int ammo})'
+  'teaDecode':
+    'prefix': 'teaDecode'
+    'body': 'teaDecode()'
+  'teaEncode':
+    'prefix': 'teaEncode'
+    'body': 'teaEncode()'
+  'testLineAgainstWater':
+    'prefix': 'testLineAgainstWater'
+    'body': 'testLineAgainstWater(${1:float startX}, ${2:float startY}, ${3:float startZ}, ${4:float endX}, ${5:float endY}, ${6:float endZ})'
+  'textCreateDisplay':
+    'prefix': 'textCreateDisplay'
+    'body': 'textCreateDisplay()'
+  'textCreateTextItem':
+    'prefix': 'textCreateTextItem'
+    'body': 'textCreateTextItem(${1:[string text}, ${2:float x}, ${3:float y}, ${4:string priority}, ${5:int red = 255}, ${6:int green = 0}, ${7:int blue = 0}, ${8:int alpha = 255}, ${9:float scale = 1}, ${10:string alignX = "left"]}, ${11:string alignY = "top"]})'
+  'textDestroyDisplay':
+    'prefix': 'textDestroyDisplay'
+    'body': 'textDestroyDisplay(${1:textdisplay display})'
+  'textDestroyTextItem':
+    'prefix': 'textDestroyTextItem'
+    'body': 'textDestroyTextItem(${1:textitem theTextitem})'
+  'textDisplayAddObserver':
+    'prefix': 'textDisplayAddObserver'
+    'body': 'textDisplayAddObserver(${1:textdisplay display}, ${2:player playerToAdd})'
+  'textDisplayAddText':
+    'prefix': 'textDisplayAddText'
+    'body': 'textDisplayAddText(${1:textdisplay displayToAddTo}, ${2:textitem itemToAdd})'
+  'textDisplayGetObservers':
+    'prefix': 'textDisplayGetObservers'
+    'body': 'textDisplayGetObservers(${1:textdisplay display})'
+  'textDisplayIsObserver':
+    'prefix': 'textDisplayIsObserver'
+    'body': 'textDisplayIsObserver(${1:textdisplay display}, ${2:player thePlayer})'
+  'textDisplayRemoveObserver':
+    'prefix': 'textDisplayRemoveObserver'
+    'body': 'textDisplayRemoveObserver(${1:textdisplay display}, ${2:player playerToRemove})'
+  'textDisplayRemoveText':
+    'prefix': 'textDisplayRemoveText'
+    'body': 'textDisplayRemoveText(${1:textdisplay displayToRemoveFrom}, ${2:textitem itemToRemove})'
+  'textItemGetColor':
+    'prefix': 'textItemGetColor'
+    'body': 'textItemGetColor(${1:textitem theTextItem})'
+  'textItemGetPosition':
+    'prefix': 'textItemGetPosition'
+    'body': 'textItemGetPosition(${1:textitem theTextItem})'
+  'textItemGetPriority':
+    'prefix': 'textItemGetPriority'
+    'body': 'textItemGetPriority(${1:textitem textitemToCheck})'
+  'textItemGetScale':
+    'prefix': 'textItemGetScale'
+    'body': 'textItemGetScale(${1:textitem theTextitem})'
+  'textItemGetText':
+    'prefix': 'textItemGetText'
+    'body': 'textItemGetText(${1:textitem theTextitem})'
+  'textItemSetColor':
+    'prefix': 'textItemSetColor'
+    'body': 'textItemSetColor(${1:textitem theTextItem}, ${2:int r}, ${3:int g}, ${4:int b}, ${5:int a})'
+  'textItemSetPosition':
+    'prefix': 'textItemSetPosition'
+    'body': 'textItemSetPosition(${1:textitem theTextItem}, ${2:float x}, ${3:float y})'
+  'textItemSetPriority':
+    'prefix': 'textItemSetPriority'
+    'body': 'textItemSetPriority(${1:textitem theTextItem}, ${2:string priority})'
+  'textItemSetScale':
+    'prefix': 'textItemSetScale'
+    'body': 'textItemSetScale(${1:textitem theTextitem}, ${2:float scale})'
+  'textItemSetText':
+    'prefix': 'textItemSetText'
+    'body': 'textItemSetText(${1:textitem theTextitem}, ${2:string text})'
+  'tocolor':
+    'prefix': 'tocolor'
+    'body': 'tocolor(${1:int red}, ${2:int green}, ${3:int blue [}, ${4:int alpha = 255]})'
+  'toggleAllControls':
+    'prefix': 'toggleAllControls'
+    'body': 'toggleAllControls(${1:player thePlayer}, ${2:bool enabled}, ${3:[bool gtaControls=true}, ${4:bool mtaControls=true]})'
+  'toggleCameraFixedMode':
+    'prefix': 'toggleCameraFixedMode'
+    'body': 'toggleCameraFixedMode(${1:bool fixed})'
+  'toggleControl':
+    'prefix': 'toggleControl'
+    'body': 'toggleControl(${1:player thePlayer}, ${2:string control}, ${3:bool enabled})'
+  'toggleObjectRespawn':
+    'prefix': 'toggleObjectRespawn'
+    'body': 'toggleObjectRespawn(${1:object theObject}, ${2:bool respawn})'
+  'toggleVehicleRespawn':
+    'prefix': 'toggleVehicleRespawn'
+    'body': 'toggleVehicleRespawn(${1:vehicle theVehicle}, ${2:bool Respawn})'
+  'toJSON':
+    'prefix': 'toJSON'
+    'body': 'toJSON(${1:var arguments ...})'
+  'triggerClientEvent':
+    'prefix': 'triggerClientEvent'
+    'body': 'triggerClientEvent(${1:[element triggerFor=getRootElement()]}, ${2:string name}, ${3:element theElement}, ${4:[arguments...]})'
+  'triggerEvent':
+    'prefix': 'triggerEvent'
+    'body': 'triggerEvent(${1:string eventName}, ${2:element baseElement}, ${3:[ var argument1}, ${4:... ]})'
+  'triggerLatentClientEvent':
+    'prefix': 'triggerLatentClientEvent'
+    'body': 'triggerLatentClientEvent(${1:[element triggerFor=getRootElement()]}, ${2:string name [}, ${3:int bandwidth=5000}, ${4:bool persist=false ]}, ${5:element theElement}, ${6:[arguments...]})'
+  'triggerLatentServerEvent':
+    'prefix': 'triggerLatentServerEvent'
+    'body': 'triggerLatentServerEvent(${1:string event [}, ${2:int bandwidth=5000}, ${3:bool persist=false ]}, ${4:element theElement}, ${5:[arguments...]})'
+  'triggerServerEvent':
+    'prefix': 'triggerServerEvent'
+    'body': 'triggerServerEvent(${1:string event}, ${2:element theElement}, ${3:[arguments...]})'
+  'utfChar':
+    'prefix': 'utfChar'
+    'body': 'utfChar(${1:int characterCode})'
+  'utfCode':
+    'prefix': 'utfCode'
+    'body': 'utfCode(${1:string theString})'
+  'utfLen':
+    'prefix': 'utfLen'
+    'body': 'utfLen(${1:string theString})'
+  'utfSeek':
+    'prefix': 'utfSeek'
+    'body': 'utfSeek(${1:string theString}, ${2:int position})'
+  'utfSub':
+    'prefix': 'utfSub'
+    'body': 'utfSub(${1:string theString}, ${2:int Start}, ${3:int End})'
+  'updateResourceACLRequest':
+    'prefix': 'updateResourceACLRequest'
+    'body': 'updateResourceACLRequest(${1:resource theResource}, ${2:string rightName}, ${3:bool access [}, ${4:string byWho = nil ]})'
+  'unbanIP':
+    'prefix': 'unbanIP'
+    'body': 'unbanIP(${1:string ipToUnban [}, ${2:player unbanningPlayer = nil]})'
+  'unbanSerial':
+    'prefix': 'unbanSerial'
+    'body': 'unbanSerial(${1:string serialToUnban})'
+  'unbindKey':
+    'prefix': 'unbindKey'
+    'body': 'unbindKey(${1:player thePlayer}, ${2:string key}, ${3:[ string keyState}, ${4:function handler ]})'
+  'usePickup':
+    'prefix': 'usePickup'
+    'body': 'usePickup(${1:pickup thePickup}, ${2:player thePlayer})'
+  'warpPedIntoVehicle':
+    'prefix': 'warpPedIntoVehicle'
+    'body': 'warpPedIntoVehicle(${1:ped thePed}, ${2:vehicle theVehicle}, ${3:[ int seat=0 ]})'
+  'warpPlayerIntoVehicle':
+    'prefix': 'warpPlayerIntoVehicle'
+    'body': 'warpPlayerIntoVehicle(${1:player thePlayer}, ${2:vehicle theVehicle}, ${3:[ int seat=0 ]})'
+  'wasEventCanceled':
+    'prefix': 'wasEventCanceled'
+    'body': 'wasEventCanceled()'
+  'wasEventCancelled':
+    'prefix': 'wasEventCancelled'
+    'body': 'wasEventCancelled()'
+  'xmlCopyFile':
+    'prefix': 'xmlCopyFile'
+    'body': 'xmlCopyFile(${1:xmlnode nodeToCopy}, ${2:string newFilename}, ${3:[ resource inResource = getThisResource() ]})'
+  'xmlCreateChild':
+    'prefix': 'xmlCreateChild'
+    'body': 'xmlCreateChild(${1:xmlnode parentNode}, ${2:string tagName})'
+  'xmlCreateFile':
+    'prefix': 'xmlCreateFile'
+    'body': 'xmlCreateFile(${1:string filename}, ${2:string rootNodeName}, ${3:[ resource inResource = getThisResource() ]})'
+  'xmlCreateSubNode':
+    'prefix': 'xmlCreateSubNode'
+    'body': 'xmlCreateSubNode(${1:xmlnode parentNode}, ${2:string tagname})'
+  'xmlDestroyNode':
+    'prefix': 'xmlDestroyNode'
+    'body': 'xmlDestroyNode(${1:xmlnode theXMLNode})'
+  'xmlFindChild':
+    'prefix': 'xmlFindChild'
+    'body': 'xmlFindChild(${1:xmlnode parent}, ${2:string tagName}, ${3:int index})'
+  'xmlFindSubNode':
+    'prefix': 'xmlFindSubNode'
+    'body': 'xmlFindSubNode(${1:xmlnode parent}, ${2:string subnode}, ${3:int index})'
+  'xmlLoadFile':
+    'prefix': 'xmlLoadFile'
+    'body': 'xmlLoadFile(${1:string filename}, ${2:[ resource fromResource = getThisResource () ]})'
+  'xmlNodeGetAttribute':
+    'prefix': 'xmlNodeGetAttribute'
+    'body': 'xmlNodeGetAttribute(${1:xmlnode node}, ${2:string name})'
+  'xmlNodeGetAttributes':
+    'prefix': 'xmlNodeGetAttributes'
+    'body': 'xmlNodeGetAttributes(${1:xmlnode node})'
+  'xmlNodeGetChildren':
+    'prefix': 'xmlNodeGetChildren'
+    'body': 'xmlNodeGetChildren(${1:xmlnode parent}, ${2:[ int index ]})'
+  'xmlNodeGetName':
+    'prefix': 'xmlNodeGetName'
+    'body': 'xmlNodeGetName(${1:xmlnode node})'
+  'xmlNodeGetParent':
+    'prefix': 'xmlNodeGetParent'
+    'body': 'xmlNodeGetParent(${1:xmlnode node})'
+  'xmlNodeGetValue':
+    'prefix': 'xmlNodeGetValue'
+    'body': 'xmlNodeGetValue(${1:xmlnode theXMLNode})'
+  'xmlNodeSetAttribute':
+    'prefix': 'xmlNodeSetAttribute'
+    'body': 'xmlNodeSetAttribute(${1:xmlnode node}, ${2:string name}, ${3:var value})'
+  'xmlNodeSetName':
+    'prefix': 'xmlNodeSetName'
+    'body': 'xmlNodeSetName(${1:xmlnode node}, ${2:string name})'
+  'xmlNodeSetValue':
+    'prefix': 'xmlNodeSetValue'
+    'body': 'xmlNodeSetValue(${1:xmlnode theXMLNode}, ${2:string value})'
+  'xmlSaveFile':
+    'prefix': 'xmlSaveFile'
+    'body': 'xmlSaveFile(${1:xmlnode rootNode})'
+  'xmlUnloadFile':
+    'prefix': 'xmlUnloadFile'
+    'body': 'xmlUnloadFile(${1:xmlnode node})'
